@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ArrayOfMyDictionary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <myDictionary>
+    <EngWord>first</EngWord>
+    <RusWord>первое</RusWord>
+  </myDictionary>
+  <myDictionary>
+    <EngWord>second</EngWord>
+    <RusWord>второе</RusWord>
+  </myDictionary>
+  <myDictionary>
+    <EngWord>third</EngWord>
+    <RusWord>третье</RusWord>
+  </myDictionary>
+</ArrayOfMyDictionary>

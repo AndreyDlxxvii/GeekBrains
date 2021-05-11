@@ -1,0 +1,12 @@
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW4\HomeWorkLesson4\MyTwoArray\bin\Debug\net5.0\MyTwoArray.deps.json
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW4\HomeWorkLesson4\MyTwoArray\bin\Debug\net5.0\MyTwoArray.dll
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW4\HomeWorkLesson4\MyTwoArray\bin\Debug\net5.0\ref\MyTwoArray.dll
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW4\HomeWorkLesson4\MyTwoArray\bin\Debug\net5.0\MyTwoArray.pdb
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW4\HomeWorkLesson4\MyTwoArray\obj\Debug\net5.0\MyTwoArray.csprojAssemblyReference.cache
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW4\HomeWorkLesson4\MyTwoArray\obj\Debug\net5.0\MyTwoArray.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW4\HomeWorkLesson4\MyTwoArray\obj\Debug\net5.0\MyTwoArray.AssemblyInfoInputs.cache
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW4\HomeWorkLesson4\MyTwoArray\obj\Debug\net5.0\MyTwoArray.AssemblyInfo.cs
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW4\HomeWorkLesson4\MyTwoArray\obj\Debug\net5.0\MyTwoArray.csproj.CoreCompileInputs.cache
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW4\HomeWorkLesson4\MyTwoArray\obj\Debug\net5.0\MyTwoArray.dll
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW4\HomeWorkLesson4\MyTwoArray\obj\Debug\net5.0\ref\MyTwoArray.dll
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW4\HomeWorkLesson4\MyTwoArray\obj\Debug\net5.0\MyTwoArray.pdb

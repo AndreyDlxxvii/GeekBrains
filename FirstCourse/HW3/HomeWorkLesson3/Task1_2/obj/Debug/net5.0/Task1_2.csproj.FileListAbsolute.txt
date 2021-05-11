@@ -1,0 +1,16 @@
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW3\HomeWorkLesson3\Task1_2\bin\Debug\net5.0\Task1_2.exe
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW3\HomeWorkLesson3\Task1_2\bin\Debug\net5.0\Task1_2.deps.json
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW3\HomeWorkLesson3\Task1_2\bin\Debug\net5.0\Task1_2.runtimeconfig.json
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW3\HomeWorkLesson3\Task1_2\bin\Debug\net5.0\Task1_2.runtimeconfig.dev.json
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW3\HomeWorkLesson3\Task1_2\bin\Debug\net5.0\Task1_2.dll
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW3\HomeWorkLesson3\Task1_2\bin\Debug\net5.0\ref\Task1_2.dll
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW3\HomeWorkLesson3\Task1_2\bin\Debug\net5.0\Task1_2.pdb
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW3\HomeWorkLesson3\Task1_2\obj\Debug\net5.0\Task1_2.csprojAssemblyReference.cache
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW3\HomeWorkLesson3\Task1_2\obj\Debug\net5.0\Task1_2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW3\HomeWorkLesson3\Task1_2\obj\Debug\net5.0\Task1_2.AssemblyInfoInputs.cache
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW3\HomeWorkLesson3\Task1_2\obj\Debug\net5.0\Task1_2.AssemblyInfo.cs
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW3\HomeWorkLesson3\Task1_2\obj\Debug\net5.0\Task1_2.csproj.CoreCompileInputs.cache
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW3\HomeWorkLesson3\Task1_2\obj\Debug\net5.0\Task1_2.dll
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW3\HomeWorkLesson3\Task1_2\obj\Debug\net5.0\ref\Task1_2.dll
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW3\HomeWorkLesson3\Task1_2\obj\Debug\net5.0\Task1_2.pdb
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW3\HomeWorkLesson3\Task1_2\obj\Debug\net5.0\Task1_2.genruntimeconfig.cache

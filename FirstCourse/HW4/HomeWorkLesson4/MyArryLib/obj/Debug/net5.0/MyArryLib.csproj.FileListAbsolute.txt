@@ -1,0 +1,12 @@
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW4\HomeWorkLesson4\MyArryLib\bin\Debug\net5.0\MyArryLib.deps.json
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW4\HomeWorkLesson4\MyArryLib\bin\Debug\net5.0\MyArryLib.dll
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW4\HomeWorkLesson4\MyArryLib\bin\Debug\net5.0\ref\MyArryLib.dll
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW4\HomeWorkLesson4\MyArryLib\bin\Debug\net5.0\MyArryLib.pdb
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW4\HomeWorkLesson4\MyArryLib\obj\Debug\net5.0\MyArryLib.csprojAssemblyReference.cache
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW4\HomeWorkLesson4\MyArryLib\obj\Debug\net5.0\MyArryLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW4\HomeWorkLesson4\MyArryLib\obj\Debug\net5.0\MyArryLib.AssemblyInfoInputs.cache
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW4\HomeWorkLesson4\MyArryLib\obj\Debug\net5.0\MyArryLib.AssemblyInfo.cs
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW4\HomeWorkLesson4\MyArryLib\obj\Debug\net5.0\MyArryLib.csproj.CoreCompileInputs.cache
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW4\HomeWorkLesson4\MyArryLib\obj\Debug\net5.0\MyArryLib.dll
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW4\HomeWorkLesson4\MyArryLib\obj\Debug\net5.0\ref\MyArryLib.dll
+C:\Users\Tech-orel\RiderProjects\GeekBrains\HW4\HomeWorkLesson4\MyArryLib\obj\Debug\net5.0\MyArryLib.pdb
