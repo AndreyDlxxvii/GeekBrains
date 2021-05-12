@@ -5,18 +5,24 @@ using UnityEngine;
 
 public class LiftControl : MonoBehaviour
 {
-    private float _speed = 0.02f;
+    private float _speed = 0.5f;
+    private bool _flag;
     private void FixedUpdate()
     {
-        print(transform.position.y);
-       // MoveLift();
+        if (_flag&& transform.position.y<17f)
+        {
+            MoveLift();
+        }
     }
-
-    // private void MoveLift()
-    // {
-    //     if (transform.position.y)
-    //     {
-    //         transform.Translate(Vector3.up * _speed);
-    //     }
-    // }
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.collider.CompareTag("Player"))
+        {
+            _flag = true;
+        }
+    }
+    private void MoveLift()
+    {
+        transform.Translate(Vector3.up * (_speed * Time.fixedDeltaTime));
+    }
 }
