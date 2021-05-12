@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -8,7 +9,9 @@ public class Control : MonoBehaviour
 {
     //public GameManager GameManager;
     public float Speed = 2f;
-    public float JumpForce = 100f;
+    public float Sensitivity = 5f;
+    public GameObject Bullet;
+    public Transform GunPoint;
 
     private bool _isGrounded;
     private Rigidbody _rb;
@@ -17,6 +20,19 @@ public class Control : MonoBehaviour
     private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
+    }
+
+    private void Update()
+    {
+        Fire();
+    }
+
+    private void Fire()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Instantiate(Bullet, GunPoint.position, GunPoint.rotation);
+        }
     }
 
     void FixedUpdate()
@@ -30,9 +46,8 @@ public class Control : MonoBehaviour
         float moveVertical = Input.GetAxis("Vertical");
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
         transform.Translate(movement*Speed*Time.fixedDeltaTime);
-        transform.rotation = Quaternion.Euler(0f,Input.mousePosition.normalized.x*360f,0f);
+        transform.GetChild(1).Rotate(0,Input.GetAxis("Mouse X") * Sensitivity,0);
         var q = Input.mousePosition.x;
-        print(q);
     }
 }
 
