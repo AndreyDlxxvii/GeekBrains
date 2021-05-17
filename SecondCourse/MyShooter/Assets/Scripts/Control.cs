@@ -19,6 +19,7 @@ public class Control : MonoBehaviour
 
     private void Awake()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         _rb = GetComponent<Rigidbody>();
     }
 
