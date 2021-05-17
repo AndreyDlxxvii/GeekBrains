@@ -5,10 +5,10 @@ using UnityEngine;
 public class CameraMove : MonoBehaviour
 {
     public Transform trans;
-
+    
     void Update()
     {
-        Vector3 q = new Vector3(trans.position.x, trans.position.y + 2f, trans.position.z - 2.5f);
-        transform.position = q;
+        transform.position = new Vector3(trans.position.x, trans.position.y, trans.position.z);
+        transform.rotation = Quaternion.Euler(trans.rotation.x, trans.rotation.y, trans.rotation.z);
     }
 }

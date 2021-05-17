@@ -15,7 +15,7 @@ public class BonusRespaw : MonoBehaviour
     }
     void BonusRespawn()
     {
-        var spawnPoint = new Vector3(Random.Range(-10f, 10f), 0f, Random.Range(10f, 26f));
+        var spawnPoint = new Vector3(Random.Range(-10f, 10f), 4f, Random.Range(10f, 26f));
         spawnIndexMine = Random.Range(0, prefab.Length);
         GameObject bonus = Instantiate(prefab[spawnIndexMine], spawnPoint, Quaternion.identity);
         Destroy(bonus, lifeRespawn);
