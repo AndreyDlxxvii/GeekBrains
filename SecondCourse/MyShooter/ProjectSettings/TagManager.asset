@@ -9,6 +9,7 @@ TagManager:
   - Ammo
   - Mine
   - Aid
+  - Key
   layers:
   - Default
   - TransparentFX

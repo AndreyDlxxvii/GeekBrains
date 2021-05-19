@@ -17,12 +17,14 @@ public class Control1 : MonoBehaviour
     public float Sensitivity;
     public Text Helth;
     public Text Ammo;
+    public bool KeyIsUp;
     
     private bool _isGrounded;
     private Rigidbody _rb;
     private byte _countCheckGround;
-    private int _countOfShell=5;
+    private int _countOfShell = 30;
     private int _helthPlayer = 100;
+    private int _maxHelth = 100;
 
     private void Awake()
     {
@@ -84,7 +86,7 @@ public class Control1 : MonoBehaviour
             Ammo.text = $"Ammo: {_countOfShell}";
         }
     }
-    //check on ground
+    
     void OnCollisionEnter (Collision collision)
     {
         var temp = collision.gameObject.tag;
@@ -98,19 +100,31 @@ public class Control1 : MonoBehaviour
                     Ammo.text = $"Ammo: {_countOfShell}";
                     break;
                 case "Mine":
-                    _helthPlayer -= 10;
-                    Helth.text = $"Helth: {_helthPlayer}";
+                    TakeDamage(10);
                     break;
                 case "Aid":
-                    _helthPlayer += 10;
-                    Helth.text = $"Helth: {_helthPlayer}";
+                    HealPlayer(10);
                     break;
                 case "Bullet":
-                    _helthPlayer -= 5;
-                    Helth.text = $"Helth: {_helthPlayer}";
+                    TakeDamage(5);
+                    break;
+                case "Key":
+                    KeyIsUp = true;
                     break;
             }
-        } 
+        }
+
+    public void TakeDamage(int damage)
+    {
+        _helthPlayer -= damage;
+        Helth.text = $"Helth: {_helthPlayer}";
+    }
+
+    public void HealPlayer(int heal)
+    {
+        _helthPlayer = Mathf.Clamp(_helthPlayer + heal, 0, _maxHelth);
+        Helth.text = $"Helth: {_helthPlayer}";
+    }
     void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ground")) _countCheckGround--;

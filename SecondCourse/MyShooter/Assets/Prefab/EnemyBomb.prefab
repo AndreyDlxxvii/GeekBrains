@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5966030545056483829}
   - component: {fileID: 6127392492700116757}
   - component: {fileID: 1746440260321750943}
+  - component: {fileID: 1754814329403866561}
   m_Layer: 0
   m_Name: EnemyBomb
   m_TagString: Untagged
@@ -106,12 +107,12 @@ NavMeshAgent:
   m_GameObject: {fileID: 7084891506946899734}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.49999997
+  m_Radius: 0.5
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 0.09
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -119,6 +120,26 @@ NavMeshAgent:
   m_BaseOffset: 0.49999997
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1754814329403866561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7084891506946899734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3ebffe0a648f246823949ddedd7d14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 5
+  MinDistance: 10
+  Bullet: {fileID: 0}
+  WayPoint:
+  - {fileID: 274660964761215874, guid: 16ad703ce658bc5458876f52292c368b, type: 3}
+  - {fileID: 5836364134903202988, guid: 804f2a506e7aced4498c1dc7b6e81a38, type: 3}
+  - {fileID: 107568193244288358, guid: c374776b126387d489cece6fda366614, type: 3}
+  - {fileID: 923705119603052795, guid: 88df7f9f165ad774ebee64b09d321ea2, type: 3}
 --- !u!1 &9065147871299433192
 GameObject:
   m_ObjectHideFlags: 0

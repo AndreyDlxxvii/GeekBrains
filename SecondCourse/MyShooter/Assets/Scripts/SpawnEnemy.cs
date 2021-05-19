@@ -9,7 +9,6 @@ public class SpawnEnemy : MonoBehaviour
     public bool Flag = true;
    
     private float _timer;
-    private bool _count = false;
     private int i = 0;
 
     // private void CreateEnemyBomb()
