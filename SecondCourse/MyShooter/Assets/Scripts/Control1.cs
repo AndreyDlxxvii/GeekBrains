@@ -18,6 +18,9 @@ public class Control1 : MonoBehaviour
     public Text Helth;
     public Text Ammo;
     public bool KeyIsUp;
+
+    // public GameObject Cube;
+    // public RaycastHit hit;
     
     private bool _isGrounded;
     private Rigidbody _rb;
@@ -78,7 +81,10 @@ public class Control1 : MonoBehaviour
     
     private void Fire()
     {
-        //Debug.DrawRay(GunPoint.position,Gun.forward*1000f,Color.black);
+        //Debug.DrawRay(GunPoint.position, Gun.forward * 1000f, Color.black);
+        // Ray ray = new Ray(GunPoint.position, Gun.forward);
+        // Physics.Raycast(ray,out hit);
+        // Cube.GetComponent<Transform>().position = new Vector3(hit.point.x, 0, hit.point.z);
         if (Input.GetButtonDown("Fire1") && _countOfShell!=0)
         {
             Instantiate(Bullet, GunPoint.position, Gun.rotation);
