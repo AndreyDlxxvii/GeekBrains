@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class Control1 : MonoBehaviour
+public class Control1 : MonoBehaviour, ITakeDamage
 {
     public float Speed = 5f;
     public float JumpForce = 100f;
@@ -18,6 +18,7 @@ public class Control1 : MonoBehaviour
     public Text Helth;
     public Text Ammo;
     public bool KeyIsUp;
+    public GameObject Mine;
 
     // public GameObject Cube;
     // public RaycastHit hit;
@@ -28,7 +29,8 @@ public class Control1 : MonoBehaviour
     private int _countOfShell = 30;
     private int _helthPlayer = 100;
     private int _maxHelth = 100;
-
+    private float _reloadTime;
+    
     private void Awake()
     {
         Helth.text = $"Helth: {_helthPlayer}";
@@ -46,21 +48,20 @@ public class Control1 : MonoBehaviour
     {
         RotateGun();
         Fire();
+        InstalMine();
     }
-    
+
     void FixedUpdate()
     {
         Jump();
         Movement();
-        
-    }
+   }
 
     private void RotateGun()
     {
         var position = transform.position;
         Gun.transform.position = new Vector3(position.x, position.y, position.z);
         Gun.Rotate(0, Input.GetAxis("Mouse X") * Sensitivity, 0);
-        //Gun.eulerAngles = new Vector3(Gun.rotation.eulerAngles.x, Gun.rotation.eulerAngles.y, 0);
     }
     private void Movement()
     {
@@ -81,10 +82,6 @@ public class Control1 : MonoBehaviour
     
     private void Fire()
     {
-        //Debug.DrawRay(GunPoint.position, Gun.forward * 1000f, Color.black);
-        // Ray ray = new Ray(GunPoint.position, Gun.forward);
-        // Physics.Raycast(ray,out hit);
-        // Cube.GetComponent<Transform>().position = new Vector3(hit.point.x, 0, hit.point.z);
         if (Input.GetButtonDown("Fire1") && _countOfShell!=0)
         {
             Instantiate(Bullet, GunPoint.position, Gun.rotation);
@@ -93,9 +90,21 @@ public class Control1 : MonoBehaviour
         }
     }
     
+    private void InstalMine()
+    {
+        _reloadTime += Time.deltaTime;
+        if (Input.GetButtonDown("Fire2")&&_reloadTime>3f)
+        {
+            var t = Instantiate(Mine, GunPoint.position, Gun.rotation);
+            t.GetComponent<Rigidbody>().AddForce(t.transform.forward*1f);
+            _reloadTime = 0f;
+        }
+    }
+    
     void OnCollisionEnter (Collision collision)
     {
         var temp = collision.gameObject.tag;
+        print(collision.gameObject.tag);
             switch (temp)
             {
                 case "Ground":
@@ -111,7 +120,7 @@ public class Control1 : MonoBehaviour
                 case "Aid":
                     HealPlayer(10);
                     break;
-                case "Bullet":
+                case "BulletEnemy":
                     TakeDamage(5);
                     break;
                 case "Key":
@@ -122,7 +131,7 @@ public class Control1 : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        _helthPlayer -= damage;
+        _helthPlayer = Mathf.Clamp(_helthPlayer - damage, 0, _maxHelth);
         Helth.text = $"Helth: {_helthPlayer}";
     }
 
