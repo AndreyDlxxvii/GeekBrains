@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     {
         //Destroy(MyPlayer.transform.GetChild(0).gameObject);
         MyPlayer.transform.GetChild(0).gameObject.SetActive(false);
+        MyPlayer.transform.GetChild(1).gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().enabled=false;
         MyPlayer.transform.GetChild(0).gameObject.transform.position = new Vector3(0, 0, 0);
         GameOver.gameObject.SetActive(true);
         GameOver.text = "Game Over";

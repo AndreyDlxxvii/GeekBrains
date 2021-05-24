@@ -13,9 +13,13 @@ public class SpawnEnemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        i++;
-        transform.GetComponent<BoxCollider>().center = new Vector3(0, 0, -3f);
-        StartCoroutine("CreateBomb");
+        if (other.CompareTag("Player"))
+        {
+            i++;
+            transform.GetComponent<BoxCollider>().center = new Vector3(0, 0, -3f);
+            StartCoroutine("CreateBomb");
+        }
+        
         if (i>=2)
         {
             StopCoroutine("CreateBomb");

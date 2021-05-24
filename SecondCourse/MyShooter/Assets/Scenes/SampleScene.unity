@@ -1740,7 +1740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
-  JumpForce: 50
+  JumpForce: 3
   Gun: {fileID: 649034585}
   GunPoint: {fileID: 1637221262}
   Bullet: {fileID: 8523168731117612546, guid: 7905ecd9817c90744b7b4c094d839365, type: 3}
@@ -2061,7 +2061,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5549054307570673279, guid: 6e5ebab1fdc6fff499cb86e598d054c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.385519
+      value: 8.078
       objectReference: {fileID: 0}
     - target: {fileID: 5549054307570673279, guid: 6e5ebab1fdc6fff499cb86e598d054c2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2069,7 +2069,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5549054307570673279, guid: 6e5ebab1fdc6fff499cb86e598d054c2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.843306
+      value: 11.636
       objectReference: {fileID: 0}
     - target: {fileID: 5549054307570673279, guid: 6e5ebab1fdc6fff499cb86e598d054c2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3536,7 +3536,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5549054307570673279, guid: 6e5ebab1fdc6fff499cb86e598d054c2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.455
+      value: 7.464
       objectReference: {fileID: 0}
     - target: {fileID: 5549054307570673279, guid: 6e5ebab1fdc6fff499cb86e598d054c2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -25231,7 +25231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5017598435958690530, guid: 6283d8998e16163418672d2fe84d6d6a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.48
+      value: 7.436
       objectReference: {fileID: 0}
     - target: {fileID: 5017598435958690530, guid: 6283d8998e16163418672d2fe84d6d6a, type: 3}
       propertyPath: m_LocalRotation.w

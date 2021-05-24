@@ -78,7 +78,8 @@ public class Control1 : MonoBehaviour, ITakeDamage
     {
         if (Input.GetAxis("Jump") > 0 && _countCheckGround>0)
         {
-           _rb.AddForce(Vector3.up.normalized * JumpForce);
+           //_rb.AddForce(Vector3.up.normalized * JumpForce);
+           _rb.velocity = Vector3.up * JumpForce;
         }
     }
     
