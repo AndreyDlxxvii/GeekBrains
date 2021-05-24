@@ -28,7 +28,6 @@ public class Enemy : MonoBehaviour, ITakeDamage
         Target = GameObject.FindWithTag("Player").GetComponent<Transform>();
         _navMesh = GetComponent<NavMeshAgent>();
         _transformGun = transform.GetChild(1);
-        print(WayPoint.Length);
     }
 
     private void Start()
@@ -46,7 +45,7 @@ public class Enemy : MonoBehaviour, ITakeDamage
     {
         if (_navMesh.remainingDistance<_navMesh.stoppingDistance)
         {
-            _navMesh.SetDestination(WayPoint[Random.Range(0, WayPoint.Length-1)].position);
+            _navMesh.SetDestination(WayPoint[Random.Range(0, WayPoint.Length)].position);
             // _currentWayPoint = (_currentWayPoint + 1) % WayPoint.Length;
             // _navMesh.SetDestination(WayPoint[_currentWayPoint].position);
         }

@@ -40,7 +40,7 @@ public class Control1 : MonoBehaviour, ITakeDamage
 
     void Start()
     {
-        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;
         _rb = GetComponent<Rigidbody>();
     }
 
@@ -96,7 +96,7 @@ public class Control1 : MonoBehaviour, ITakeDamage
         if (Input.GetButtonDown("Fire2")&&_reloadTime>3f)
         {
             var t = Instantiate(Mine, GunPoint.position, Gun.rotation);
-            t.GetComponent<Rigidbody>().AddForce(t.transform.forward*1f);
+            t.GetComponent<Rigidbody>().AddForce(t.transform.forward.normalized*3f);
             _reloadTime = 0f;
         }
     }
@@ -104,7 +104,6 @@ public class Control1 : MonoBehaviour, ITakeDamage
     void OnCollisionEnter (Collision collision)
     {
         var temp = collision.gameObject.tag;
-        print(collision.gameObject.tag);
             switch (temp)
             {
                 case "Ground":

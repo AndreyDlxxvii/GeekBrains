@@ -11,15 +11,6 @@ public class SpawnEnemy : MonoBehaviour
     private float _timer;
     private int i = 0;
 
-    // private void CreateEnemyBomb()
-    // {
-    //     _timer += Time.deltaTime;
-    //     if (Flag&&_timer>1f)
-    //     {
-    //         Instantiate(EnemyBomb, transform.position, transform.rotation);
-    //     }
-    // }
-
     private void OnTriggerEnter(Collider other)
     {
         i++;
@@ -38,7 +29,7 @@ public class SpawnEnemy : MonoBehaviour
         while (Flag)
         {
             Instantiate(EnemyBomb, transform.position, transform.rotation);
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(2f);
         }
 
 
