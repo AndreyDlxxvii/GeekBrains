@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public class Control1 : MonoBehaviour, ITakeDamage
 {
     public float Speed = 5f;
-    public float JumpForce = 100f;
+    public float JumpForce = 1f;
     public Transform Gun;
     public Transform GunPoint;
     public GameObject Bullet;
@@ -20,9 +20,6 @@ public class Control1 : MonoBehaviour, ITakeDamage
     public bool KeyIsUp;
     public GameObject Mine;
 
-    // public GameObject Cube;
-    // public RaycastHit hit;
-    
     private bool _isGrounded;
     private Rigidbody _rb;
     private byte _countCheckGround;
@@ -30,9 +27,11 @@ public class Control1 : MonoBehaviour, ITakeDamage
     private int _helthPlayer = 100;
     private int _maxHelth = 100;
     private float _reloadTime;
+    private GameManager _gameManager;
     
     private void Awake()
     {
+        _gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         Helth.text = $"Helth: {_helthPlayer}";
         Ammo.text = $"Ammo: {_countOfShell}";
     }
@@ -69,14 +68,17 @@ public class Control1 : MonoBehaviour, ITakeDamage
         float moveVertical = Input.GetAxis("Vertical");
         _rb.AddForce(Gun.forward*Speed*moveVertical);
         _rb.AddForce(Gun.right*Speed*moveHorizontal);
+        if (transform.position.y<-1f)
+        {
+            _gameManager.EndOfGame();
+        }
     }
 
     private void Jump()
     {
         if (Input.GetAxis("Jump") > 0 && _countCheckGround>0)
         {
-            _rb.velocity = Vector3.up * JumpForce;
-            //_rb.AddForce(Vector3.up * JumpForce);
+           _rb.AddForce(Vector3.up.normalized * JumpForce);
         }
     }
     
@@ -132,6 +134,10 @@ public class Control1 : MonoBehaviour, ITakeDamage
     {
         _helthPlayer = Mathf.Clamp(_helthPlayer - damage, 0, _maxHelth);
         Helth.text = $"Helth: {_helthPlayer}";
+        if (_helthPlayer<=0)
+        {
+            _gameManager.EndOfGame();
+        }
     }
 
     public void HealPlayer(int heal)

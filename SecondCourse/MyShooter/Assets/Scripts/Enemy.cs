@@ -53,7 +53,7 @@ public class Enemy : MonoBehaviour, ITakeDamage
 
     private void RotateToTarget()
     {
-        if (Vector3.Distance(transform.position, Target.position) < MinDistance )
+        if (Vector3.Distance(transform.position, Target.position) < MinDistance && Target!=null)
         {
             Vector3 vect = Target.position - transform.position;
             Vector3 newDict = Vector3.RotateTowards(transform.forward, vect, Speed * Time.deltaTime, 0f);

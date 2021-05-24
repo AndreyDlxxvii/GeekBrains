@@ -11,6 +11,7 @@ TagManager:
   - Aid
   - Key
   - BulletEnemy
+  - GameManager
   layers:
   - Default
   - TransparentFX
