@@ -11,20 +11,15 @@ public class SpawnEnemy : MonoBehaviour
     private float _timer;
     private int i = 0;
 
-    // private void CreateEnemyBomb()
-    // {
-    //     _timer += Time.deltaTime;
-    //     if (Flag&&_timer>1f)
-    //     {
-    //         Instantiate(EnemyBomb, transform.position, transform.rotation);
-    //     }
-    // }
-
     private void OnTriggerEnter(Collider other)
     {
-        i++;
-        transform.GetComponent<BoxCollider>().center = new Vector3(0, 0, -3f);
-        StartCoroutine("CreateBomb");
+        if (other.CompareTag("Player"))
+        {
+            i++;
+            transform.GetComponent<BoxCollider>().center = new Vector3(0, 0, -3f);
+            StartCoroutine("CreateBomb");
+        }
+        
         if (i>=2)
         {
             StopCoroutine("CreateBomb");
@@ -38,7 +33,7 @@ public class SpawnEnemy : MonoBehaviour
         while (Flag)
         {
             Instantiate(EnemyBomb, transform.position, transform.rotation);
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(2f);
         }
 
 

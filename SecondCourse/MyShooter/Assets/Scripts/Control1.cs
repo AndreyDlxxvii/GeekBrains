@@ -7,10 +7,10 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class Control1 : MonoBehaviour
+public class Control1 : MonoBehaviour, ITakeDamage
 {
     public float Speed = 5f;
-    public float JumpForce = 100f;
+    public float JumpForce = 1f;
     public Transform Gun;
     public Transform GunPoint;
     public GameObject Bullet;
@@ -18,19 +18,20 @@ public class Control1 : MonoBehaviour
     public Text Helth;
     public Text Ammo;
     public bool KeyIsUp;
+    public GameObject Mine;
 
-    // public GameObject Cube;
-    // public RaycastHit hit;
-    
     private bool _isGrounded;
     private Rigidbody _rb;
     private byte _countCheckGround;
     private int _countOfShell = 30;
     private int _helthPlayer = 100;
     private int _maxHelth = 100;
-
+    private float _reloadTime;
+    private GameManager _gameManager;
+    
     private void Awake()
     {
+        _gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         Helth.text = $"Helth: {_helthPlayer}";
         Ammo.text = $"Ammo: {_countOfShell}";
     }
@@ -38,7 +39,7 @@ public class Control1 : MonoBehaviour
 
     void Start()
     {
-        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;
         _rb = GetComponent<Rigidbody>();
     }
 
@@ -46,21 +47,20 @@ public class Control1 : MonoBehaviour
     {
         RotateGun();
         Fire();
+        InstalMine();
     }
-    
+
     void FixedUpdate()
     {
         Jump();
         Movement();
-        
-    }
+   }
 
     private void RotateGun()
     {
         var position = transform.position;
         Gun.transform.position = new Vector3(position.x, position.y, position.z);
         Gun.Rotate(0, Input.GetAxis("Mouse X") * Sensitivity, 0);
-        //Gun.eulerAngles = new Vector3(Gun.rotation.eulerAngles.x, Gun.rotation.eulerAngles.y, 0);
     }
     private void Movement()
     {
@@ -68,28 +68,39 @@ public class Control1 : MonoBehaviour
         float moveVertical = Input.GetAxis("Vertical");
         _rb.AddForce(Gun.forward*Speed*moveVertical);
         _rb.AddForce(Gun.right*Speed*moveHorizontal);
+        if (transform.position.y<-1f)
+        {
+            _gameManager.EndOfGame();
+        }
     }
 
     private void Jump()
     {
         if (Input.GetAxis("Jump") > 0 && _countCheckGround>0)
         {
-            _rb.velocity = Vector3.up * JumpForce;
-            //_rb.AddForce(Vector3.up * JumpForce);
+           //_rb.AddForce(Vector3.up.normalized * JumpForce);
+           _rb.velocity = Vector3.up * JumpForce;
         }
     }
     
     private void Fire()
     {
-        //Debug.DrawRay(GunPoint.position, Gun.forward * 1000f, Color.black);
-        // Ray ray = new Ray(GunPoint.position, Gun.forward);
-        // Physics.Raycast(ray,out hit);
-        // Cube.GetComponent<Transform>().position = new Vector3(hit.point.x, 0, hit.point.z);
         if (Input.GetButtonDown("Fire1") && _countOfShell!=0)
         {
             Instantiate(Bullet, GunPoint.position, Gun.rotation);
             _countOfShell--;
             Ammo.text = $"Ammo: {_countOfShell}";
+        }
+    }
+    
+    private void InstalMine()
+    {
+        _reloadTime += Time.deltaTime;
+        if (Input.GetButtonDown("Fire2")&&_reloadTime>3f)
+        {
+            var t = Instantiate(Mine, GunPoint.position, Gun.rotation);
+            t.GetComponent<Rigidbody>().AddForce(t.transform.forward.normalized*3f);
+            _reloadTime = 0f;
         }
     }
     
@@ -111,7 +122,7 @@ public class Control1 : MonoBehaviour
                 case "Aid":
                     HealPlayer(10);
                     break;
-                case "Bullet":
+                case "BulletEnemy":
                     TakeDamage(5);
                     break;
                 case "Key":
@@ -122,8 +133,12 @@ public class Control1 : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        _helthPlayer -= damage;
+        _helthPlayer = Mathf.Clamp(_helthPlayer - damage, 0, _maxHelth);
         Helth.text = $"Helth: {_helthPlayer}";
+        if (_helthPlayer<=0)
+        {
+            _gameManager.EndOfGame();
+        }
     }
 
     public void HealPlayer(int heal)

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Turel : MonoBehaviour
+public class Turel : MonoBehaviour, ITakeDamage
 {
    
     public float Speed = 5f;
@@ -15,6 +15,7 @@ public class Turel : MonoBehaviour
     private Transform _transformTower;
     private Transform _transformGun;
     private Transform Target;
+    private int _helthEnemy = 10;
     
     private void Awake()
     {
@@ -51,6 +52,16 @@ public class Turel : MonoBehaviour
         {
             Destroy(gameObject);
             _secondDoor.Increase();
+        }
+    }
+    
+    public void TakeDamage(int damage)
+    {
+        _helthEnemy -= damage;
+
+        if (_helthEnemy<=0)
+        {
+            Destroy(gameObject);
         }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, ITakeDamage
 {
    
     public float Speed = 5f;
@@ -20,6 +20,7 @@ public class Enemy : MonoBehaviour
     private Transform Target;
     private NavMeshAgent _navMesh;
     private int _currentWayPoint;
+    private int _helthEnemy = 10;
     
     private void Awake()
     {
@@ -52,7 +53,7 @@ public class Enemy : MonoBehaviour
 
     private void RotateToTarget()
     {
-        if (Vector3.Distance(transform.position, Target.position) < MinDistance )
+        if (Vector3.Distance(transform.position, Target.position) < MinDistance && Target!=null)
         {
             Vector3 vect = Target.position - transform.position;
             Vector3 newDict = Vector3.RotateTowards(transform.forward, vect, Speed * Time.deltaTime, 0f);
@@ -70,8 +71,18 @@ public class Enemy : MonoBehaviour
     {
             if (other.gameObject.CompareTag("Bullet"))
         {
-            Destroy(gameObject);
+            TakeDamage(10);
             _secondDoor.Increase();
+        }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        _helthEnemy -= damage;
+
+        if (_helthEnemy<=0)
+        {
+            Destroy(gameObject);
         }
     }
 }

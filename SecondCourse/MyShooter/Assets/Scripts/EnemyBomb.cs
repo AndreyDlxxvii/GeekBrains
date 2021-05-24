@@ -8,25 +8,17 @@ using Random = UnityEngine.Random;
 public class EnemyBomb : MonoBehaviour
 {
    
-    //public float Speed = 5f;
-    public float MinDistance = 2f;
-    public GameObject Bullet;
+    public float MinDistance = 1f;
     public Transform [] WayPoint;
 
-    private OpenSecondDoor _secondDoor;
-    private float _timer;
-    private Transform _transformTower;
-    private Transform _transformGun;
-    private GameObject Target;
+    private GameObject _target;
     private NavMeshAgent _navMesh;
     private int _currentWayPoint;
     
     private void Awake()
     {
-        _secondDoor = GameObject.Find("SecondDoor").GetComponent<OpenSecondDoor>();
-        Target = GameObject.FindWithTag("Player");
-        _navMesh = GetComponent<NavMeshAgent>();
-        // _transformGun = transform.GetChild(1);
+       _target = GameObject.FindWithTag("Player");
+       _navMesh = GetComponent<NavMeshAgent>();
     }
 
     private void Start()
@@ -36,35 +28,23 @@ public class EnemyBomb : MonoBehaviour
 
     void Update()
     {
-        //RotateToTarget();
         WalkOnWayPoint();
     }
 
     private void WalkOnWayPoint()
     {
-        if (_navMesh.remainingDistance<_navMesh.stoppingDistance)
+        var q = WayPoint.Length;
+        if (_navMesh.remainingDistance < _navMesh.stoppingDistance)
         {
             _navMesh.SetDestination(WayPoint[Random.Range(0, WayPoint.Length)].position);
-            // _currentWayPoint = (_currentWayPoint + 1) % WayPoint.Length;
-            // _navMesh.SetDestination(WayPoint[_currentWayPoint].position);
         }
-
-        else if (Vector3.Distance(transform.position, Target.transform.position) < MinDistance)
+        else if (Vector3.Distance(transform.position, _target.transform.position) < MinDistance)
         {
-            _navMesh.SetDestination(Target.transform.position);
+            _navMesh.SetDestination(_target.transform.position);
         }
     }
 
-    // private void RotateToTarget()
-    // {
-    //     if (Vector3.Distance(transform.position, Target.position) < MinDistance )
-    //     {
-    //         Vector3 vect = Target.position - transform.position;
-    //         Vector3 newDict = Vector3.RotateTowards(transform.forward, vect, Speed * Time.deltaTime, 0f);
-    //         transform.rotation = Quaternion.LookRotation(newDict);
-    //     }
-    // }
-
+   
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Bullet"))
@@ -74,7 +54,7 @@ public class EnemyBomb : MonoBehaviour
 
         else if (other.gameObject.CompareTag("Player"))
         {
-            Target.GetComponent<Control1>().TakeDamage(10);
+            _target.GetComponent<ITakeDamage>().TakeDamage(10);
             Destroy(gameObject);
         }
     }

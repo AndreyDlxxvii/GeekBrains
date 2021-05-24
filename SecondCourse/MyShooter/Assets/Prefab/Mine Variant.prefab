@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8272510458708400750
+--- !u!114 &589356389144875293
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3076384573027005401}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4987627e83a51f445b6c029e25e058d8, type: 3}
+  m_Script: {fileID: 11500000, guid: acc2de05d85cf104c829c0dc79b3ce35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &4362105601835619591
@@ -19,9 +19,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -968647741636357043, guid: 62e55e9b15fc7284dae83fa662225597, type: 3}
+      propertyPath: m_Mass
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 1601254615198951130, guid: 62e55e9b15fc7284dae83fa662225597, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1601254615198951130, guid: 62e55e9b15fc7284dae83fa662225597, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1601254615198951130, guid: 62e55e9b15fc7284dae83fa662225597, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1601254615198951130, guid: 62e55e9b15fc7284dae83fa662225597, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1601254615198951130, guid: 62e55e9b15fc7284dae83fa662225597, type: 3}
       propertyPath: m_LocalPosition.x
@@ -73,9 +89,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1601254615198951134, guid: 62e55e9b15fc7284dae83fa662225597, type: 3}
       propertyPath: m_TagString
-      value: Mine
+      value: Untagged
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1601254615198951135, guid: 62e55e9b15fc7284dae83fa662225597, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 315132722512750255, guid: 62e55e9b15fc7284dae83fa662225597, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 62e55e9b15fc7284dae83fa662225597, type: 3}
 --- !u!1 &3076384573027005401 stripped
 GameObject:
