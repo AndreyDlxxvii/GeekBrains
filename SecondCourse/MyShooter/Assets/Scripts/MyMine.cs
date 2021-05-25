@@ -17,7 +17,7 @@ public class MyMine : MonoBehaviour
         {
             if (ell.GetComponent<Rigidbody>()!=null && Vector3.Distance(transform.position,ell.transform.position)<3f)
             {
-                ell.GetComponent<Rigidbody>().AddForce((ell.transform.position-transform.position)*200f);
+                ell.GetComponent<Rigidbody>().AddForce((ell.transform.position.normalized-transform.position.normalized)*2f, ForceMode.Impulse);
                 if (ell.GetComponent<ITakeDamage>() != null)
                 {
                     ell.GetComponent<ITakeDamage>().TakeDamage(10);
