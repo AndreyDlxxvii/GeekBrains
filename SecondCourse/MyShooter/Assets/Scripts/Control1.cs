@@ -19,7 +19,7 @@ public class Control1 : MonoBehaviour, ITakeDamage
     public Text Ammo;
     public bool KeyIsUp;
     public GameObject Mine;
-
+    
     private bool _isGrounded;
     private Rigidbody _rb;
     private byte _countCheckGround;
@@ -28,12 +28,14 @@ public class Control1 : MonoBehaviour, ITakeDamage
     private int _maxHelth = 100;
     private float _reloadTime;
     private GameManager _gameManager;
+    private float _jumpTime;
     
     private void Awake()
     {
         _gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         Helth.text = $"Helth: {_helthPlayer}";
         Ammo.text = $"Ammo: {_countOfShell}";
+        
     }
 
 
@@ -76,10 +78,18 @@ public class Control1 : MonoBehaviour, ITakeDamage
 
     private void Jump()
     {
-        if (Input.GetAxis("Jump") > 0 && _countCheckGround>0)
+        if (Input.GetKey(KeyCode.Space) && _countCheckGround>0)
         {
-           //_rb.AddForce(Vector3.up.normalized * JumpForce);
-           _rb.velocity = Vector3.up * JumpForce;
+            if ((_jumpTime +=Time.fixedDeltaTime) > 2f)
+            {
+                _rb.velocity = Vector3.up * JumpForce * 2f;
+                _jumpTime = 0f;
+            }
+            // else
+            // {
+            //     _rb.velocity = Vector3.up * JumpForce;
+            //     _jumpTime = 0f;
+            // }
         }
     }
     

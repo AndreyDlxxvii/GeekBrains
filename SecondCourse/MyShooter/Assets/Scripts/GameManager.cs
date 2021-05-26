@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -10,8 +12,11 @@ public class GameManager : MonoBehaviour
     public GameObject MyPlayer;
     public Text GameOver;
     public Button RestartButton;
-    
-    // Start is called before the first frame update
+    public Animator Road;
+    public Animator SecondDoor;
+   
+    private int _count = 0;
+
 
     public void EndOfGame()
     {
@@ -31,4 +36,22 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void IncreaceScore()
+    {
+        _count++;
+        CheckCount();
+    }
+
+    private void CheckCount()
+    {
+        switch (_count)
+        {
+            case 1:
+                Road.SetBool("Road", true);
+                break;
+            case 5:
+                SecondDoor.SetBool("DoorOpen", true);
+                break;
+        }
+    }
 }

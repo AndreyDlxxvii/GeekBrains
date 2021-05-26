@@ -10,22 +10,35 @@ public class DoorMove : MonoBehaviour
  
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("OpenDoor"))
         {
-            _flag = true;
+            if (Door.transform.position.x>-1f)
+            {
+                _flag = true;
+            }
         }
     }
-    
-    void Update()
+
+    private void OnTriggerExit(Collider other)
     {
-        if (_flag) DoorOpen();
+        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("OpenDoor"))
+        {
+            if (Door.transform.position.x<0f)
+            {
+                _flag = false;
+            }
+        }
     }
 
-    private void DoorOpen()
+    private void Update()
     {
-        if (Door.transform.position.x>-1f)
+        if (_flag && Door.transform.position.x>-1f)
         {
             Door.Translate(Vector3.left*Time.deltaTime);
+        }
+        else if (!_flag && Door.transform.position.x < 0f)
+        {
+            Door.Translate(Vector3.right*Time.deltaTime);
         }
     }
 }

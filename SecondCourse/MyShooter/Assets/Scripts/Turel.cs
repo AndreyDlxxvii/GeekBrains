@@ -9,13 +9,14 @@ public class Turel : MonoBehaviour, ITakeDamage
     public float Speed = 5f;
     public float MinDistance = 10f;
     public GameObject Bullet;
-
+    
     private OpenSecondDoor _secondDoor;
     private float _timer;
     private Transform _transformTower;
     private Transform _transformGun;
     private Transform Target;
     private int _helthEnemy = 10;
+    private GameManager _GM;
     
     private void Awake()
     {
@@ -23,6 +24,7 @@ public class Turel : MonoBehaviour, ITakeDamage
         _transformGun = _transformTower.GetChild(1);
         _secondDoor = GameObject.Find("SecondDoor").GetComponent<OpenSecondDoor>();
         Target = GameObject.FindWithTag("Player").GetComponent<Transform>();
+        _GM = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
     }
 
     void Update()
@@ -51,7 +53,8 @@ public class Turel : MonoBehaviour, ITakeDamage
             if (other.gameObject.CompareTag("Bullet"))
         {
             Destroy(gameObject);
-            _secondDoor.Increase();
+            _GM.IncreaceScore();
+            //_secondDoor.Increase();
         }
     }
     

@@ -6,9 +6,10 @@ using UnityEngine;
 public class OpenSecondDoor : MonoBehaviour
 {
     private int _count = 0;
-    
+
     void Update()
     {
+        
         if (_count>7)
         {
             if (transform.position.x>-1f)

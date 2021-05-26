@@ -12,6 +12,7 @@ TagManager:
   - Key
   - BulletEnemy
   - GameManager
+  - OpenDoor
   layers:
   - Default
   - TransparentFX
