@@ -33,15 +33,15 @@ public class EnemyBomb : MonoBehaviour
 
     private void WalkOnWayPoint()
     {
-        var q = WayPoint.Length;
-        if (_navMesh.remainingDistance < _navMesh.stoppingDistance)
-        {
-            _navMesh.SetDestination(WayPoint[Random.Range(0, WayPoint.Length)].position);
-        }
-        else if (Vector3.Distance(transform.position, _target.transform.position) < MinDistance)
+        if (Vector3.Distance(transform.position, _target.transform.position) < MinDistance)
         {
             _navMesh.SetDestination(_target.transform.position);
         }
+        else if (_navMesh.remainingDistance < _navMesh.stoppingDistance)
+        {
+            _navMesh.SetDestination(WayPoint[Random.Range(0, WayPoint.Length)].position);
+        }
+
     }
 
    
