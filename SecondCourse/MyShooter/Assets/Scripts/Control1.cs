@@ -56,11 +56,11 @@ public class Control1 : MonoBehaviour, ITakeDamage
         Fire();
         InstalMine();
         PickUpImmortalBonus();
+        Jump();
     }
     
     void FixedUpdate()
     {
-        Jump();
         Movement();
     }
 
@@ -78,53 +78,25 @@ public class Control1 : MonoBehaviour, ITakeDamage
         _rb.AddForce(Gun.right*Speed*moveHorizontal);
         if (transform.position.y<-1f)
         {
-            _gameManager.EndOfGame();
+            _gameManager.EndOfGame(false);
         }
     }
 
     private void Jump()
     {
-            if (Input.GetKey(KeyCode.Space) && _countCheckGround>0)
-            {
-                if ((_jumpTime+=Time.fixedDeltaTime)>1f)
-                {
-                    _jumpTime = 0f;
-                }
-            }
-            
-        // if (Input.GetAxis("Jump")>0)
-        // {
-        //     if (_countCheckGround>0)
-        //     {
-        //         _isGrounded = true;
-        //     }
-        //     else _isGrounded = false;
-        // }
-        //
-        // if (_isGrounded)
-        // {
-        //     if ((_jumpTime +=Time.fixedDeltaTime)>1f)
-        //     {
-        //         _rb.velocity = Vector3.up * JumpForce * 1.5f;
-        //     }
-        //     else
-        //     {
-        //         _rb.velocity = Vector3.up * JumpForce;
-        //     }
-        // }
-        // if (Input.GetKey(KeyCode.Space) && _countCheckGround>0)
-        // {
-        //     if ((_jumpTime +=Time.fixedDeltaTime) > 2f)
-        //     {
-        //         _rb.velocity = Vector3.up * JumpForce * 2f;
-        //         _jumpTime = 0f;
-        //     }
-        //     // else
-        //     // {
-        //     //     _rb.velocity = Vector3.up * JumpForce;
-        //     //     _jumpTime = 0f;
-        //     // }
-        //}
+         if (Input.GetKey(KeyCode.Space) && _countCheckGround>0)
+         {
+             if ((_jumpTime +=Time.fixedDeltaTime) > 1f)
+             {
+                 _rb.velocity = Vector3.up * JumpForce * 2f;
+                 _jumpTime = 0f;
+             }
+         }
+         else if (Input.GetKeyUp(KeyCode.Space) && _countCheckGround>0)
+         {
+             _rb.velocity = Vector3.up * JumpForce;
+             _jumpTime = 0f;
+         }
     }
     
     private void Fire()
@@ -191,7 +163,7 @@ public class Control1 : MonoBehaviour, ITakeDamage
         Helth.text = $"Helth: {_helthPlayer}";
         if (_helthPlayer<=0)
         {
-            _gameManager.EndOfGame();
+            _gameManager.EndOfGame(false);
         }
     }
 
