@@ -10,6 +10,7 @@ public class EnemyBomb : MonoBehaviour
    
     public float MinDistance = 1f;
     public Transform [] WayPoint;
+    public GameObject[] Bonus;
 
     private GameObject _target;
     private NavMeshAgent _navMesh;
@@ -49,6 +50,7 @@ public class EnemyBomb : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Bullet"))
         {
+            Instantiate(Bonus[Random.Range(0, Bonus.Length)], transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
 
