@@ -13,6 +13,8 @@ TagManager:
   - BulletEnemy
   - GameManager
   - OpenDoor
+  - Immortal
+  - InfiniteAmmo
   layers:
   - Default
   - TransparentFX

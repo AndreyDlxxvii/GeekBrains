@@ -19,6 +19,7 @@ public class Control1 : MonoBehaviour, ITakeDamage
     public Text Ammo;
     public bool KeyIsUp;
     public GameObject Mine;
+    public Animator Heart;
     
     private bool _isGrounded;
     private Rigidbody _rb;
@@ -29,7 +30,11 @@ public class Control1 : MonoBehaviour, ITakeDamage
     private float _reloadTime;
     private GameManager _gameManager;
     private float _jumpTime;
-    
+    private bool _jumpFlag;
+    private float _time;
+    private bool _immortal;
+    private bool _infinAmmo;
+
     private void Awake()
     {
         _gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
@@ -50,13 +55,14 @@ public class Control1 : MonoBehaviour, ITakeDamage
         RotateGun();
         Fire();
         InstalMine();
+        PickUpImmortalBonus();
     }
-
+    
     void FixedUpdate()
     {
         Jump();
         Movement();
-   }
+    }
 
     private void RotateGun()
     {
@@ -78,19 +84,47 @@ public class Control1 : MonoBehaviour, ITakeDamage
 
     private void Jump()
     {
-        if (Input.GetKey(KeyCode.Space) && _countCheckGround>0)
-        {
-            if ((_jumpTime +=Time.fixedDeltaTime) > 2f)
+            if (Input.GetKey(KeyCode.Space) && _countCheckGround>0)
             {
-                _rb.velocity = Vector3.up * JumpForce * 2f;
-                _jumpTime = 0f;
+                if ((_jumpTime+=Time.fixedDeltaTime)>1f)
+                {
+                    _jumpTime = 0f;
+                }
             }
-            // else
-            // {
-            //     _rb.velocity = Vector3.up * JumpForce;
-            //     _jumpTime = 0f;
-            // }
-        }
+            
+        // if (Input.GetAxis("Jump")>0)
+        // {
+        //     if (_countCheckGround>0)
+        //     {
+        //         _isGrounded = true;
+        //     }
+        //     else _isGrounded = false;
+        // }
+        //
+        // if (_isGrounded)
+        // {
+        //     if ((_jumpTime +=Time.fixedDeltaTime)>1f)
+        //     {
+        //         _rb.velocity = Vector3.up * JumpForce * 1.5f;
+        //     }
+        //     else
+        //     {
+        //         _rb.velocity = Vector3.up * JumpForce;
+        //     }
+        // }
+        // if (Input.GetKey(KeyCode.Space) && _countCheckGround>0)
+        // {
+        //     if ((_jumpTime +=Time.fixedDeltaTime) > 2f)
+        //     {
+        //         _rb.velocity = Vector3.up * JumpForce * 2f;
+        //         _jumpTime = 0f;
+        //     }
+        //     // else
+        //     // {
+        //     //     _rb.velocity = Vector3.up * JumpForce;
+        //     //     _jumpTime = 0f;
+        //     // }
+        //}
     }
     
     private void Fire()
@@ -125,18 +159,28 @@ public class Control1 : MonoBehaviour, ITakeDamage
                 case "Ammo":
                     _countOfShell += 5;
                     Ammo.text = $"Ammo: {_countOfShell}";
+                    Heart.Play("TakeAmmo");
                     break;
                 case "Mine":
                     TakeDamage(10);
+                    Heart.Play("TakeDamage");
                     break;
                 case "Aid":
                     HealPlayer(10);
+                    Heart.Play("TakeHeal");
                     break;
                 case "BulletEnemy":
                     TakeDamage(5);
+                    Heart.Play("TakeDamage");
                     break;
                 case "Key":
                     KeyIsUp = true;
+                    break;
+                case "Immortal":
+                    _immortal = true;
+                    break;
+                case "InfiniteAmmo":
+                    _infinAmmo = true;
                     break;
             }
         }
@@ -160,6 +204,25 @@ public class Control1 : MonoBehaviour, ITakeDamage
     {
         if (collision.gameObject.CompareTag("Ground")) _countCheckGround--;
     } 
-    
+    private void PickUpImmortalBonus()
+    {
+        if (_immortal)
+        {
+            _helthPlayer = 100;
+            if ((_time +=Time.deltaTime) > 5f)
+            {
+                _immortal = false;
+            }
+        }
+
+        if (_infinAmmo)
+        {
+            _countOfShell = 30;
+            if ((_time +=Time.deltaTime) > 5f)
+            {
+                _infinAmmo = false;
+            }
+        }
+    }
 }
 

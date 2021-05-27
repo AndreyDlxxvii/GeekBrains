@@ -21,10 +21,12 @@ public class Enemy : MonoBehaviour, ITakeDamage
     private NavMeshAgent _navMesh;
     private int _currentWayPoint;
     private int _helthEnemy = 10;
+    private GameManager _GM;
     
     private void Awake()
     {
-        _secondDoor = GameObject.Find("SecondDoor").GetComponent<OpenSecondDoor>();
+        //_secondDoor = GameObject.Find("SecondDoor").GetComponent<OpenSecondDoor>();
+        _GM = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         Target = GameObject.FindWithTag("Player").GetComponent<Transform>();
         _navMesh = GetComponent<NavMeshAgent>();
         _transformGun = transform.GetChild(1);
@@ -72,7 +74,8 @@ public class Enemy : MonoBehaviour, ITakeDamage
             if (other.gameObject.CompareTag("Bullet"))
         {
             TakeDamage(10);
-            _secondDoor.Increase();
+            _GM.IncreaceScore();
+            //_secondDoor.Increase();
         }
     }
 
