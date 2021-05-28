@@ -7,33 +7,26 @@ using Random = UnityEngine.Random;
 
 public class Boss : MonoBehaviour, ITakeDamage
 {
-   
-    public float Speed = 5f;
     public float MinDistance = 10f;
     public GameObject Bullet;
     public Transform [] WayPoint;
     public GameObject EnemyBomb;
-
-    private OpenSecondDoor _secondDoor;
+    
     private float _timer;
-    private Transform _transformTower;
     private Transform _transformGun;
     private Transform Target;
     private NavMeshAgent _navMesh;
     private int _currentWayPoint;
     private int _helthEnemy = 200;
-    private GameManager _GM;
     private bool _flag;
-    private GameManager _gameManager;
+    private GameManager _GM;
     
     private void Awake()
     {
-        //_secondDoor = GameObject.Find("SecondDoor").GetComponent<OpenSecondDoor>();
-        _GM = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         Target = GameObject.FindWithTag("Heart").GetComponent<Transform>();
         _navMesh = GetComponent<NavMeshAgent>();
         _transformGun = transform.GetChild(1);    
-        _gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+        _GM = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
     }
 
     private void Start()
@@ -52,8 +45,6 @@ public class Boss : MonoBehaviour, ITakeDamage
         if (_navMesh.remainingDistance<_navMesh.stoppingDistance)
         {
             _navMesh.SetDestination(WayPoint[Random.Range(0, WayPoint.Length)].position);
-            // _currentWayPoint = (_currentWayPoint + 1) % WayPoint.Length;
-            // _navMesh.SetDestination(WayPoint[_currentWayPoint].position);
         }
     }
 
@@ -64,8 +55,6 @@ public class Boss : MonoBehaviour, ITakeDamage
             Vector3 vect = Target.position - transform.position;
             Quaternion quaternion = Quaternion.LookRotation(vect);
             transform.rotation = quaternion;
-            //Vector3 newDict = Vector3.RotateTowards(transform.forward, vect, Speed * Time.deltaTime, 0f);
-            //transform.rotation = Quaternion.LookRotation(newDict);
             _timer += Time.deltaTime;
             if (_timer>0.5)
             {
@@ -78,11 +67,10 @@ public class Boss : MonoBehaviour, ITakeDamage
     private void OnCollisionEnter(Collision other)
     {
             if (other.gameObject.CompareTag("Bullet"))
-        {
-            TakeDamage(10);
-            _GM.IncreaceScore();
-            //_secondDoor.Increase();
-        }
+            {
+                TakeDamage(10);
+                _GM.IncreaceScore();
+            }
     }
 
     public void TakeDamage(int damage)
@@ -99,13 +87,12 @@ public class Boss : MonoBehaviour, ITakeDamage
             {
                 Instantiate(EnemyBomb, WayPoint[i].position, Quaternion.identity);
             }
-
             _flag = false;
         }
 
         else if (_helthEnemy<=0)
         {
-            _gameManager.EndOfGame(true);
+            _GM.EndOfGame(true);
             Destroy(gameObject);
         }
     }
