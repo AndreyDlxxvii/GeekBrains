@@ -13,7 +13,6 @@ public class BulletShot : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.forward * Time.deltaTime * 10);
-        
         Destroy(gameObject, 2f);
     }
 }

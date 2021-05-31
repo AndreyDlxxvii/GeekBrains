@@ -30,7 +30,6 @@ public class Control1 : MonoBehaviour, ITakeDamage
     private float _reloadTime;
     private GameManager _gameManager;
     private float _jumpTime;
-    private bool _jumpFlag;
     private float _time;
     private bool _immortal;
     private bool _infinAmmo;

@@ -10,7 +10,7 @@ public class DoorMove : MonoBehaviour
  
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("OpenDoor"))
+        if (other.gameObject.tag!="Untagged")
         {
             if (Door.transform.position.x>-1f)
             {
