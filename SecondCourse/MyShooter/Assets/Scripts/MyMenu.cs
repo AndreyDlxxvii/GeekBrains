@@ -58,16 +58,12 @@ public class MyMenu : MonoBehaviour
     {
         _animator.SetBool("CallMenu", false);
         Cursor.lockState = CursorLockMode.Locked;
-        if (PanelSetting.activeSelf)
-        {
-            PanelSetting.SetActive(false);
-        }
-
         GameResume();
     }
     private void ShowPanelSetting()
     {
-        PanelSetting.SetActive(true);
+        _animator.SetBool("CallMenu", false);
+        _animator.SetBool("CallSettings",true);
     }
 
     private void GamePause()
@@ -88,6 +84,7 @@ public class MyMenu : MonoBehaviour
 
     private void BackMenu()
     {
-        
+        _animator.SetBool("CallSettings",false);
+        _animator.SetBool("CallMenu", true);
     }
 }

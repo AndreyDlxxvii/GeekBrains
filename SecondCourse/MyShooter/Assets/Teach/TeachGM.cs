@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TeachGM : MonoBehaviour
@@ -30,7 +32,8 @@ public class TeachGM : MonoBehaviour
     
     void Start()
     {
-        MyText.text = "Добо пожаловать в обучение.";
+        MyText.text = "Добро пожаловать в обучение.";
+        Hello.text = "Для старта нажмите Е";
         _player = GameObject.FindWithTag("Player").GetComponent<Control1>();
     }
 
@@ -46,7 +49,7 @@ public class TeachGM : MonoBehaviour
         {
             _player.enabled = true;
             Hello.enabled = false;
-            MyText.text = "Управление WASD, прыжки Space";
+            MyText.text = "Управление WASD, прыжки Space, долгое зажатие более высокий прыжок";
             _flag = true;
             StartCoroutine(TeachToPlay());
         }
@@ -66,5 +69,8 @@ public class TeachGM : MonoBehaviour
             yield return new WaitForSeconds(5f);
             GameObjects[i].gameObject.SetActive(false);
         }
+        MyText.enabled = false;
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(1);
     }
 }

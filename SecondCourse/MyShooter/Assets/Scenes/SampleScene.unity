@@ -5188,7 +5188,7 @@ MonoBehaviour:
   btnClose: {fileID: 329421310}
   btnSetting: {fileID: 1460829636}
   btnMute: {fileID: 782222451}
-  btnBack: {fileID: 329421310}
+  btnBack: {fileID: 1455096211}
 --- !u!1001 &360805749
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10229,7 +10229,8 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2219778422851266301, guid: 185207286880b5e44a7940a40f7f409c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 185207286880b5e44a7940a40f7f409c, type: 3}
 --- !u!1001 &749029211
 PrefabInstance:
@@ -14349,8 +14350,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1005132768}
-  m_LocalRotation: {x: 0.1080859, y: -0.0177579, z: -0.0015497161, w: -0.9939817}
-  m_LocalPosition: {x: -37.601006, y: -393.55246, z: -553.42346}
+  m_LocalRotation: {x: -0.34883243, y: -0.22604059, z: -0.0872182, w: 0.9053257}
+  m_LocalPosition: {x: -6.580474, y: -5.369287, z: 11.112637}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 807596729}
@@ -16131,7 +16132,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -9105083017589662836, guid: 0109d8d1cc1f67d41b7a72cbeb9d9463, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0109d8d1cc1f67d41b7a72cbeb9d9463, type: 3}
 --- !u!4 &1122828635 stripped
 Transform:
@@ -17868,8 +17870,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1285046895}
-  m_LocalRotation: {x: 0.1080859, y: -0.0177579, z: -0.0015497161, w: -0.9939817}
-  m_LocalPosition: {x: -37.601006, y: -393.55246, z: -553.42346}
+  m_LocalRotation: {x: -0.34883243, y: -0.22604059, z: -0.0872182, w: 0.9053257}
+  m_LocalPosition: {x: -6.580474, y: -5.369287, z: 11.112637}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 807596729}
@@ -18556,7 +18558,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -9105083017589662836, guid: 0109d8d1cc1f67d41b7a72cbeb9d9463, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0109d8d1cc1f67d41b7a72cbeb9d9463, type: 3}
 --- !u!4 &1335651392 stripped
 Transform:
@@ -24246,8 +24249,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.3, y: 0.8}
-  m_AnchoredPosition: {x: -253, y: 0}
-  m_SizeDelta: {x: 247.32002, y: 334.4}
+  m_AnchoredPosition: {x: -251, y: 0}
+  m_SizeDelta: {x: 246.32002, y: 334.4}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1774425162
 MonoBehaviour:
@@ -25917,7 +25920,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.3, y: 0.8}
-  m_AnchoredPosition: {x: -538, y: 0}
+  m_AnchoredPosition: {x: -253, y: 0}
   m_SizeDelta: {x: 247.31999, y: 334.4}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1894711453
