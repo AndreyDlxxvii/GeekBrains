@@ -34,7 +34,10 @@ public class Enemy : MonoBehaviour, ITakeDamage
 
     private void Start()
     {
-        _navMesh.SetDestination(WayPoint[0].position);
+        if (WayPoint.Length > 0)
+        {
+            _navMesh.SetDestination(WayPoint[0].position);
+        }
     }
 
     void Update()

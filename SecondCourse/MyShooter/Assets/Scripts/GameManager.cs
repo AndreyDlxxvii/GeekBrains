@@ -8,7 +8,6 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    //public Camera MyCam;
     public GameObject MyPlayer;
     public Text GameOver;
     public Button RestartButton;
@@ -32,13 +31,14 @@ public class GameManager : MonoBehaviour
         }
         else GameOver.text = "Winner";
         RestartButton.gameObject.SetActive(true);
+        RestartButton.onClick.AddListener(RestartGameButton);
         Cursor.lockState = CursorLockMode.None;
 
     }
     
     public void RestartGameButton()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     public void IncreaceScore()
