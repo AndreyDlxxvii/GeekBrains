@@ -180,7 +180,7 @@ public class Control1 : MonoBehaviour, ITakeDamage
         if (_immortal)
         {
             _helthPlayer = 100;
-            if ((_time +=Time.deltaTime) > 5f)
+            if ((_time +=Time.deltaTime) > 30f)
             {
                 _immortal = false;
             }
@@ -189,7 +189,7 @@ public class Control1 : MonoBehaviour, ITakeDamage
         if (_infinAmmo)
         {
             _countOfShell = 30;
-            if ((_time +=Time.deltaTime) > 5f)
+            if ((_time +=Time.deltaTime) > 30f)
             {
                 _infinAmmo = false;
             }

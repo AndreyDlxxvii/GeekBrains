@@ -66,7 +66,7 @@ public class Boss : MonoBehaviour, ITakeDamage
 
     private void OnCollisionEnter(Collision other)
     {
-            if (other.gameObject.CompareTag("Bullet"))
+            if (other.gameObject.CompareTag("Bullet") && _GM != null)
             {
                 TakeDamage(10);
                 _GM.IncreaceScore();
@@ -76,7 +76,6 @@ public class Boss : MonoBehaviour, ITakeDamage
     public void TakeDamage(int damage)
     {
         _helthEnemy -= damage;
-        print(_helthEnemy);
         if (_helthEnemy == 100)
         {
             _flag = true;
