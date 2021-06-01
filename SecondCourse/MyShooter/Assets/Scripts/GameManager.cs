@@ -10,17 +10,31 @@ public class GameManager : MonoBehaviour
 {
     public GameObject MyPlayer;
     public Text GameOver;
+    public Text Health;
+    public Text Ammo;
     public Button RestartButton;
     public Animator Road;
     public Animator SecondDoor;
     
-    public bool CheckFinish;
     private int _count = 0;
 
+    private void Update()
+    {
+        SetHealthAndAmmo();
+    }
+
+    private void SetHealthAndAmmo()
+    {
+        if (GameObject.FindWithTag("Player") != null)
+        {
+            Health.text = GameObject.FindWithTag("Player").GetComponent<Control1>().HealthPlayer.ToString();
+            Ammo.text = GameObject.FindWithTag("Player").GetComponent<Control1>().AmmoPlayer.ToString();
+        }
+
+    }
 
     public void EndOfGame(bool _checkEndGame)
     {
-        //Destroy(MyPlayer.transform.GetChild(0).gameObject);
         MyPlayer.transform.GetChild(0).gameObject.SetActive(false);
         MyPlayer.transform.GetChild(1).gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().enabled=false;
         MyPlayer.transform.GetChild(0).gameObject.transform.position = new Vector3(0, 0, 0);
