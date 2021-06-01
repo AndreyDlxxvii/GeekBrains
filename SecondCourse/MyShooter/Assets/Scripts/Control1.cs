@@ -15,16 +15,19 @@ public class Control1 : MonoBehaviour, ITakeDamage
     public Transform GunPoint;
     public GameObject Bullet;
     public float Sensitivity;
-    public Text Helth;
-    public Text Ammo;
+    public int Helth;
+    public int Ammo;
     public bool KeyIsUp;
     public GameObject Mine;
     public Animator Heart;
     
+    public int HealthPlayer { get=>_helthPlayer; private set => _helthPlayer = value; }
+    public int AmmoPlayer { get => _countOfAmmo; private set => _countOfAmmo = value; }
+    
     private bool _isGrounded;
     private Rigidbody _rb;
     private byte _countCheckGround;
-    private int _countOfShell = 30;
+    private int _countOfAmmo = 30;
     private int _helthPlayer = 100;
     private int _maxHelth = 100;
     private float _reloadTime;
@@ -37,9 +40,11 @@ public class Control1 : MonoBehaviour, ITakeDamage
     private void Awake()
     {
         _gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
-        Helth.text = $"Helth: {_helthPlayer}";
-        Ammo.text = $"Ammo: {_countOfShell}";
-        
+        HealthPlayer = _helthPlayer;
+        AmmoPlayer = _countOfAmmo;
+        // Helth.text = $"Helth: {_helthPlayer}";
+        // Ammo.text = $"Ammo: {_countOfShell}";
+
     }
 
 
@@ -87,7 +92,7 @@ public class Control1 : MonoBehaviour, ITakeDamage
          {
              if ((_jumpTime +=Time.fixedDeltaTime) > 1f)
              {
-                 _rb.velocity = Vector3.up * JumpForce * 2f;
+                 _rb.velocity = Vector3.up * JumpForce * 1.2f;
                  _jumpTime = 0f;
              }
          }
@@ -100,11 +105,11 @@ public class Control1 : MonoBehaviour, ITakeDamage
     
     private void Fire()
     {
-        if (Input.GetButtonDown("Fire1") && _countOfShell!=0)
+        if (Input.GetButtonDown("Fire1") && _countOfAmmo!=0)
         {
             Instantiate(Bullet, GunPoint.position, Gun.rotation);
-            _countOfShell--;
-            Ammo.text = $"Ammo: {_countOfShell}";
+            _countOfAmmo--;
+            
         }
     }
     
@@ -128,8 +133,7 @@ public class Control1 : MonoBehaviour, ITakeDamage
                     _countCheckGround++;
                     break;
                 case "Ammo":
-                    _countOfShell += 5;
-                    Ammo.text = $"Ammo: {_countOfShell}";
+                    _countOfAmmo += 5;
                     Heart.Play("TakeAmmo");
                     break;
                 case "Mine":
@@ -159,7 +163,6 @@ public class Control1 : MonoBehaviour, ITakeDamage
     public void TakeDamage(int damage)
     {
         _helthPlayer = Mathf.Clamp(_helthPlayer - damage, 0, _maxHelth);
-        Helth.text = $"Helth: {_helthPlayer}";
         if (_helthPlayer<=0)
         {
             _gameManager.EndOfGame(false);
@@ -169,7 +172,6 @@ public class Control1 : MonoBehaviour, ITakeDamage
     public void HealPlayer(int heal)
     {
         _helthPlayer = Mathf.Clamp(_helthPlayer + heal, 0, _maxHelth);
-        Helth.text = $"Helth: {_helthPlayer}";
     }
     void OnCollisionExit(Collision collision)
     {
@@ -188,7 +190,7 @@ public class Control1 : MonoBehaviour, ITakeDamage
 
         if (_infinAmmo)
         {
-            _countOfShell = 30;
+            _countOfAmmo = 30;
             if ((_time +=Time.deltaTime) > 30f)
             {
                 _infinAmmo = false;

@@ -12,6 +12,8 @@ public class TeachGM : MonoBehaviour
     public Text MyText;
     public Text Hello;
     public GameObject[] GameObjects;
+    public Text Health;
+    public Text Ammo;
     
     private Control1 _player;
     private bool _flag;
@@ -41,6 +43,17 @@ public class TeachGM : MonoBehaviour
     void Update()
     {
         StartTeach();
+        SetHealthAndAmmo();
+    }
+    
+    private void SetHealthAndAmmo()
+    {
+        if (GameObject.FindWithTag("Player") != null)
+        {
+            Health.text = GameObject.FindWithTag("Player").GetComponent<Control1>().HealthPlayer.ToString();
+            Ammo.text = GameObject.FindWithTag("Player").GetComponent<Control1>().AmmoPlayer.ToString();
+        }
+
     }
 
     private void StartTeach()
