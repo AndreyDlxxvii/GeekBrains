@@ -15,8 +15,6 @@ public class Control1 : MonoBehaviour, ITakeDamage
     public Transform GunPoint;
     public GameObject Bullet;
     public float Sensitivity;
-    public int Helth;
-    public int Ammo;
     public bool KeyIsUp;
     public GameObject Mine;
     public Animator Heart;
@@ -36,12 +34,15 @@ public class Control1 : MonoBehaviour, ITakeDamage
     private float _time;
     private bool _immortal;
     private bool _infinAmmo;
+    private AudioSource _shootPlayer;
 
     private void Awake()
     {
         _gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         HealthPlayer = _helthPlayer;
         AmmoPlayer = _countOfAmmo;
+        _shootPlayer = Gun.gameObject.GetComponent<AudioSource>();
+
         // Helth.text = $"Helth: {_helthPlayer}";
         // Ammo.text = $"Ammo: {_countOfShell}";
 
@@ -108,6 +109,7 @@ public class Control1 : MonoBehaviour, ITakeDamage
         if (Input.GetButtonDown("Fire1") && _countOfAmmo!=0)
         {
             Instantiate(Bullet, GunPoint.position, Gun.rotation);
+            _shootPlayer.Play();
             _countOfAmmo--;
             
         }

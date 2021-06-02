@@ -17,6 +17,7 @@ public class Turel : MonoBehaviour, ITakeDamage
     private Transform Target;
     private int _helthEnemy = 10;
     private GameManager _GM;
+    private AudioSource _gunShoot;
     
     private void Awake()
     {
@@ -25,6 +26,7 @@ public class Turel : MonoBehaviour, ITakeDamage
         _secondDoor = GameObject.Find("SecondDoor").GetComponent<OpenSecondDoor>();
         Target = GameObject.FindWithTag("Player").GetComponent<Transform>();
         _GM = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+        _gunShoot = _transformTower.gameObject.GetComponent<AudioSource>();
     }
 
     void Update()
@@ -43,6 +45,7 @@ public class Turel : MonoBehaviour, ITakeDamage
             if (_timer>1)
             {
                 Instantiate(Bullet, _transformGun.position, _transformGun.rotation);
+                _gunShoot.Play();
                 _timer = 0f;
             }
         }
