@@ -18,6 +18,7 @@ public class Turel : MonoBehaviour, ITakeDamage
     private int _helthEnemy = 10;
     private GameManager _GM;
     private AudioSource _gunShoot;
+    private ParticleSystem _particleSystem;
     
     private void Awake()
     {
@@ -27,6 +28,7 @@ public class Turel : MonoBehaviour, ITakeDamage
         Target = GameObject.FindWithTag("Player").GetComponent<Transform>();
         _GM = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         _gunShoot = _transformTower.gameObject.GetComponent<AudioSource>();
+        _particleSystem = GetComponent<ParticleSystem>();
     }
 
     void Update()
@@ -55,9 +57,9 @@ public class Turel : MonoBehaviour, ITakeDamage
     {
             if (other.gameObject.CompareTag("Bullet"))
         {
-            Destroy(gameObject);
+            _particleSystem.Play();
+            //Destroy(gameObject);
             _GM.IncreaceScore();
-            //_secondDoor.Increase();
         }
     }
     
