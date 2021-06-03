@@ -22,6 +22,8 @@ public class Enemy : MonoBehaviour, ITakeDamage
     private int _currentWayPoint;
     private int _helthEnemy = 10;
     private GameManager _GM;
+    private AudioSource _shotAudioSource;
+    private bool _dead;
     
     private void Awake()
     {
@@ -30,6 +32,7 @@ public class Enemy : MonoBehaviour, ITakeDamage
         Target = GameObject.FindWithTag("Player").GetComponent<Transform>();
         _navMesh = GetComponent<NavMeshAgent>();
         _transformGun = transform.GetChild(1);
+        _shotAudioSource = _transformGun.gameObject.GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -51,8 +54,6 @@ public class Enemy : MonoBehaviour, ITakeDamage
         if (_navMesh.remainingDistance<_navMesh.stoppingDistance)
         {
             _navMesh.SetDestination(WayPoint[Random.Range(0, WayPoint.Length)].position);
-            // _currentWayPoint = (_currentWayPoint + 1) % WayPoint.Length;
-            // _navMesh.SetDestination(WayPoint[_currentWayPoint].position);
         }
     }
 
@@ -68,6 +69,7 @@ public class Enemy : MonoBehaviour, ITakeDamage
             {
                 Instantiate(Bullet, _transformGun.position, _transformGun.rotation);
                 _timer = 0f;
+                _shotAudioSource.Play();
             }
         }
     }
@@ -78,7 +80,6 @@ public class Enemy : MonoBehaviour, ITakeDamage
         {
             TakeDamage(10);
             _GM.IncreaceScore();
-            //_secondDoor.Increase();
         }
     }
 
@@ -88,7 +89,8 @@ public class Enemy : MonoBehaviour, ITakeDamage
 
         if (_helthEnemy<=0)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+            Destroy(gameObject, 2f);
         }
     }
 }

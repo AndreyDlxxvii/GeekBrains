@@ -19,6 +19,8 @@ public class Turel : MonoBehaviour, ITakeDamage
     private GameManager _GM;
     private AudioSource _gunShoot;
     private ParticleSystem _particleSystem;
+    private AudioSource _explosionSourse;
+    private bool _dead;
     
     private void Awake()
     {
@@ -29,6 +31,7 @@ public class Turel : MonoBehaviour, ITakeDamage
         _GM = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         _gunShoot = _transformTower.gameObject.GetComponent<AudioSource>();
         _particleSystem = GetComponent<ParticleSystem>();
+        _explosionSourse = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -44,7 +47,7 @@ public class Turel : MonoBehaviour, ITakeDamage
             Vector3 newDict = Vector3.RotateTowards(_transformTower.forward, vect, Speed * Time.deltaTime, 0f);
             _transformTower.rotation = Quaternion.LookRotation(newDict);
             _timer += Time.deltaTime;
-            if (_timer>1)
+            if (_timer>1 && !_dead)
             {
                 Instantiate(Bullet, _transformGun.position, _transformGun.rotation);
                 _gunShoot.Play();
@@ -58,8 +61,12 @@ public class Turel : MonoBehaviour, ITakeDamage
             if (other.gameObject.CompareTag("Bullet"))
         {
             _particleSystem.Play();
-            //Destroy(gameObject);
+            _explosionSourse.Play();
+            transform.GetChild(0).gameObject.SetActive(false);
+            transform.GetChild(1).gameObject.SetActive(false);
             _GM.IncreaceScore();
+            _dead = true;
+            Destroy(gameObject, 2f);
         }
     }
     
