@@ -27,7 +27,6 @@ public class Enemy : MonoBehaviour, ITakeDamage
     
     private void Awake()
     {
-        //_secondDoor = GameObject.Find("SecondDoor").GetComponent<OpenSecondDoor>();
         _GM = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         Target = GameObject.FindWithTag("Player").GetComponent<Transform>();
         _navMesh = GetComponent<NavMeshAgent>();

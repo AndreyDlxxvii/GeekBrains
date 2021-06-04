@@ -42,12 +42,7 @@ public class Control1 : MonoBehaviour, ITakeDamage
         HealthPlayer = _helthPlayer;
         AmmoPlayer = _countOfAmmo;
         _shootPlayer = Gun.gameObject.GetComponent<AudioSource>();
-
-        // Helth.text = $"Helth: {_helthPlayer}";
-        // Ammo.text = $"Ammo: {_countOfShell}";
-
     }
-
 
     void Start()
     {
@@ -75,6 +70,7 @@ public class Control1 : MonoBehaviour, ITakeDamage
         Gun.transform.position = new Vector3(position.x, position.y, position.z);
         Gun.Rotate(0, Input.GetAxis("Mouse X") * Sensitivity, 0);
     }
+    
     private void Movement()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
@@ -111,7 +107,6 @@ public class Control1 : MonoBehaviour, ITakeDamage
             Instantiate(Bullet, GunPoint.position, Gun.rotation);
             _shootPlayer.Play();
             _countOfAmmo--;
-            
         }
     }
     
@@ -175,10 +170,12 @@ public class Control1 : MonoBehaviour, ITakeDamage
     {
         _helthPlayer = Mathf.Clamp(_helthPlayer + heal, 0, _maxHelth);
     }
+    
     void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ground")) _countCheckGround--;
     } 
+    
     private void PickUpImmortalBonus()
     {
         if (_immortal)
