@@ -20,6 +20,7 @@ public class Boss : MonoBehaviour, ITakeDamage
     private int _helthEnemy = 200;
     private bool _flag;
     private GameManager _GM;
+    private AudioSource _gunShoot;
     
     private void Awake()
     {
@@ -27,6 +28,7 @@ public class Boss : MonoBehaviour, ITakeDamage
         _navMesh = GetComponent<NavMeshAgent>();
         _transformGun = transform.GetChild(1);    
         _GM = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+        _gunShoot = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -59,6 +61,7 @@ public class Boss : MonoBehaviour, ITakeDamage
             if (_timer>0.5)
             {
                 Instantiate(Bullet, _transformGun.position, _transformGun.rotation);
+                _gunShoot.Play();
                 _timer = 0f;
             }
         }

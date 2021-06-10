@@ -15,8 +15,6 @@ public class Control1 : MonoBehaviour, ITakeDamage
     public Transform GunPoint;
     public GameObject Bullet;
     public float Sensitivity;
-    public int Helth;
-    public int Ammo;
     public bool KeyIsUp;
     public GameObject Mine;
     public Animator Heart;
@@ -36,17 +34,15 @@ public class Control1 : MonoBehaviour, ITakeDamage
     private float _time;
     private bool _immortal;
     private bool _infinAmmo;
+    private AudioSource _shootPlayer;
 
     private void Awake()
     {
         _gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         HealthPlayer = _helthPlayer;
         AmmoPlayer = _countOfAmmo;
-        // Helth.text = $"Helth: {_helthPlayer}";
-        // Ammo.text = $"Ammo: {_countOfShell}";
-
+        _shootPlayer = Gun.gameObject.GetComponent<AudioSource>();
     }
-
 
     void Start()
     {
@@ -74,6 +70,7 @@ public class Control1 : MonoBehaviour, ITakeDamage
         Gun.transform.position = new Vector3(position.x, position.y, position.z);
         Gun.Rotate(0, Input.GetAxis("Mouse X") * Sensitivity, 0);
     }
+    
     private void Movement()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
@@ -108,8 +105,8 @@ public class Control1 : MonoBehaviour, ITakeDamage
         if (Input.GetButtonDown("Fire1") && _countOfAmmo!=0)
         {
             Instantiate(Bullet, GunPoint.position, Gun.rotation);
+            _shootPlayer.Play();
             _countOfAmmo--;
-            
         }
     }
     
@@ -173,10 +170,12 @@ public class Control1 : MonoBehaviour, ITakeDamage
     {
         _helthPlayer = Mathf.Clamp(_helthPlayer + heal, 0, _maxHelth);
     }
+    
     void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ground")) _countCheckGround--;
     } 
+    
     private void PickUpImmortalBonus()
     {
         if (_immortal)

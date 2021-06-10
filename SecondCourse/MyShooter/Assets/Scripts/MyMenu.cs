@@ -3,26 +3,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MyMenu : MonoBehaviour
 {
-    private Animator _animator;
+    public AudioMixer MasterMixer;
     [SerializeField] private GameObject PanelSetting;
-    
     [SerializeField] private Button btnStart;
     [SerializeField] private Button btnPause;
     [SerializeField] private Button btnClose;
     [SerializeField] private Button btnSetting;
     [SerializeField] private Button btnMute;
     [SerializeField] private Button btnBack;
+    [SerializeField] private Slider sldVolume;
+    
     private Control1 _player;
-   
 
+
+    private float _volume;
     private bool _flag;
     private float _time;
-
+    private Animator _animator;
+    
     private void Awake()
     {
         _animator = GetComponent<Animator>();
@@ -32,6 +36,7 @@ public class MyMenu : MonoBehaviour
         btnPause.onClick.AddListener(GamePause);
         btnMute.onClick.AddListener(MuteMyGame);
         btnBack.onClick.AddListener(BackMenu);
+        sldVolume.onValueChanged.AddListener(SetVolume);
         _player = GameObject.FindWithTag("Player").GetComponent<Control1>();
     }
 
@@ -66,10 +71,26 @@ public class MyMenu : MonoBehaviour
         _animator.SetBool("CallSettings",true);
     }
 
+    private void SetVolume(float value)
+    {
+        _volume = value;
+        MasterMixer.SetFloat("MasterVolume", Mathf.Lerp(-20, 0, _volume));
+    }
+
     private void GamePause()
     {
-        Time.timeScale = 0;
-        _player.enabled = false;
+        if (_flag)
+        {
+            Time.timeScale = 1;
+            _player.enabled = true;
+            _flag = false;
+        }
+        else
+        {
+            Time.timeScale = 0;
+            _player.enabled = false;
+            _flag = true;
+        }
     }
 
     private void StartGame()
