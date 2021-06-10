@@ -134,3 +134,4 @@ Received Import Request.
 Start importing Assets/New Terrain.asset using Guid(0a653ccd606ee044fb0740b488c2aa94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31bc43d796d60249c1e846209814727b') in 0.028327 seconds
   Import took 0.035834 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
