@@ -6,6 +6,7 @@ using UnityEngine;
 public class MyGUI1 : MonoBehaviour
 {
     private float _fps;
+    private int i=100;
     private void OnGUI()
     {
         GUIStyle _style = new GUIStyle(GUI.skin.window);
@@ -13,6 +14,6 @@ public class MyGUI1 : MonoBehaviour
         
         _fps = 1.0f / Time.deltaTime;
         GUILayout.Label("FPS: " + (int)_fps, _style);
-        GUILayout.Label("Hello world", _style);
+        GUILayout.Label($"HP: " + i, _style);
     }
 }
