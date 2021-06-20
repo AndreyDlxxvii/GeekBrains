@@ -18,6 +18,7 @@ public class Control1 : MonoBehaviour, ITakeDamage
     public bool KeyIsUp;
     public GameObject Mine;
     public Animator Heart;
+    public Light GunFlash;
     
     public int HealthPlayer { get=>_helthPlayer; private set => _helthPlayer = value; }
     public int AmmoPlayer { get => _countOfAmmo; private set => _countOfAmmo = value; }
@@ -35,6 +36,7 @@ public class Control1 : MonoBehaviour, ITakeDamage
     private bool _immortal;
     private bool _infinAmmo;
     private AudioSource _shootPlayer;
+    private float lightFlash = 10f;
 
     private void Awake()
     {
@@ -107,6 +109,7 @@ public class Control1 : MonoBehaviour, ITakeDamage
             Instantiate(Bullet, GunPoint.position, Gun.rotation);
             _shootPlayer.Play();
             _countOfAmmo--;
+            StartCoroutine(Flash());
         }
     }
     
@@ -195,6 +198,13 @@ public class Control1 : MonoBehaviour, ITakeDamage
                 _infinAmmo = false;
             }
         }
+    }
+
+    IEnumerator Flash()
+    {
+        GunFlash.intensity = lightFlash;
+        yield return new WaitForSeconds(0.1f);
+        GunFlash.intensity = 0f;
     }
 }
 

@@ -44,9 +44,9 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.7169812, g: 0.5981861, b: 0.12445709, a: 1}
   m_Intensity: 20
-  m_Range: 2.7624543
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_Range: 7
+  m_SpotAngle: 9
+  m_InnerSpotAngle: 9
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -321,6 +321,7 @@ MonoBehaviour:
   KeyIsUp: 0
   Mine: {fileID: 3076384573027005401, guid: 6c0a2456e34432f4aa3928c687f39883, type: 3}
   Heart: {fileID: 7792333765404042933}
+  GunFlash: {fileID: 0}
 --- !u!1 &7792333765404042930
 GameObject:
   m_ObjectHideFlags: 0
