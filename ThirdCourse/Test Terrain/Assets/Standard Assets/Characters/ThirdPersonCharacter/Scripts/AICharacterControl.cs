@@ -34,6 +34,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                 character.Move(Vector3.zero, false, false);
         }
 
+        public void Step()
+        {
+            print("step");
+        }
 
         public void SetTarget(Transform target)
         {
