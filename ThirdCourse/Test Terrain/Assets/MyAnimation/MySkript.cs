@@ -47,7 +47,7 @@ public class MySkript : MonoBehaviour
             _animator.SetBool("Run", true);
             _animator.SetBool("Walk", false);
             _animator.SetBool("Idle", false);
-            _navMesh.speed = 2f;
+            _navMesh.speed = 3f;
             if (_navMesh.remainingDistance<_navMesh.stoppingDistance)
             {
                 _navMesh.SetDestination(WayPoint[Random.Range(0, WayPoint.Length)].position);
