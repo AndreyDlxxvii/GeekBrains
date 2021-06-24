@@ -190,8 +190,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122243381}
-  m_LocalRotation: {x: -0.09376322, y: -0.7489206, z: -0.10863187, w: 0.6469355}
-  m_LocalPosition: {x: 557.7675, y: -79.03162, z: 417.17453}
+  m_LocalRotation: {x: -0.04002634, y: -0.08743294, z: -0.003588192, w: 0.9953595}
+  m_LocalPosition: {x: 557.36365, y: -79.20946, z: 415.61563}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -314,6 +314,11 @@ Transform:
 --- !u!1 &371868217 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+  m_PrefabInstance: {fileID: 1180689434}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &371868222 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
   m_PrefabInstance: {fileID: 1180689434}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &371868223
@@ -2480,6 +2485,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9100000, guid: e2cf68ff4b1ffda45a77f7307dd789b9, type: 2}
     - target: {fileID: 11402594, guid: 54eb5844754051b40a918a84c33b7c1a, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 371868222}
+    - target: {fileID: 11402594, guid: 54eb5844754051b40a918a84c33b7c1a, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -2491,6 +2500,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 19597056, guid: 54eb5844754051b40a918a84c33b7c1a, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1454994216047774010, guid: 54eb5844754051b40a918a84c33b7c1a, type: 3}
       propertyPath: _handObj
       value: 
@@ -2499,6 +2512,10 @@ PrefabInstance:
       propertyPath: _lookObj
       value: 
       objectReference: {fileID: 1691059593}
+    - target: {fileID: 1454994216047774010, guid: 54eb5844754051b40a918a84c33b7c1a, type: 3}
+      propertyPath: _rightHandWeight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8879846536083782623, guid: 54eb5844754051b40a918a84c33b7c1a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 54eb5844754051b40a918a84c33b7c1a, type: 3}

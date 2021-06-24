@@ -5,14 +5,24 @@ using UnityEngine;
 
 public class IKAnimation : MonoBehaviour
 {
+    public LayerMask Mask;
+    
     [SerializeField] private Animator _animatorMy;
     [SerializeField] private Transform _handObj;
     [SerializeField] private Transform _lookObj;
+    [SerializeField] private Transform _rightFoot;
+    
+    [Range(0, 1)] [SerializeField] private float _rightHandWeight;
 
-    [SerializeField] private float _rightHandWeight;
+    [Range(0, 1)] [SerializeField] private float _rightFootWeight;
+
+    private int _rightHash;
+    private Vector3 _rightFootPos;
+    private Quaternion _rightFoorRot;
     void Start()
     {
         _animatorMy = GetComponent<Animator>();
+        _rightHash = Animator.StringToHash("right_foot");
     }
 
     private void OnAnimatorIK(int layerIndex)
