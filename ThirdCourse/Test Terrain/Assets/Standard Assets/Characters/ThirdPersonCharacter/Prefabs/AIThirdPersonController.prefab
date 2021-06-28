@@ -479,6 +479,7 @@ GameObject:
   - component: {fileID: 19597056}
   - component: {fileID: 11402594}
   - component: {fileID: 11450346}
+  - component: {fileID: 3944074931486980131}
   - component: {fileID: 1454994216047774010}
   m_Layer: 0
   m_Name: AIThirdPersonController
@@ -608,6 +609,24 @@ MonoBehaviour:
   m_MoveSpeedMultiplier: 1
   m_AnimSpeedMultiplier: 1
   m_GroundCheckDistance: 0.2
+--- !u!114 &3944074931486980131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18101682e104e6743969b54940f1cd34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RBS: []
+  Colls: []
+  RB: {fileID: 0}
+  _killForce: 5
+  _animator: {fileID: 0}
+  _navMesh: {fileID: 0}
 --- !u!114 &1454994216047774010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -620,6 +639,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 481d25a4929eb8544893e029b6fc8fd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Mask:
+    serializedVersion: 2
+    m_Bits: 0
+  _animatorMy: {fileID: 0}
+  _handObj: {fileID: 0}
+  _lookObj: {fileID: 0}
+  _rightLowerLeg: {fileID: 0}
+  _rightFootT: {fileID: 0}
+  _rightHandWeight: 0
+  _rightFootWeight: 0
 --- !u!1 &113866
 GameObject:
   m_ObjectHideFlags: 0
