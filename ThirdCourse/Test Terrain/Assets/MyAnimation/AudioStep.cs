@@ -6,6 +6,6 @@ public class AudioStep : MonoBehaviour
 {
  public void Step()
  {
-  print("step");
+//  print("step");
  }
 }
