@@ -314,3 +314,12 @@ Received Import Request.
 Start importing Assets/Shipping Container Environment/Demo/Demo_Profiles/Cube Profile.asset using Guid(f1c8f2aa77d44154c99b65fdbf2a4885) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2228e6a146862b9c71c2a82b2b1f9214') in 0.033609 seconds
   Import took 0.038234 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 61385.436939 seconds.
+  path: Assets/Shipping Container Environment/Demo/Demo_Profiles/Cube Profile.asset
+  artifactKey: Guid(f1c8f2aa77d44154c99b65fdbf2a4885) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shipping Container Environment/Demo/Demo_Profiles/Cube Profile.asset using Guid(f1c8f2aa77d44154c99b65fdbf2a4885) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30fde16de011beb254814f4e6233bd84') in 0.020315 seconds
+  Import took 0.027224 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
