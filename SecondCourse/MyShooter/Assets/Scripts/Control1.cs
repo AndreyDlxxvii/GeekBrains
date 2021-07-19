@@ -127,7 +127,7 @@ public class Control1 : MonoBehaviour, ITakeDamage
     void OnCollisionEnter (Collision collision)
     {
         var temp = collision.gameObject.tag;
-            switch (temp)
+        switch (temp)
             {
                 case "Ground":
                     _countCheckGround++;
@@ -148,9 +148,9 @@ public class Control1 : MonoBehaviour, ITakeDamage
                     TakeDamage(5);
                     Heart.Play("TakeDamage");
                     break;
-                case "Key":
-                    KeyIsUp = true;
-                    break;
+                // case "Key":
+                //     KeyIsUp = true;
+                //     break;
                 case "Immortal":
                     _immortal = true;
                     break;

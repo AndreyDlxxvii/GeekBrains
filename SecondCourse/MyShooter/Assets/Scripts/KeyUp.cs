@@ -10,11 +10,20 @@ public class KeyUp : MonoBehaviour
         transform.Rotate(Vector3.up*Time.deltaTime*20f);
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
-        {
-           Destroy(gameObject);
+        { 
+            other.gameObject.GetComponent<Control1>().KeyIsUp = true;
+            Destroy(gameObject);
         }
     }
+
+    // private void OnCollisionEnter(Collision other)
+    // {
+    //     if (other.gameObject.CompareTag("Player"))
+    //     {
+    //        Destroy(gameObject);
+    //     }
+    // }
 }

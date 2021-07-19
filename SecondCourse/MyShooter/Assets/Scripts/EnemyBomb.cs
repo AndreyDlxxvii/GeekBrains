@@ -29,7 +29,10 @@ public class EnemyBomb : MonoBehaviour
 
     void Update()
     {
-        WalkOnWayPoint();
+        if (_target!=null)
+        {
+            WalkOnWayPoint();
+        }
     }
 
     private void WalkOnWayPoint()
