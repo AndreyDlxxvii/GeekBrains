@@ -3,14 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyCoin : MonoBehaviour
+public class DestroyCoin : MonoBehaviour, IDisposable
 
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-        }
+        Dispose();
+    }
+
+    public void Dispose()
+    {
+        Destroy(gameObject);
     }
 }
