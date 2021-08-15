@@ -18,6 +18,8 @@ namespace GeekBrainsHW
         private float _myTimer;
         private Dictionary<string, Action> _myActions;
         private ImmortalBonus _myTrigger;
+        private int _timerValue;
+        
      
 
         void Start()
@@ -30,7 +32,11 @@ namespace GeekBrainsHW
         private void GetUpBonus()
         {
             _myTrigger = FindObjectOfType<ImmortalBonus>();
-            _myTrigger.OnTrigger += b => { _immortalBonus = b;};
+            _myTrigger.OnTrigger += (b, n) =>
+            {
+                _immortalBonus = b;
+                _timerValue = n;
+            };
         }
 
         void Update()
@@ -43,11 +49,11 @@ namespace GeekBrainsHW
             if (_immortalBonus)
             {
                 _myTimer += Time.deltaTime;
-                if (_myTimer>5f)
+                if (_myTimer>_timerValue)
                 {
                     _immortalBonus = false;
                     _myTimer = 0f;
-                    if (_myTrigger is { }) _myTrigger.OnTrigger -= n => { };
+                    if (_myTrigger is { }) _myTrigger.OnTrigger -= delegate { };
                 }
             }
         }
@@ -57,7 +63,7 @@ namespace GeekBrainsHW
             Movement();
             Jump();
         }
-    
+        
         private void Movement()
         {
             float moveHorizontal = Input.GetAxis("Horizontal");
