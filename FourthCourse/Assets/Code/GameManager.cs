@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using GeekBrainsHW;
+using GeekBrainsHW.MVC;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -17,31 +18,44 @@ namespace GeekBrainsHW
         public Button RestartButton;
 
         private GameObject _player;
-        private int _i = 0;
+        private int _score = 0;
         private SmoothFollow _smoothFollow;
         private Player _controlPlayer;
         private static readonly int New = Animator.StringToHash("New");
         private ImmortalBonus _myBonus;
         private static readonly int RestartButtonShow = Animator.StringToHash("RestartButtonShow");
+        private bool _checkFinish = false;
 
         void Start()
         {
             _smoothFollow = Camera.GetComponent<SmoothFollow>();
             PrintTimer();
+            FinishGame();
+            IncrementalScore();
         }
-        //Обмен двух чисел
-        // private void OnValidate()
-        // {
-        //     new ChangeTwoNumbers().Changes();
-        // }
+
+        private void FinishGame()
+        {
+            FindObjectOfType<Finish>().FinishGame += () =>
+            {
+                _controlPlayer = FindObjectOfType<Player>().GetComponent<Player>();
+                GameOverText.text = $"Сongratulations!";
+                _controlPlayer.enabled = false;
+                RestartGame();
+            };
+        }
+ 
 
         public void IncrementalScore()
         {
-            _i++;
-            ScoreText.text = $"Score: {_i}";
-
+            FindObjectOfType<PlayerView>().GetCoin += () =>
+            {
+                _score++;
+                ScoreText.text = $"Score: {_score}";
+            };
         }
         
+
         private void PrintTimer()
         {
             _myBonus = FindObjectOfType<ImmortalBonus>();
@@ -69,13 +83,7 @@ namespace GeekBrainsHW
             GameOverText.text = $"Game Over!";
             RestartGame();
         }
-        public void Finish()
-        {
-            _controlPlayer = FindObjectOfType<Player>().GetComponent<Player>();
-            GameOverText.text = $"Сongratulations!";
-            _controlPlayer.enabled = false;
-            RestartGame();
-        }
+
         private void RestartGame()
         {
             GameOverText.gameObject.SetActive(true);
