@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Finish : MonoBehaviour
@@ -11,7 +8,10 @@ public class Finish : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        FinishGame?.Invoke();
+        if (other.CompareTag("Player"))
+        {
+            FinishGame?.Invoke();
+        }
     }
 }
 

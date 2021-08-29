@@ -1,46 +1,59 @@
 using System;
 using System.Collections;
+using Code.MVC;
+using Code.MVC.View;
 using GeekBrainsHW;
-using GeekBrainsHW.MVC;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace GeekBrainsHW
+namespace Code
 {
     public class GameManager : MonoBehaviour
     {
-        public Text ScoreText;
-        public Text TimerText;
-        public Text GameOverText;
+        [SerializeField] private Text ScoreText;
+        [SerializeField] private Text TimerText;
+        [SerializeField] private Text GameOverText;
+        
         public Camera Camera;
         public Animator ButtonRestart;
         public Button RestartButton;
 
-        private GameObject _player;
         private int _score = 0;
         private SmoothFollow _smoothFollow;
-        private Player _controlPlayer;
         private static readonly int New = Animator.StringToHash("New");
         private ImmortalBonus _myBonus;
         private static readonly int RestartButtonShow = Animator.StringToHash("RestartButtonShow");
         private bool _checkFinish = false;
+        private bool _checkGameOver = false;
+        private bool _checkBonus = false;
+        private ShowScore _showScore;
+        private ShowTimer _showTimer;
+        private ShowTextGame _showTextGame;
 
-        void Start()
+        private void Awake()
         {
             _smoothFollow = Camera.GetComponent<SmoothFollow>();
+            _showScore = new ShowScore(ScoreText, _score);
+            _showTimer = new ShowTimer(TimerText, 0);
+            _showTextGame = new ShowTextGame(GameOverText);
+        }
+
+        private void Start()
+        {
             PrintTimer();
             FinishGame();
             IncrementalScore();
+            CheckGameOver();
         }
 
         private void FinishGame()
         {
             FindObjectOfType<Finish>().FinishGame += () =>
             {
-                _controlPlayer = FindObjectOfType<Player>().GetComponent<Player>();
-                GameOverText.text = $"Сongratulations!";
-                _controlPlayer.enabled = false;
+                GameOverText.gameObject.SetActive(true);
+                _showTextGame.ShowWinText("Сongratulations!");
                 RestartGame();
             };
         }
@@ -51,7 +64,7 @@ namespace GeekBrainsHW
             FindObjectOfType<PlayerView>().GetCoin += () =>
             {
                 _score++;
-                ScoreText.text = $"Score: {_score}";
+                _showScore.Show(_score);
             };
         }
         
@@ -59,8 +72,9 @@ namespace GeekBrainsHW
         private void PrintTimer()
         {
             _myBonus = FindObjectOfType<ImmortalBonus>();
-            _myBonus.OnTrigger += (b, n)=>
+            _myBonus.GetUpBonus += (b, n)=>
             {
+                _checkBonus = b;
                 StartCoroutine(MyTimer(n));
             };
         }
@@ -69,32 +83,53 @@ namespace GeekBrainsHW
         {
             while (i!=-1)
             {
-                TimerText.text = $"Timer: {i}";
+                _showTimer.Show(i);
                 yield return new WaitForSeconds(1f);
                 i--;
             }
-
-            if (_myBonus is { }) _myBonus.OnTrigger -= (b, timer) => { };
+            if (_myBonus is { })
+            {
+                _checkBonus = false;
+                _myBonus.GetUpBonus -= (b, timer) => { };
+            }
         }
 
         public void CheckGameOver()
         {
-            _smoothFollow.enabled = false;
-            GameOverText.text = $"Game Over!";
-            RestartGame();
+            var player = FindObjectOfType<PlayerView>();
+            player.MyGameOver += () =>
+            {
+                if (_checkBonus)
+                {
+                    player.transform.position = new Vector3(-5f,-16.7f,37f);
+                }
+                else
+                {
+                    _smoothFollow.enabled = false;
+                    GameOverText.gameObject.SetActive(true);
+                    _showTextGame.ShowWinText("Game Over");
+                    if (player is { }) player.MyGameOver -= () => { };
+                    RestartGame();  
+                }
+            };
+            
         }
 
         private void RestartGame()
         {
-            GameOverText.gameObject.SetActive(true);
+            if (FindObjectOfType<PlayerView>() != null)
+            {
+                var t = FindObjectOfType<PlayerView>();
+                t.gameObject.SetActive(false);
+            }
             ButtonRestart.SetInteger(RestartButtonShow, 0);
             RestartButton.onClick.AddListener(RestartGameButton);
         }
 
         private void RestartGameButton()
         {
-            SceneManager.LoadScene(0);
             RestartButton.onClick.RemoveAllListeners();
+            SceneManager.LoadScene(0);
         }
     }
 }
