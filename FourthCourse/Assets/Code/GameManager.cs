@@ -20,22 +20,30 @@ namespace Code
         public Animator ButtonRestart;
         public Button RestartButton;
 
-        private int _score = 0;
+        public int Score
+        {
+            get => _score;
+            set
+            {
+                _score = value;
+                _showScore.Show(_score);
+            }
+        }
+
         private SmoothFollow _smoothFollow;
         private static readonly int New = Animator.StringToHash("New");
         private ImmortalBonus _myBonus;
         private static readonly int RestartButtonShow = Animator.StringToHash("RestartButtonShow");
-        private bool _checkFinish = false;
-        private bool _checkGameOver = false;
         private bool _checkBonus = false;
         private ShowScore _showScore;
         private ShowTimer _showTimer;
         private ShowTextGame _showTextGame;
+        private int _score;
 
         private void Awake()
         {
             _smoothFollow = Camera.GetComponent<SmoothFollow>();
-            _showScore = new ShowScore(ScoreText, _score);
+            _showScore = new ShowScore(ScoreText, Score);
             _showTimer = new ShowTimer(TimerText, 0);
             _showTextGame = new ShowTextGame(GameOverText);
         }
@@ -57,14 +65,15 @@ namespace Code
                 RestartGame();
             };
         }
- 
+        
+
 
         public void IncrementalScore()
         {
             FindObjectOfType<PlayerView>().GetCoin += () =>
             {
-                _score++;
-                _showScore.Show(_score);
+                Score++;
+                _showScore.Show(Score);
             };
         }
         

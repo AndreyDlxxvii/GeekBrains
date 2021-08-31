@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Code.MVC.Controller;
 using Code.MVC.Model;
@@ -14,33 +15,31 @@ namespace Code.MVC
         
         private const string Ground = "Ground";
         private PlayerController _playerController;
-        private CoinController _coinController;
-        private PlayerModel _playerModel;
-        private PlayerView _playerView;
-        private CoinModel _coinModel;
-        private CoinView _coinView;
-        private bool _gameOver = false;
+        private CameraController _cameraController;
         private List<CoinController> _coinControllers;
+        private SaveController _saveController;
+        
 
-        private void Awake()
-        {
-            var a = new HW7.HW7();
-            a.Task2();
-            a.Task3();
-            a.Task4();
-            _coinView = _prefabCoin.GetComponent<CoinView>();
-        }
+        // private void Awake()
+        // {
+        //     var a = new HW7.HW7();
+        //     a.Task2();
+        //     a.Task3();
+        //     a.Task4();
+        // }
 
         private void Start()
         {
-            MakePlayer();
+            InitControllers();
             MakeCoinOnTargets();
+
         }
 
-        private void MakePlayer()
+        private void InitControllers()
         {
-            _playerController = new PlayerController(new PlayerModel(5f, 100f), FindObjectOfType<PlayerView>());
-            _playerView = FindObjectOfType<PlayerView>();
+            _saveController = new SaveController(FindObjectOfType<PlayerView>(), FindObjectOfType<GameManager>());
+            _playerController = new PlayerController(new PlayerModel(5f, 100f),FindObjectOfType<PlayerView>());
+            _cameraController = new CameraController(new CameraModel(9f, FindObjectOfType<PlayerView>().transform),FindObjectOfType<CameraView>());
         }
 
         private void MakeCoinOnTargets()
@@ -61,6 +60,7 @@ namespace Code.MVC
 
         private void Update()
         {
+            _saveController.OnUpdate();
             foreach (var obj in _coinControllers)
             {
                 obj.OnUpdate();
@@ -70,6 +70,11 @@ namespace Code.MVC
         private void FixedUpdate()
         {
             _playerController.OnFixedUpdate();
+        }
+
+        private void LateUpdate()
+        {
+            _cameraController.OnLateUpdate();
         }
     }
 }
