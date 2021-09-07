@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GeekBrainsHW
+namespace CodeGeek
 {
     public class Elevator : MonoBehaviour
     {
@@ -27,14 +27,14 @@ namespace GeekBrainsHW
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                other.gameObject.transform.parent = null;
+                other.transform.parent = null;
             }
         }
 
         private void CheckPlayerOnElevator(Collision collision)
         {
             if (!collision.gameObject.CompareTag("Player")) return;
-            collision.gameObject.transform.SetParent(transform);
+            collision.transform.SetParent(transform);
             _isPlayerOnElevator = true;
         }
     }

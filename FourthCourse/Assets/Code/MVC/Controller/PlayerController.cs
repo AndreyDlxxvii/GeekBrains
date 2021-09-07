@@ -1,10 +1,7 @@
-using System.Runtime.InteropServices;
-using Code.MVC.Model;
-using Code.MVC.View;
-using GeekBrainsHW.MVC;
+
 using UnityEngine;
 
-namespace Code.MVC.Controller
+namespace CodeGeek
 {
     public class PlayerController
     {

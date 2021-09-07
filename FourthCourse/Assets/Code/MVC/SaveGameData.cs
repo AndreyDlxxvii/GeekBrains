@@ -1,10 +1,8 @@
 using System;
 using System.IO;
-using Code.MVC.View;
 using UnityEngine;
-using UnityEngine.UIElements;
 
-namespace Code
+namespace CodeGeek
 {
     [Serializable]
     public sealed class SaveGameData

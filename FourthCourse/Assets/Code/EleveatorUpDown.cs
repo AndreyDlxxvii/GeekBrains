@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GeekBrainsHW
+namespace CodeGeek
 {
     public class EleveatorUpDown : MonoBehaviour
     {
@@ -15,14 +15,14 @@ namespace GeekBrainsHW
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                other.gameObject.transform.parent = null;
+                other.transform.parent = null;
             }
         }
 
         private void CheckPlayerOnElevator(Collision collision)
         {
             if (!collision.gameObject.CompareTag("Player")) return;
-            collision.gameObject.transform.SetParent(transform);
+            collision.transform.SetParent(transform);
         }
     }
 }

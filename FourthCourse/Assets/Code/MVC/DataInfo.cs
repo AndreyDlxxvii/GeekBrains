@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Code
+namespace CodeGeek
 {
     [Serializable]
     public sealed class DataInfo

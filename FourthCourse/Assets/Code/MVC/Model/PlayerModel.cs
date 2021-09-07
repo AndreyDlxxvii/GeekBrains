@@ -1,4 +1,4 @@
-namespace Code.MVC.Model
+namespace CodeGeek
 {
     public readonly struct PlayerModel
     {

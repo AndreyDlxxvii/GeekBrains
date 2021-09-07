@@ -1,6 +1,6 @@
 using UnityEngine.UI;
 
-namespace Code
+namespace CodeGeek
 {
     public sealed class ShowTextGame
     {

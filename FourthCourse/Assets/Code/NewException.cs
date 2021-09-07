@@ -1,7 +1,7 @@
 using System;
 using UnityEditor.VersionControl;
 
-namespace GeekBrainsHW
+namespace CodeGeek
 {
     public class NewException : ArgumentException
     {

@@ -1,9 +1,6 @@
-using System;
-using GeekBrainsHW;
-using GeekBrainsHW.MVC;
 using UnityEngine;
 
-namespace Code.MVC.View
+namespace CodeGeek
 {
     public class PlayerView : MonoBehaviour
     {

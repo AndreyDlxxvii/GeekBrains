@@ -1,7 +1,4 @@
-using Code.MVC.View;
-using UnityEngine;
-
-namespace GeekBrainsHW.MVC
+namespace CodeGeek
 {
     public class CoinController : IMyUpdates
     {

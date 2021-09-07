@@ -1,6 +1,5 @@
-using UnityEngine;
 
-namespace GeekBrainsHW.MVC
+namespace CodeGeek
 {
     public static class AxisManager
     {
