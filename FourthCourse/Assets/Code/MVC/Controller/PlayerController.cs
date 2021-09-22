@@ -1,8 +1,11 @@
+using Code.MVC.Model;
+using Code.MVC.View;
+using GeekBrainsHW.MVC;
 using UnityEngine;
 
-namespace GeekBrainsHW.MVC
+namespace Code.MVC.Controller
 {
-    public class PlayerController
+    public class PlayerController : IMyUpdates
     {
         private PlayerModel _playerModel;
         private PlayerView _playerView;
@@ -12,7 +15,8 @@ namespace GeekBrainsHW.MVC
             _playerModel = playerModel;
             _playerView = playerView;
         }
-        
+
+       
         public void OnUpdate()
         {
 

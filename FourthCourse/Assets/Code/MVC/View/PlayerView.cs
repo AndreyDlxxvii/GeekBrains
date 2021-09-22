@@ -1,7 +1,9 @@
 using System;
+using GeekBrainsHW;
+using GeekBrainsHW.MVC;
 using UnityEngine;
 
-namespace GeekBrainsHW.MVC
+namespace Code.MVC.View
 {
     public class PlayerView : MonoBehaviour
     {
@@ -11,8 +13,9 @@ namespace GeekBrainsHW.MVC
         public delegate void GetCoins();
         public event GetCoins GetCoin;
 
-        public delegate void MyGameOver();
-        public event MyGameOver GameOver;
+        public delegate void GameOver();
+        public event GameOver MyGameOver;
+        
 
         private void Awake()
         {
@@ -22,6 +25,10 @@ namespace GeekBrainsHW.MVC
         public void Move(float speed)
         {
             _rb.AddForce(new Vector3(Input.GetAxis(AxisManager.Horizontal), 0.0f, Input.GetAxis(AxisManager.Vertical)).normalized * speed);
+            if (transform.position.y < -18f)
+            {
+                MyGameOver?.Invoke();
+            }
         }
 
         public void Jump(float _jumpForce)
@@ -34,7 +41,7 @@ namespace GeekBrainsHW.MVC
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.GetComponent<DestroyCoin>())
+            if (other.GetComponent<CoinView>())
             {
                 GetCoin?.Invoke();
             }

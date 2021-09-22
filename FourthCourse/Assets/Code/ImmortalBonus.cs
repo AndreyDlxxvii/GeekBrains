@@ -1,47 +1,46 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
 using GeekBrainsHW;
 using UnityEngine;
 
-public class ImmortalBonus : MonoBehaviour, IDisposable
+namespace Code
 {
-    public string TimeOfLiveBonus;
+    public class ImmortalBonus : MonoBehaviour, IDisposable
+    {
+        public string TimeOfLiveBonus;
     
-    public delegate void OnTriggered(bool n, int timer);
-    public event OnTriggered OnTrigger;
+        public event Action<bool, int> GetUpBonus = delegate(bool s, int timer) { };
 
-    private void OnTriggerEnter(Collider other)
-    {
-        int value;
-        try
+        private void OnTriggerEnter(Collider other)
         {
-            if (!int.TryParse(TimeOfLiveBonus, out value))
+            int value;
+            try
             {
-                throw new FormatException($"Время жизни бонуса должно быть исключительно положительным числом");
+                if (!int.TryParse(TimeOfLiveBonus, out value))
+                {
+                    throw new FormatException($"Время жизни бонуса должно быть исключительно числом");
+                }
+                value = int.Parse(TimeOfLiveBonus);
+                if (int.Parse(TimeOfLiveBonus) < 0)
+                {
+                    throw new NewException($"Время жизни бонуса должно быть исключительно положительным числом", value);
+                }
+                GetUpBonus?.Invoke(true, int.Parse(TimeOfLiveBonus));
             }
-            value = int.Parse(TimeOfLiveBonus);
-            if (int.Parse(TimeOfLiveBonus) < 0)
+            catch (NewException e)
             {
-                throw new NewException($"Время жизни бонуса должно быть исключительно положительным числом", value);
+                print($"{e.Message} {e.Value}");
             }
-            OnTrigger?.Invoke(true, int.Parse(TimeOfLiveBonus));
-        }
-        catch (NewException e)
-        {
-            print($"{e.Message} {e.Value}");
-        }
         
-        finally
-        {
-            Dispose();
-        }
+            finally
+            {
+                Dispose();
+            }
         
-    }
+        }
 
-    public void Dispose()
-    {
-        Destroy(gameObject);
+        public void Dispose()
+        {
+            Destroy(gameObject);
+        }
     }
 }

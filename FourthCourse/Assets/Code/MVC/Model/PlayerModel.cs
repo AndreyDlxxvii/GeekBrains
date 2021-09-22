@@ -1,6 +1,6 @@
-namespace GeekBrainsHW.MVC
+namespace Code.MVC.Model
 {
-    public struct PlayerModel
+    public readonly struct PlayerModel
     {
         public float Speed { get; }
         public float JumpForce { get; }
