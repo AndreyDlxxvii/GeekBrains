@@ -60,57 +60,57 @@ namespace GeekBrainsHW
 
         void FixedUpdate()
         {
-            Movement();
-            Jump();
+            //Movement();
+            //Jump();
         }
         
-        private void Movement()
-        {
-            float moveHorizontal = Input.GetAxis("Horizontal");
-            float moveVertical = Input.GetAxis("Vertical");
-            Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
-            _rb.AddForce(movement.normalized * _speed);
-            if (transform.position.y < -18f && !_immortalBonus)
-            {
-                _gameManager.CheckGameOver();
-            }
-            else if (transform.position.y < -18f && _immortalBonus)
-            {
-                transform.position = new Vector3(-5f,-16.7f,37f);
-            }
-        }
+        // private void Movement()
+        // {
+        //     float moveHorizontal = Input.GetAxis("Horizontal");
+        //     float moveVertical = Input.GetAxis("Vertical");
+        //     Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        //     _rb.AddForce(movement.normalized * _speed);
+        //     if (transform.position.y < -18f && !_immortalBonus)
+        //     {
+        //         _gameManager.CheckGameOver();
+        //     }
+        //     else if (transform.position.y < -18f && _immortalBonus)
+        //     {
+        //         transform.position = new Vector3(-5f,-16.7f,37f);
+        //     }
+        // }
     
-        private void Jump()
-        {
-            if (Input.GetAxis("Jump") > 0 && _countCheckGround>0)
-            {
-                _rb.AddForce(Vector3.up * _jumpForce);
-            }
-        }
+        // private void Jump()
+        // {
+        //     if (Input.GetAxis("Jump") > 0 && _countCheckGround>0)
+        //     {
+        //         _rb.AddForce(Vector3.up * _jumpForce);
+        //     }
+        // }
         //check on ground
-        void OnCollisionEnter (Collision collision)
-            {
-                if (collision.gameObject.CompareTag("Ground")) _countCheckGround++;
-            } 
-        //check out ground
-        void OnCollisionExit(Collision collision)
-        {
-            if (collision.gameObject.CompareTag("Ground")) _countCheckGround--;
-        }
+        // void OnCollisionEnter (Collision collision)
+        //     {
+        //         if (collision.gameObject.CompareTag("Ground")) _countCheckGround++;
+        //     } 
+        // //check out ground
+        // void OnCollisionExit(Collision collision)
+        // {
+        //     if (collision.gameObject.CompareTag("Ground")) _countCheckGround--;
+        // }
         
         
-        private void OnTriggerEnter(Collider other)
-        {
-            OnTriggered(other.gameObject.tag);
-        }
+        // private void OnTriggerEnter(Collider other)
+        // {
+        //     OnTriggered(other.gameObject.tag);
+        // }
 
-        private void OnTriggered(string value)
-        {
-            _myActions = new Dictionary<string, Action>();
-            _myActions["Coin"] = _gameManager.IncrementalScore;
-            _myActions["Finish"] = _gameManager.Finish;
-            if (_myActions.ContainsKey(value)) _myActions[value]();
-        }
+        // private void OnTriggered(string value)
+        // {
+        //     _myActions = new Dictionary<string, Action>();
+        //     _myActions["Coin"] = _gameManager.IncrementalScore;
+        //     _myActions["Finish"] = _gameManager.Finish;
+        //     if (_myActions.ContainsKey(value)) _myActions[value]();
+        // }
         
     }
 }

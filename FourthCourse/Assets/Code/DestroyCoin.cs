@@ -1,18 +1,21 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyCoin : MonoBehaviour, IDisposable
-
+namespace GeekBrainsHW
 {
-    private void OnTriggerEnter(Collider other)
+    public class DestroyCoin : MonoBehaviour, IDisposable
+
     {
-        Dispose();
+        private void OnTriggerEnter(Collider other)
+        {
+            Dispose();
+        }
+
+        public void Dispose()
+        {
+            Destroy(gameObject);
+        }
     }
 
-    public void Dispose()
-    {
-        Destroy(gameObject);
-    }
+    
 }
