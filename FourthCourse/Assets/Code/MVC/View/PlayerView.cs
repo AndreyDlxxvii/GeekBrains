@@ -41,6 +41,7 @@ namespace CodeGeek
             if (other.GetComponent<CoinView>())
             {
                 GetCoin?.Invoke();
+                Destroy(other.gameObject);
             }
         }
 
