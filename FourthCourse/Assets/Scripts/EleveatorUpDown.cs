@@ -2,24 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EleveatorUpDown : MonoBehaviour
+namespace GeekBrainsHW
 {
-    private void OnCollisionEnter(Collision other)
+    public class EleveatorUpDown : MonoBehaviour
     {
-        CheckPlayerOnElevator(other);
-    }
-
-    private void OnCollisionExit(Collision other)
-    {
-        if (other.gameObject.CompareTag("Player"))
+        private void OnCollisionEnter(Collision other)
         {
-            other.gameObject.transform.parent = null;
+            CheckPlayerOnElevator(other);
+        }
+
+        private void OnCollisionExit(Collision other)
+        {
+            if (other.gameObject.CompareTag("Player"))
+            {
+                other.gameObject.transform.parent = null;
+            }
+        }
+
+        private void CheckPlayerOnElevator(Collision collision)
+        {
+            if (!collision.gameObject.CompareTag("Player")) return;
+            collision.gameObject.transform.SetParent(transform);
         }
     }
-
-    private void CheckPlayerOnElevator(Collision collision)
-    {
-        if (!collision.gameObject.CompareTag("Player")) return;
-        collision.gameObject.transform.SetParent(transform);
-    }
 }
+
