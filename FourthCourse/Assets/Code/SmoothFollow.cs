@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using static UnityEngine.Screen;
 
-namespace GeekBrainsHW
+namespace CodeGeek
 {
     public class SmoothFollow : MonoBehaviour
     {
@@ -27,35 +27,28 @@ namespace GeekBrainsHW
                 _cameraRotation = 0f;
             }
             
-            // Early out if we don't have a Target
-            if (!Target)
+           if (!Target)
             {
                 return;
             }
     
-            // Calculate the current rotation angles
             float wantedRotationAngle = Target.eulerAngles.y;
             float wantedHeight = Target.position.y + Height;
     
-            //float currentRotationAngle = i;
             float currentHeight = transform.position.y;
-    
-            // Damp the rotation around the y-axis
-            
-            // Damp the Height
+
             currentHeight = Mathf.Lerp(currentHeight, wantedHeight, HeightDamping * Time.deltaTime);
     
-            // Convert the angle into a rotation
+           
             Quaternion currentRotation = Quaternion.Euler(0, _cameraRotation, 0);
     
-            // Set the position of the camera on the x-z plane to:
-            // Distance meters behind the Target
+
             var pos = transform.position;
             pos = Target.position - currentRotation * Vector3.forward * Distance;
             pos.y = currentHeight;
             transform.position = pos;
     
-            // Always look at the Target
+
             transform.LookAt(Target);
         }
     }

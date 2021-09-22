@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Code.MVC.View
+namespace CodeGeek
 {
     public class CoinView : MonoBehaviour, IDisposable
     {

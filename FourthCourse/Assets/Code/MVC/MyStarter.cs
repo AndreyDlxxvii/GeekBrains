@@ -1,13 +1,9 @@
-using System;
 using System.Collections.Generic;
-using Code.MVC.Controller;
-using Code.MVC.Model;
-using Code.MVC.View;
-using GeekBrainsHW.MVC;
+using CCodeGeek;
 using UnityEngine;
 using static UnityEngine.Random;
 
-namespace Code.MVC
+namespace CodeGeek
 {
     public class MyStarter : MonoBehaviour
     {
@@ -19,20 +15,10 @@ namespace Code.MVC
         private List<CoinController> _coinControllers;
         private SaveController _saveController;
         
-
-        // private void Awake()
-        // {
-        //     var a = new HW7.HW7();
-        //     a.Task2();
-        //     a.Task3();
-        //     a.Task4();
-        // }
-
         private void Start()
         {
             InitControllers();
             MakeCoinOnTargets();
-
         }
 
         private void InitControllers()

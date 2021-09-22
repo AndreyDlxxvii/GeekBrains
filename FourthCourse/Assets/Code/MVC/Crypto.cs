@@ -1,6 +1,6 @@
 using System;
 
-namespace Code
+namespace CodeGeek
 {
     public static class Crypto
     {

@@ -1,8 +1,5 @@
-using Code.MVC.Model;
-using Code.MVC.View;
-using UnityEngine;
 
-namespace Code.MVC.Controller
+namespace CodeGeek
 {
     public class CameraController
     {

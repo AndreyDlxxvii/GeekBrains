@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Code.MVC.View
+namespace CodeGeek
 {
     public class CameraView : MonoBehaviour
     {

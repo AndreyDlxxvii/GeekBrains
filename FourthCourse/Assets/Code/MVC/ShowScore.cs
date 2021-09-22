@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Code.MVC
+namespace CodeGeek
 {
     public sealed class ShowScore
     {

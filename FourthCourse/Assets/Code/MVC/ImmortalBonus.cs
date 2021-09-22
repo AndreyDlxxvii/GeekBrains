@@ -1,14 +1,13 @@
 using System;
-using GeekBrainsHW;
 using UnityEngine;
 
-namespace Code
+namespace CodeGeek
 {
     public class ImmortalBonus : MonoBehaviour, IDisposable
     {
         public string TimeOfLiveBonus;
     
-        public event Action<bool, int> GetUpBonus = delegate(bool s, int timer) { };
+        public event Action<int> GetUpBonus = delegate(int timer) { };
 
         private void OnTriggerEnter(Collider other)
         {
@@ -24,7 +23,7 @@ namespace Code
                 {
                     throw new NewException($"Время жизни бонуса должно быть исключительно положительным числом", value);
                 }
-                GetUpBonus?.Invoke(true, int.Parse(TimeOfLiveBonus));
+                GetUpBonus?.Invoke(int.Parse(TimeOfLiveBonus));
             }
             catch (NewException e)
             {

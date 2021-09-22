@@ -1,7 +1,7 @@
 using System.IO;
 using UnityEngine;
 
-namespace Code
+namespace CodeGeek
 {
     public class JsonData
     {

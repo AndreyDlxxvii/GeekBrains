@@ -1,4 +1,4 @@
-namespace GeekBrainsHW.MVC
+namespace CodeGeek
 {
     public struct CoinModel
     {
