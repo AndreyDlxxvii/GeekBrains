@@ -5,7 +5,12 @@ namespace AsteroidGB
     internal class MyMovement : IMovement
     {
         private readonly Rigidbody _playerRigidbody;
-        public float Speed { get; set;}
+
+        public float Speed
+        {
+            get; set;
+            
+        }
 
 
         private Vector2 _movement;

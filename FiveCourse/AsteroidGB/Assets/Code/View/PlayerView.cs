@@ -12,6 +12,7 @@ namespace AsteroidGB
 
         public Transform GunPosition
         {
+            
             get
             {
                 var point = transform.Find("GunPoint");

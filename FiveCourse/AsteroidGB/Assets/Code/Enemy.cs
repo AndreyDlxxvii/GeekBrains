@@ -5,5 +5,6 @@ namespace AsteroidGB
         public float Speed { get; set; }
 
         public abstract void Move(float speed);
+        
     }
 }

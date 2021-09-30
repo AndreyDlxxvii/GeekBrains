@@ -3,6 +3,7 @@ using UnityEngine;
 namespace AsteroidGB
 {
     internal class MyRotation : AccelerationSpeed
+    
     {
         private readonly Transform _transform;
         
