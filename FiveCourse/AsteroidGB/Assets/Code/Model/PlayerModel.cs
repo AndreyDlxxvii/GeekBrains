@@ -12,6 +12,7 @@ namespace AsteroidGB
 
         public PlayerModel(float live, float speed, float acceleration)
         {
+            
             Acceleration = acceleration;
             Live = live;
             Speed = speed;

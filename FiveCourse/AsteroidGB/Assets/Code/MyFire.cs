@@ -16,7 +16,9 @@ namespace AsteroidGB
         public void Fire(GameObject _prefabGameObject)
         {
             var bullet = Object.Instantiate(_prefabGameObject, _gunTransform.position, _gunTransform.rotation);
-            bullet.GetComponent<Rigidbody>().AddForce(bullet.transform.up * _forceBullet, ForceMode.Impulse);
+            bullet.GetComponent<Rigidbody>().AddForce(bullet.transform.up * _forceBullet, ForceMode.Impulse
+            );
+            
         }
     }
 }

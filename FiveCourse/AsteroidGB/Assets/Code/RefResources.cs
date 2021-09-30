@@ -26,7 +26,8 @@ namespace AsteroidGB
             {
                 if (_player == null)
                 {
-                    _player = Object.Instantiate(Resources.Load<GameObject>("Player"), Vector3.zero, Quaternion.identity);
+                    _player = Object.Instantiate(Resources.Load<GameObject>("Player"), Vector3.zero, Quaternion.identity)
+                        ;
                 }
                 return _player;
             }

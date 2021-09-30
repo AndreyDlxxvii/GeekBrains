@@ -14,6 +14,7 @@ namespace AsteroidGB
         public void IncreaseSpeed()
         {
             Speed += _acceleration;
+            
         }
 
         public void DecreaseSpeed()
