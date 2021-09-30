@@ -9,6 +9,7 @@ namespace AsteroidGB
     {
         private PlayerController _controller;
         private RefResources _refResources;
+        private Enemy test;
 
         private void Awake()
         {
@@ -19,6 +20,10 @@ namespace AsteroidGB
 
         void Start()
         {
+            test = new AsteroidEnemy();
+            test.Speed = 5f;
+            var q = test.Speed;
+            test.Move(5f);
             _controller.OnStart();
         }
 
