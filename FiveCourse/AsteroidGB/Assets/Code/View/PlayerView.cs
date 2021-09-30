@@ -14,8 +14,8 @@ namespace AsteroidGB
         {
             get
             {
-                var q = transform.Find("GunPoint");
-                return q;
+                var point = transform.Find("GunPoint");
+                return point;
             }
         }
 

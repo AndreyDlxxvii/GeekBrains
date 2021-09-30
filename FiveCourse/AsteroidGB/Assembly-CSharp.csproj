@@ -52,6 +52,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Code\AsteroidEnemy.cs" />
+     <Compile Include="Assets\Code\Enemy.cs" />
      <Compile Include="Assets\Code\View\PlayerView.cs" />
      <Compile Include="Assets\Code\Controller\PlayerController.cs" />
      <Compile Include="Assets\Code\Model\PlayerModel.cs" />

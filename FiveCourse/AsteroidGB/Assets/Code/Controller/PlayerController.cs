@@ -10,7 +10,7 @@ namespace AsteroidGB
         private PlayerView _playerView { get; }
         private RefResources _refResources;
         private IMovement _myMovement;
-        private IRotation _myRotation;
+        //private IRotation _myRotation;
         private IFire _myFire;
 
         public PlayerController(PlayerModel playerModel, PlayerView playerView)
