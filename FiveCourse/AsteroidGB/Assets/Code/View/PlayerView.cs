@@ -5,14 +5,13 @@ using UnityEngine;
 
 namespace AsteroidGB
 {
-    internal class PlayerView : MonoBehaviour
+    public class PlayerView : MonoBehaviour
     {
         
         private Rigidbody2D _playerRigidbody2D;
 
         public Transform GunPosition
         {
-            
             get
             {
                 var point = transform.Find("GunPoint");

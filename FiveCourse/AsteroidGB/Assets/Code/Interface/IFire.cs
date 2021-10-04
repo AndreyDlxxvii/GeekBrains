@@ -4,6 +4,6 @@ namespace AsteroidGB
 {
     interface IFire
     {
-        void Fire(GameObject _prefabGameObject);
+        void Fire();
     }
 }
