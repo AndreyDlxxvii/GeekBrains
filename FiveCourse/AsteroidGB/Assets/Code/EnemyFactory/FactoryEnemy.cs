@@ -18,12 +18,16 @@ namespace AsteroidGB
             {
                 case Enemys.Asteroid:
                     return new AsteroidEnemyNormal(_refResources.AsteroidPrefab).Create();
+                break;
                 case Enemys.AsteroidBig:
                     return new AsteroidEnemyBig(_refResources.AsteroidPrefabBig).Create();
-                case Enemys.AsteroidSmall:
-                    return new AsteroidEnemySmall(_refResources.AsteroidPrefab).Create();
+                break;
+                case Enemys.AsteroidMedium:
+                    return new AsteroidEnemySmall(_refResources.AsteroidPrefabMedium).Create();
+                break;
                 case Enemys.UFO:
                     return new UFO(_refResources.UFO).Create();
+                break;
                     
             }
 

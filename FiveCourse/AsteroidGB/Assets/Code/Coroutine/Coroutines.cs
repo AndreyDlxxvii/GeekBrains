@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace CodeGeek
+namespace AsteroidGB
 {
     public sealed class Coroutines : MonoBehaviour
     {

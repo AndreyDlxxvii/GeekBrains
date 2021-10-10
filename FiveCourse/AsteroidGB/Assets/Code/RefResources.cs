@@ -9,7 +9,10 @@ namespace AsteroidGB
         private GameObject _player;
         private GameObject _asteroid;
         private GameObject _asteroidBig;
+        private GameObject _asteroidMedium;
         private GameObject _ufo;
+        private Sprite _spriteAsteroid;
+        private Sprite _spriteBullet;
         
         public GameObject BulletPrefab
         {
@@ -58,6 +61,18 @@ namespace AsteroidGB
             }
         }
         
+        public GameObject AsteroidPrefabMedium
+        {
+            get 
+            {
+                if (_asteroidMedium == null)
+                {
+                    _asteroidMedium = Resources.Load<GameObject>("AsteroidMedium");
+                }
+                return _asteroidMedium;
+            }
+        }
+        
         public GameObject UFO
         {
             get 
@@ -69,6 +84,29 @@ namespace AsteroidGB
                 return _ufo;
             }
         }
+
+        public Sprite AsteroidSprite
+        {
+            get 
+            {
+                if (_spriteAsteroid == null)
+                {
+                    _spriteAsteroid = Resources.Load<Sprite>("Sprites/Asteroid");
+                }
+                return _spriteAsteroid;    
+            }
+        }
         
+        public Sprite BulletSprite
+        {
+            get 
+            {
+                if (_spriteBullet == null)
+                {
+                    _spriteBullet = Resources.Load<Sprite>("Sprites/BulletSprite");
+                }
+                return _spriteBullet;    
+            }
+        }
     }
 }

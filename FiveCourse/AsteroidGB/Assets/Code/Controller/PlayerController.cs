@@ -19,7 +19,7 @@ namespace AsteroidGB
             _refResources = new RefResources();
             _myMovement = new MyRotation(_playerView.GetComponent<Rigidbody>(), _playerModel.Speed, 
                 _playerModel.Acceleration, _playerView.transform);
-            _myFire = new MyFire(_playerView.GunPosition , 10f, _refResources.BulletPrefab);
+            _myFire = new MyFire(_playerView.GunPosition , 10f, _refResources);
         }
 
         public void OnUpdate()
