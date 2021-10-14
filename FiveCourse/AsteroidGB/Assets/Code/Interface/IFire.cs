@@ -2,8 +2,8 @@ using UnityEngine;
 
 namespace AsteroidGB
 {
-    interface IFire
+    public interface IFire
     {
-        void Fire();
+        void Fire(Transform gunPosition);
     }
 }

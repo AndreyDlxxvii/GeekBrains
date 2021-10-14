@@ -2,14 +2,18 @@ using System.Collections.Generic;
 
 namespace AsteroidGB
 {
-    public class MyControllers : IOnUpdate, IOnStart, IOnFixedUpdate
+    public class Controllers : IOnUpdate, IOnStart, IOnFixedUpdate
     {
+        public const string startMethod = "OnStart";
+        public const string updateMethod = "OnUpdate";
+        public const string fixedUpdateMethod = "OnFixedUpdate";
+        
         private List<IOnStart> _onStarts = new List<IOnStart>();
         private List<IOnUpdate> _onUpdates = new List<IOnUpdate>();
         private List<IOnFixedUpdate> _onFixedUpdates = new List<IOnFixedUpdate>();
 
 
-        public MyControllers Add(IController controller)
+        public Controllers Add(IController controller)
         {
             if (controller is IOnStart onStart)
             {
@@ -33,7 +37,7 @@ namespace AsteroidGB
         {
             foreach (var ell in _onStarts)
             {
-                if (ell.HasMethod(AxisManager.OnStart))
+                if (ell.HasMethod(startMethod))
                 {
                     ell.OnStart();
                 }
@@ -44,7 +48,7 @@ namespace AsteroidGB
         {
             foreach (var ell in _onUpdates)
             {
-                if (ell.HasMethod(AxisManager.OnUpdate))
+                if (ell.HasMethod(updateMethod))
                 {
                     ell.OnUpdate();
                 }
@@ -55,7 +59,7 @@ namespace AsteroidGB
         {
             foreach (var ell in _onFixedUpdates)
             {
-                if (ell.HasMethod(AxisManager.OnFixedUpdate))
+                if (ell.HasMethod(fixedUpdateMethod))
                 {
                     ell.OnFixedUpdate();
                 }
