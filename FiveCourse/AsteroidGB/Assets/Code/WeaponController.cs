@@ -18,7 +18,7 @@ namespace AsteroidGB
             _fire.Fire(gunPosition);
         }
 
-        // Изменене видя оружия
+        // Изменене вида оружия
         public void ChangeWeapon()
         {
             _fire = new LaserFire();

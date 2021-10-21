@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 
 namespace AsteroidGB
@@ -13,7 +14,7 @@ namespace AsteroidGB
         private GameObject _ufo;
         private Sprite _spriteAsteroid;
         private Sprite _spriteBullet;
-        
+  
         public Rigidbody BulletPrefab
         {
             get 
@@ -25,7 +26,6 @@ namespace AsteroidGB
                 return _bulletPrefab;
             }
         }
-        
         public GameObject PlayerPrefab
         {
             get 
@@ -37,7 +37,6 @@ namespace AsteroidGB
                 return _player;
             }
         }
-        
         public GameObject AsteroidPrefab
         {
             get 
@@ -60,7 +59,6 @@ namespace AsteroidGB
                 return _asteroidBig;
             }
         }
-        
         public GameObject AsteroidPrefabMedium
         {
             get 
@@ -72,7 +70,6 @@ namespace AsteroidGB
                 return _asteroidMedium;
             }
         }
-        
         public GameObject UFO
         {
             get 
@@ -84,7 +81,6 @@ namespace AsteroidGB
                 return _ufo;
             }
         }
-
         public Sprite AsteroidSprite
         {
             get 
@@ -96,7 +92,6 @@ namespace AsteroidGB
                 return _spriteAsteroid;    
             }
         }
-        
         public Sprite BulletSprite
         {
             get 
@@ -108,5 +103,6 @@ namespace AsteroidGB
                 return _spriteBullet;    
             }
         }
+        
     }
 }

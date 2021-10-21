@@ -7,11 +7,8 @@ namespace AsteroidGB
         private readonly Rigidbody _playerRigidbody;
 
         public float Speed
-        {
-            get; set;
-            
+        { get; set;
         }
-
 
         private Vector2 _movement;
 

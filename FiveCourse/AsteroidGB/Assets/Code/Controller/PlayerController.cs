@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using AsteroidGB.Chain_of_responsibility;
 using UnityEngine;
 
 namespace AsteroidGB
@@ -15,6 +16,8 @@ namespace AsteroidGB
 
         private WeaponProxy _weaponProxy;
         private UnlockWeapon _unlockWeapon;
+        
+        
 
 
         public PlayerController(PlayerModel playerModel, PlayerView playerView)
@@ -27,6 +30,7 @@ namespace AsteroidGB
             // Залочка оружия
             // _unlockWeapon = new UnlockWeapon(true);
             // _weaponProxy = new WeaponProxy(new LaserFire(), _unlockWeapon);
+            
             
             _myMovement = new MyRotation(_playerView.GetComponent<Rigidbody>(), _playerModel.Speed, 
                 _playerModel.Acceleration, _playerView.transform);
@@ -44,8 +48,6 @@ namespace AsteroidGB
             {
                 _weaponController.ChangeWeapon();
             }
-            
-            
 
             if (Input.GetButtonDown(AxisManager.Acceleration))   
             {

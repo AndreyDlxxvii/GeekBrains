@@ -5,23 +5,28 @@ namespace AsteroidGB
     public class UFOController : IController, IOnStart, IOnFixedUpdate
     {
         private UFOModel _ufoModel;
-        private EnemyView _enemyView;
+        private FactoryEnemy _factoryEnemy;
 
         private GameObject _player;
         private Rigidbody _rb;
-
+        private EnemyView _enemyView;
         private Vector3[] _direction;
         private Vector3 _randomVectorDirection;
 
-        public UFOController(UFOModel ufoModel, EnemyView enemyView)
+        public UFOController(UFOModel ufoModel, FactoryEnemy enemyFactory)
         {
             _ufoModel = ufoModel;
-            _enemyView = enemyView;
+            _factoryEnemy = enemyFactory;
         }
-
 
         public void OnStart()
         {
+            Start();
+        }
+
+        public void Start()
+        {
+            _enemyView = _factoryEnemy.CreateEnemy(Enemys.UFO);
             _player = GameObject.FindWithTag("Player");
             _rb = _enemyView.GetComponent<Rigidbody>();
             _direction = new[] {Vector3.down, Vector3.left, Vector3.right, Vector3.up};
