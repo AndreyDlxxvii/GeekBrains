@@ -122,6 +122,14 @@
      <Compile Include="Assets\Code\RefResources.cs" />
      <Compile Include="Assets\Code\Interface\IEnemyFactory.cs" />
      <Compile Include="Assets\Code\CreatePlayer.cs" />
+     <Compile Include="Assets\Code\Interface\IOnHit.cs" />
+     <Compile Include="Assets\Code\Observer\Observer.cs" />
+     <Compile Include="Assets\Code\Controller\ObserverController.cs" />
+     <Compile Include="Assets\Code\StatePattern\PlayerStay.cs" />
+     <Compile Include="Assets\Code\StatePattern\PlayerMove.cs" />
+     <Compile Include="Assets\Code\StatePattern\Player.cs" />
+     <Compile Include="Assets\Code\StatePattern\StateMachine.cs" />
+     <Compile Include="Assets\Code\StatePattern\State.cs" />
      <None Include="Assets\Code\HW5\Parse\Parse.txt" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
