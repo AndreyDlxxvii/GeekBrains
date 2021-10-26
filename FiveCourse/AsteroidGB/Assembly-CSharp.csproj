@@ -130,6 +130,12 @@
      <Compile Include="Assets\Code\StatePattern\Player.cs" />
      <Compile Include="Assets\Code\StatePattern\StateMachine.cs" />
      <Compile Include="Assets\Code\StatePattern\State.cs" />
+     <Compile Include="Assets\MVVM Game\Starter.cs" />
+     <Compile Include="Assets\MVVM Game\ScoreModel.cs" />
+     <Compile Include="Assets\MVVM Game\ScoreViewModel.cs" />
+     <Compile Include="Assets\MVVM Game\PlayerView.cs" />
+     <Compile Include="Assets\MVVM Game\ShowScore.cs" />
+     <Compile Include="Assets\MVVM Game\EnemySpawn.cs" />
      <None Include="Assets\Code\HW5\Parse\Parse.txt" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
