@@ -52,21 +52,42 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Code\AsteroidEnemy.cs" />
-     <Compile Include="Assets\Code\Enemy.cs" />
+     <Compile Include="Assets\Code\Enemys.cs" />
+     <Compile Include="Assets\Code\View\BulletView.cs" />
+     <Compile Include="Assets\Code\EnemyFactory\FactoryEnemy.cs" />
      <Compile Include="Assets\Code\View\PlayerView.cs" />
-     <Compile Include="Assets\Code\Controller\PlayerController.cs" />
-     <Compile Include="Assets\Code\Model\PlayerModel.cs" />
-     <Compile Include="Assets\Code\Controller\GameController.cs" />
-     <Compile Include="Assets\Code\Interface\IMovement.cs" />
-     <Compile Include="Assets\Code\AxisManager.cs" />
-     <Compile Include="Assets\Code\Interface\IRotation.cs" />
-     <Compile Include="Assets\Code\MyMovement.cs" />
-     <Compile Include="Assets\Code\MyRotation.cs" />
-     <Compile Include="Assets\Code\MyFire.cs" />
+     <Compile Include="Assets\Code\Interface\IOnUpdate.cs" />
      <Compile Include="Assets\Code\Interface\IFire.cs" />
-     <Compile Include="Assets\Code\RefResources.cs" />
+     <Compile Include="Assets\Code\MyFire.cs" />
+     <Compile Include="Assets\Code\Interface\IController.cs" />
+     <Compile Include="Assets\Code\EnemyFactory\UFO.cs" />
+     <Compile Include="Assets\Code\Controller\EnemyController.cs" />
+     <Compile Include="Assets\Code\Extensions.cs" />
+     <Compile Include="Assets\Code\Controller\PlayerController.cs" />
+     <Compile Include="Assets\Code\EnemyFactory\AsteroidEnemySmall.cs" />
+     <Compile Include="Assets\Code\AxisManager.cs" />
+     <Compile Include="Assets\Code\Model\PlayerModel.cs" />
+     <Compile Include="Assets\Code\EnemyFactory\AsteroidEnemyBig.cs" />
+     <Compile Include="Assets\Code\MyMovement.cs" />
+     <Compile Include="Assets\Code\Interface\IMovement.cs" />
+     <Compile Include="Assets\Code\Interface\IOnStart.cs" />
+     <Compile Include="Assets\Code\Coroutine\Coroutines.cs" />
+     <Compile Include="Assets\Code\Coroutine\TestCoroutine.cs" />
+     <Compile Include="Assets\Code\Controller\MyControllers.cs" />
+     <Compile Include="Assets\Code\Interface\IEnemy.cs" />
+     <Compile Include="Assets\Code\Interface\IRotation.cs" />
+     <Compile Include="Assets\Code\MyObjectPool.cs" />
+     <Compile Include="Assets\Code\MyRotation.cs" />
      <Compile Include="Assets\Code\AccelerationSpeed.cs" />
+     <Compile Include="Assets\Code\Model\EnemyModel.cs" />
+     <Compile Include="Assets\Code\GameInit.cs" />
+     <Compile Include="Assets\Code\Interface\IOnFixedUpdate.cs" />
+     <Compile Include="Assets\Code\EnemyFactory\AsteroidEnemyNormal.cs" />
+     <Compile Include="Assets\Code\Starter.cs" />
+     <Compile Include="Assets\Code\View\EnemyView.cs" />
+     <Compile Include="Assets\Code\RefResources.cs" />
+     <Compile Include="Assets\Code\Interface\IEnemyFactory.cs" />
+     <Compile Include="Assets\Code\CreatePlayer.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace AsteroidGB
 {
-    internal class PlayerModel
+    public class PlayerModel
     {
         public float Live { get; }
         public float Speed { get; }
