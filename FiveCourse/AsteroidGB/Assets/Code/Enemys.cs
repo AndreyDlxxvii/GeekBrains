@@ -2,6 +2,9 @@ namespace AsteroidGB
 {
     public enum Enemys
     {
-        Asteroid, AsteroidBig, AsteroidMedium, UFO
+        Asteroid = 0,
+        AsteroidBig = 1,
+        AsteroidMedium = 2,
+        UFO = 3
     }
 }

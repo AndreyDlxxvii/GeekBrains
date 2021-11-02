@@ -10,7 +10,7 @@ namespace AsteroidGB
    {
        public event EndTimer End;
         private Coroutine _coroutine;
-        public void StartTestCoroutine(int second)
+        public void StartTestCoroutine(float second)
         {
             if (_coroutine != null)
             {
@@ -25,12 +25,12 @@ namespace AsteroidGB
             _coroutine = null;
         }
         
-        private IEnumerator MyTimer(int second)
+        private IEnumerator MyTimer(float second)
         {
-            while (second!=-1)
+            while (second>0)
             {
-                yield return new WaitForSeconds(1f);
-                second--;
+                yield return new WaitForSeconds(0.1f);
+                second-=0.1f;
             }
 
             End?.Invoke();

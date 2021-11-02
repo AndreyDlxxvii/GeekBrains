@@ -6,7 +6,7 @@ namespace AsteroidGB
     public class Starter : MonoBehaviour
     {
         RefResources _resources = new RefResources();
-        MyControllers _myControllers;
+        Controllers _controllers;
 
         // private void Awake()
         // {
@@ -15,19 +15,19 @@ namespace AsteroidGB
 
         private void Start()
         {
-            _myControllers = new MyControllers();
-            new GameInit(_resources, _myControllers);
-            _myControllers.OnStart();
+            _controllers = new Controllers();
+            new GameInit(_resources, _controllers);
+            _controllers.OnStart();
         }
 
         private void Update()
         {
-            _myControllers.OnUpdate();
+            _controllers.OnUpdate();
         }
 
         private void FixedUpdate()
         {
-            _myControllers.OnFixedUpdate();
+            _controllers.OnFixedUpdate();
         }
     }
 }

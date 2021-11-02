@@ -6,19 +6,19 @@ namespace AsteroidGB
 {
     public class MyObjectPool
     {
-        private List<GameObject> _listGO = new List<GameObject>();
-        private GameObject _prefab;
+        private List<Rigidbody> _listGO = new List<Rigidbody>();
+        private Rigidbody _prefab;
         private Transform _pointOfRespawn;
         private Transform _root;
 
-        public MyObjectPool(GameObject prefab)
+        public MyObjectPool(Rigidbody prefab)
         {
             _prefab = prefab;
         }
 
-        public GameObject Create()
+        public Rigidbody Create()
         {
-            GameObject temp = null;
+            Rigidbody temp = null;
             if (_listGO.Count == 0 )
             {
                 temp = Object.Instantiate(_prefab);
@@ -28,9 +28,9 @@ namespace AsteroidGB
             {
                 for (int i = 0; i < _listGO.Count; i++)
                 {
-                    if (!_listGO[i].activeInHierarchy)
+                    if (!_listGO[i].gameObject.activeInHierarchy)
                     {
-                        _listGO[i].SetActive(true);
+                        _listGO[i].gameObject.SetActive(true);
                         temp = _listGO[i];
                         break;
                     }
@@ -46,10 +46,10 @@ namespace AsteroidGB
             return temp;
         }
 
-        public void Hide(GameObject gameObject)
+        public void Hide(Rigidbody _rigidbody)
         {
-            gameObject.SetActive(false);
-            gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            _rigidbody.gameObject.SetActive(false);
+            _rigidbody.velocity = Vector3.zero;
         }
     }
 }

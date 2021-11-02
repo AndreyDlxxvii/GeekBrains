@@ -5,7 +5,7 @@ namespace AsteroidGB
 {
     public class RefResources
     {
-        private GameObject _bulletPrefab;
+        private Rigidbody _bulletPrefab;
         private GameObject _player;
         private GameObject _asteroid;
         private GameObject _asteroidBig;
@@ -14,13 +14,13 @@ namespace AsteroidGB
         private Sprite _spriteAsteroid;
         private Sprite _spriteBullet;
         
-        public GameObject BulletPrefab
+        public Rigidbody BulletPrefab
         {
             get 
             {
                 if (_bulletPrefab == null)
                 {
-                    _bulletPrefab = Resources.Load<GameObject>("Bullet");
+                    _bulletPrefab = Resources.Load<Rigidbody>("Bullet");
                 }
                 return _bulletPrefab;
             }

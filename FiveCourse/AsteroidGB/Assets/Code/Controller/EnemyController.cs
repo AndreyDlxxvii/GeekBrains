@@ -21,7 +21,8 @@ namespace AsteroidGB
             for (int i = 0; i < COUNT; i++)
             {
                 var numOfEnemy = Enum.GetNames(typeof(Enemys)).Length-1;
-                var enemy = _factoryEnemy.CreateEnemy((Enemys)Range(0, numOfEnemy));
+                var t = (Enemys) Range(0, numOfEnemy);
+                var enemy = _factoryEnemy.CreateEnemy(t);
                 _enemies.Add(enemy);
             }
         }
