@@ -14,7 +14,7 @@ namespace AsteroidGB.HW5.Parse
         public void CreateEnemy()
         {
         
-            Debug.Log("создать мага со здоровьем= " + _units.unit.health);
+            //Debug.Log("создать мага со здоровьем= " + _units.unit.health);
         } 
     }
     

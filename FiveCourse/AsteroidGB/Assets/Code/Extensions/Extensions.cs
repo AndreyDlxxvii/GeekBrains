@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
@@ -48,6 +49,31 @@ namespace AsteroidGB
                 stream.Seek(0, SeekOrigin.Begin);
                 return (T)formatter.Deserialize(stream);
             }
+        }
+
+        public static string NumReduction(this long num)
+        {
+            Dictionary<int, string> _dictionary = new Dictionary<int, string>
+            {
+                {0, ""},
+                {1, "K"},
+                {2, "M"},
+                {3, "B"},
+                {4, "T"}
+            };
+            
+            int _count = 0;
+            string number;
+            var value = num;
+            while (value >=1000)
+            {
+                _count++;
+                value /=1000L;
+            }
+            number = $"{value}{_dictionary[_count]}";
+            _count = 0;
+
+            return number;
         }
     }
 }

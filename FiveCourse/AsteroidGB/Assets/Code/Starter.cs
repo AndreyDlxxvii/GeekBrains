@@ -8,11 +8,6 @@ namespace AsteroidGB
         RefResources _resources = new RefResources();
         Controllers _controllers;
 
-        // private void Awake()
-        // {
-        //     
-        // }
-
         private void Start()
         {
             _controllers = new Controllers();
