@@ -11,9 +11,9 @@ namespace AsteroidGB
         }
 
         //TODO сделать рандомный спавн
-        public EnemyView Create()
+        public UFOView Create()
         {
-            return Object.Instantiate(_gameObject, Vector3.right, Quaternion.identity).GetComponent<EnemyView>();
+            return Object.Instantiate(_gameObject, Vector3.right, Quaternion.identity).GetComponent<UFOView>();
         }
     }
 }

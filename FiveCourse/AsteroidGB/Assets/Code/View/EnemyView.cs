@@ -7,7 +7,20 @@ namespace AsteroidGB
     {
         private void OnTriggerEnter(Collider other)
         {
-            Debug.Log(123);
+            if (other.CompareTag("Bullet"))
+            {
+                Destroy(gameObject);
+            }
+            
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.CompareTag("Respawn"))
+            {
+                var i = transform.position;
+                transform.position = i * -1;
+            }
         }
     }
 }

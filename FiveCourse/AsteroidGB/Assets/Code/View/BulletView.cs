@@ -1,6 +1,5 @@
 using System;
 using System.Runtime.CompilerServices;
-using CodeGeek;
 using UnityEngine;
 
 namespace AsteroidGB
@@ -24,10 +23,22 @@ namespace AsteroidGB
         //     _coroutine.End -= MyCleanUp;
         //     _coroutine.StopTestCoroutine();
         // }
-
+        
+        //TODO переделать костыль из-за появившегося телепорта для объектов
         private void OnTriggerEnter(Collider other)
         {
-            Hit?.Invoke();
+            if (!other.CompareTag("Respawn"))
+            {
+                Hit?.Invoke();
+            }
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.CompareTag("Respawn"))
+            {
+                Hit?.Invoke();
+            }
         }
     }
 }

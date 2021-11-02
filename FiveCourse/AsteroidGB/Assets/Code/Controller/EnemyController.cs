@@ -13,14 +13,15 @@ namespace AsteroidGB
         private List<EnemyView> _enemies = new List<EnemyView>();
 
         //TODO сделать выбор количества врагов
-        private int COUNT = 5;
+        private int COUNT = 10;
         public EnemyController(EnemyModel enemyModel, FactoryEnemy enemyFactory)
         {
             _enemyModel = enemyModel;
             _factoryEnemy = enemyFactory;
             for (int i = 0; i < COUNT; i++)
             {
-                var enemy = _factoryEnemy.CreateEnemy((Enemys)Range(0, Enum.GetNames(typeof(Enemys)).Length));
+                var numOfEnemy = Enum.GetNames(typeof(Enemys)).Length-1;
+                var enemy = _factoryEnemy.CreateEnemy((Enemys)Range(0, numOfEnemy));
                 _enemies.Add(enemy);
             }
         }

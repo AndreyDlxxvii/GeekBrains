@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-namespace CodeGeek
+namespace AsteroidGB
 {
     public delegate void EndTimer();
     
