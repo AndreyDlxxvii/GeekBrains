@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace AsteroidGB
 {
-    public class EnemyView : MonoBehaviour
+    public class EnemyView : MonoBehaviour, IEnemy
     {
         public event Action OnDeath; 
         private void OnTriggerEnter(Collider other)

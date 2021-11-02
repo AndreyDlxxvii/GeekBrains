@@ -5,9 +5,9 @@ using UnityEngine;
 
 namespace AsteroidGB
 {
-    public class PlayerView : MonoBehaviour
+    public class PlayerView : MonoBehaviour, IOnHit
     {
-        
+        public event Action OnHit;
         private Rigidbody2D _playerRigidbody2D;
 
         public Transform GunPosition
@@ -23,7 +23,13 @@ namespace AsteroidGB
 
         private void OnTriggerEnter(Collider other)
         {
+            if (other.GetComponent<IEnemy>() != null)
+            {
+                OnHit?.Invoke();
+            }
         }
+
+        
     }
 }
 
