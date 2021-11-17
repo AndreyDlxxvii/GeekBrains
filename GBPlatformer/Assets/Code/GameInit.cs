@@ -1,3 +1,4 @@
+using GBPlatformer.Model;
 using UnityEngine;
 
 namespace GBPlatformer
@@ -6,11 +7,13 @@ namespace GBPlatformer
     {
         public GameInit(RefResources refResources, Controllers controllers)
         {
-            var _playerConfig = refResources.PlayerConfig;
-            var _playerView = new CreatePlayer(refResources.PlayerView);
-            var _playerAnimator = new SpriteAnimController(_playerConfig, _playerView.PlayerMonoBeh());
+            var playerConfig = refResources.PlayerConfig;
+            var playerView = new CreatePlayer(refResources.PlayerView);
+            var playerAnimator = new SpriteAnimController(playerConfig);
+            var playerModel = new PlayerModel(100f, 10f, 5f);
+            var playerController = new PlayerController(playerView.PlayerMonoBeh(), playerAnimator, playerModel);
 
-            controllers.Add(_playerAnimator);
+           controllers.Add(playerController);
         }
     }
 }

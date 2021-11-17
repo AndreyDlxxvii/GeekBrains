@@ -2,6 +2,6 @@ namespace GBPlatformer
 {
     public interface IOnUpdate
     {
-        public void OnUpdate ();
+        public void OnUpdate (float deltaTime);
     }
 }

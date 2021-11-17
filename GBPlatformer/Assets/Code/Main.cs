@@ -19,7 +19,7 @@ namespace GBPlatformer
 
         void Update()
         {
-            _controllers.OnUpdate();
+            _controllers.OnUpdate(Time.deltaTime);
         }
     }
 }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace GBPlatformer
 {
@@ -44,13 +45,13 @@ namespace GBPlatformer
             }
         }
 
-        public void OnUpdate()
+        public void OnUpdate(float deltaTime)
         {
             foreach (var ell in _onUpdates)
             {
                 if (ell.HasMethod(updateMethod))
                 {
-                    ell.OnUpdate();
+                    ell.OnUpdate(deltaTime);
                 }
             }
         }

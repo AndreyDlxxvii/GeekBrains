@@ -5,17 +5,16 @@ using UnityEngine;
 
 namespace GBPlatformer
 {
-    public class SpriteAnimController : IDisposable, IOnUpdate, IOnController, IOnStart
+    public class SpriteAnimController : IDisposable
     {
         
         private SpriteAnimConfig _spriteAnimConfig;
         private Dictionary<SpriteRenderer, Animation> _activeAnimation = new Dictionary<SpriteRenderer, Animation>();
         private LevelObjectView _playerView;
 
-        public SpriteAnimController(SpriteAnimConfig spriteAnimConfig, LevelObjectView playerView)
+        public SpriteAnimController(SpriteAnimConfig spriteAnimConfig)
         {
             _spriteAnimConfig = spriteAnimConfig;
-            _playerView = playerView;
         }
 
         public void StartAnimation(SpriteRenderer spriteRenderer, AnimState animState, bool loop)
@@ -53,11 +52,7 @@ namespace GBPlatformer
                 _activeAnimation.Remove(spriteRenderer);
             }
         }
-        public void OnStart()
-        {
-            StartAnimation(_playerView.SpriteRenderer, AnimState.Idle, true);
-        }
-        public void OnUpdate()
+        public void Update()
         {
             foreach (var ell in _activeAnimation)
             {
@@ -73,7 +68,5 @@ namespace GBPlatformer
         {
             _activeAnimation.Clear();
         }
-
-       
     }
 }
