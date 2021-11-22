@@ -6,6 +6,8 @@ namespace GBPlatformer
     {
         private SpriteAnimConfig _playerConfig;
         private LevelObjectView _playerView;
+        private Rigidbody2D _bulletView;
+        private CannonView _cannonView;
 
         public SpriteAnimConfig PlayerConfig
         {
@@ -13,7 +15,7 @@ namespace GBPlatformer
             {
                 if (_playerConfig == null)
                 {
-                    _playerConfig = Resources.Load<SpriteAnimConfig>("PlayerAnimCFG");
+                    _playerConfig = Resources.Load<SpriteAnimConfig>(PrefabNameManager.PlayerAnimCFG);
                 }
                 return _playerConfig;
             }
@@ -25,10 +27,36 @@ namespace GBPlatformer
             {
                 if (_playerView == null)
                 {
-                    _playerView = Resources.Load<LevelObjectView>("Player");
+                    _playerView = Resources.Load<LevelObjectView>(PrefabNameManager.Player);
                 }
 
                 return _playerView;
+            }
+        }
+        
+        public CannonView CannonView
+        {
+            get
+            {
+                if (_cannonView == null)
+                {
+                    _cannonView = Resources.Load<CannonView>(PrefabNameManager.Gun);
+                }
+
+                return _cannonView;
+            }
+        }
+        
+        public Rigidbody2D Bullet
+        {
+            get
+            {
+                if (_bulletView == null)
+                {
+                    _bulletView = Resources.Load<Rigidbody2D>(PrefabNameManager.Bullet);
+                }
+
+                return _bulletView;
             }
         }
     }

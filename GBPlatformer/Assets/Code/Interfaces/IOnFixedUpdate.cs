@@ -2,6 +2,6 @@ namespace GBPlatformer
 {
     public interface IOnFixedUpdate
     {
-        public void OnFixedUpdate();
+        public void OnFixedUpdate(float fixedDeltaTime);
     }
 }

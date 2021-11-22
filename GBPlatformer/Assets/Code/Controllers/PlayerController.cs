@@ -3,11 +3,12 @@ using UnityEngine;
 
 namespace GBPlatformer
 {
-    public class PlayerController : IOnController, IOnUpdate
+    public class PlayerController : IOnController, IOnUpdate, IOnFixedUpdate
     {
         private LevelObjectView _playerView;
         private SpriteAnimController _spriteAnimController;
         private PlayerModel _playerModel;
+        private ContactPooler _contactPooler;
 
         private float _xAxisInput;
         private bool _isJumping;
@@ -20,9 +21,9 @@ namespace GBPlatformer
         private bool _isMoving;
         
         private float _jumpTreshold = 1f;
-        private const float _g = -9.8f;
         private float _groundLevel = -3f;
         private float _yVelocity;
+        private float _xVelocity;
         
         
         
@@ -33,14 +34,21 @@ namespace GBPlatformer
             _spriteAnimController = spriteAnimController;
             _playerModel = playerModel;
             _spriteAnimController.StartAnimation(_playerView.SpriteRenderer, AnimState.Idle, true);
+            _contactPooler = new ContactPooler(_playerView.Collider2D);
         }
         
         public void OnUpdate(float deltaTime)
         {
+            _contactPooler.Update();
             _spriteAnimController.Update();
             CheckInput();
-            Move(deltaTime);
-            Jump(deltaTime);
+            
+        }
+        
+        public void OnFixedUpdate(float fixedDeltaTime)
+        {
+            Move(fixedDeltaTime);
+            Jump(fixedDeltaTime);
         }
 
         private void CheckInput()
@@ -50,13 +58,13 @@ namespace GBPlatformer
             _isJumping = Input.GetAxis(AxisManager.Vertical) > 0f;
         }
         
-        private void Move(float deltaTime)
+        private void Move(float fixedDeltaTime)
         {
             if (_isMoving)
             {
                 _xAxisInput = _xAxisInput > 0 ? 1 : -1;
-                _playerView.Transform.position +=
-                    Vector3.right * (deltaTime * _playerModel.Speed * _xAxisInput);
+                _xVelocity = fixedDeltaTime * _playerModel.Speed * _xAxisInput;
+                _playerView.Rigidbody2D.velocity = _playerView.Rigidbody2D.velocity.Change(x: _xVelocity);
                 _playerView.Transform.localScale = _xAxisInput < 0 ? _leftScale:_rightScale;
                 _spriteAnimController.StartAnimation(_playerView.SpriteRenderer, AnimState.Run, true);
             }
@@ -66,14 +74,14 @@ namespace GBPlatformer
             }
         }
         
-        private void Jump(float deltaTime)
+        private void Jump(float fixedDeltaTime)
         {
-            if (_playerView.Transform.LowerThanYPos(_groundLevel) && _yVelocity <= 0f)
+            if (_contactPooler.IsGrounded)
             {
                 _spriteAnimController.StartAnimation(_playerView.SpriteRenderer, _isMoving? AnimState.Run:AnimState.Idle, true);
-                if (_isJumping)
+                if (_isJumping && Mathf.Abs(_playerView.Rigidbody2D.velocity.y)<= _jumpTreshold)
                 {
-                    _yVelocity = _playerModel.JumpSpeed;
+                    _playerView.Rigidbody2D.AddForce(Vector2.up*_playerModel.JumpSpeed, ForceMode2D.Impulse);
                 }
                 else if (_yVelocity < 0)
                 {
@@ -83,13 +91,13 @@ namespace GBPlatformer
             }
             else
             {
-                if (Mathf.Abs(_yVelocity)>_jumpTreshold)
+                if (Mathf.Abs(_playerView.Rigidbody2D.velocity.y)>= _jumpTreshold)
                 {
                     _spriteAnimController.StartAnimation(_playerView.SpriteRenderer, AnimState.Jump, true);
                 }
-                _yVelocity += _g * deltaTime;
-                _playerView.Transform.position += Vector3.up * (deltaTime * _yVelocity);
             }
         }
+
+
     }
 }
