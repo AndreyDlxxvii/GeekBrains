@@ -1,0 +1,1085 @@
+Using pre-set license
+Built from '2020.2/staging' branch; Version is '2020.2.7f1 (c53830e277f1) revision 12924976'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19042.1348; Version 2009; 64bit' Language: 'ru' Physical Memory: 16264 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.2.7f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+C:/GitHub/GeekBrains/GBPlatformer
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+57765
+Successfully changed project path to: C:/GitHub/GeekBrains/GBPlatformer
+C:/GitHub/GeekBrains/GBPlatformer
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 45.49 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.7f1 (c53830e277f1)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/GitHub/GeekBrains/GBPlatformer/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA Quadro M600M (ID=0x13b2)
+    Vendor:   
+    VRAM:     2007 MB
+    Driver:   27.21.14.6294
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56960
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003158 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 41.79 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.243 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001451 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 52.07 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.213 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 0.37 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1823 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.9 MB.
+System memory in use after: 84.9 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2265.
+Total: 4.175300 ms (FindLiveObjects: 0.397800 ms CreateObjectMapping: 0.513100 ms MarkObjects: 3.032700 ms  DeleteObjects: 0.230300 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Sprites/Background/Cloud_2.png
+  artifactKey: Guid(5ece7682d873cd643a452f09daec554d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/Cloud_2.png using Guid(5ece7682d873cd643a452f09daec554d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0255b4cbee25dfda677bc152e7be913') in 0.228123 seconds
+  Import took 0.231766 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000382 seconds.
+  path: Assets/Sprites/Background/Mountain_1.png
+  artifactKey: Guid(185d279125c69534d998d80dd5b85816) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/Mountain_1.png using Guid(185d279125c69534d998d80dd5b85816) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f19d3475ccc2b643a92b91a48219cd8') in 0.033427 seconds
+  Import took 0.038368 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000447 seconds.
+  path: Assets/Sprites/Background
+  artifactKey: Guid(73279d4d74f548841a6ac4637a15b38b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background using Guid(73279d4d74f548841a6ac4637a15b38b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '681821985fb08ca02ef94aa6d696f613') in 0.003504 seconds
+  Import took 0.008370 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000411 seconds.
+  path: Assets/Sprites/Background/Mountain_2.png
+  artifactKey: Guid(d02d266bd76efc248ac444aa1475a962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/Mountain_2.png using Guid(d02d266bd76efc248ac444aa1475a962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89ab875718c96f4171060c89efac06eb') in 0.027447 seconds
+  Import took 0.033470 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000453 seconds.
+  path: Assets/Sprites/Background/Mountain_3.png
+  artifactKey: Guid(18e079a57d1e99d40800016fa91d8b8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/Mountain_3.png using Guid(18e079a57d1e99d40800016fa91d8b8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b98f483aa3f9895389ce0457a789724') in 0.026371 seconds
+  Import took 0.033196 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000540 seconds.
+  path: Assets/Sprites/Background/Mountain_4.png
+  artifactKey: Guid(7a44d5d02afe5f64fba10dd9bc58f6a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/Mountain_4.png using Guid(7a44d5d02afe5f64fba10dd9bc58f6a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9735ff6a99c2820c2232b89b8c71390') in 0.028282 seconds
+  Import took 0.035001 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000363 seconds.
+  path: Assets/Sprites/Background/Hills_2.png
+  artifactKey: Guid(410666bf33986d84fbdb239e3eacb3de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/Hills_2.png using Guid(410666bf33986d84fbdb239e3eacb3de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ca745798ea53c9ce04d7ef5c978127e') in 0.032440 seconds
+  Import took 0.039011 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000354 seconds.
+  path: Assets/Sprites/Background/Sky.png
+  artifactKey: Guid(255bec901c6b800459c02321349e2ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/Sky.png using Guid(255bec901c6b800459c02321349e2ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a918fad4dbc97091a866ed59b80ffe3a') in 0.027025 seconds
+  Import took 0.035180 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000369 seconds.
+  path: Assets/Sprites/Background/Hills_1.png
+  artifactKey: Guid(a629dd0c4f24fbf4986787247e41a1af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/Hills_1.png using Guid(a629dd0c4f24fbf4986787247e41a1af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d4764fd962bd634da82b86a66294b03') in 0.026915 seconds
+  Import took 0.033411 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000371 seconds.
+  path: Assets/Sprites/Background/Cloud_1.png
+  artifactKey: Guid(2d7683012a50e5d4db5e064273673638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/Cloud_1.png using Guid(2d7683012a50e5d4db5e064273673638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82c41c846be926e8198ea9c769f54b4e') in 0.018357 seconds
+  Import took 0.024096 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000513 seconds.
+  path: Assets/Sprites/Background/Background.png
+  artifactKey: Guid(65605faa4d260d243a71749594871fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/Background.png using Guid(65605faa4d260d243a71749594871fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f99c51b49ff4208ff495905150ef157') in 0.020072 seconds
+  Import took 0.027563 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.805637 seconds.
+  path: Assets/Sprites/Background/Background.png
+  artifactKey: Guid(65605faa4d260d243a71749594871fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/Background.png using Guid(65605faa4d260d243a71749594871fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbff1cf1ed79d3f73b7fabab0fea8053') in 0.016000 seconds
+  Import took 0.022482 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.552663 seconds.
+  path: Assets/Sprites/Background/Background.png
+  artifactKey: Guid(65605faa4d260d243a71749594871fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/Background.png using Guid(65605faa4d260d243a71749594871fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b344f75557be30405c931a445452f4f1') in 0.012574 seconds
+  Import took 0.021178 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.228747 seconds.
+  path: Assets/Sprites/Background/Background.png
+  artifactKey: Guid(65605faa4d260d243a71749594871fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/Background.png using Guid(65605faa4d260d243a71749594871fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '712c99e0f39adb853d9cf777f0a0fbbf') in 0.013861 seconds
+  Import took 0.021212 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.641103 seconds.
+  path: Assets/Sprites/Background/Background.png
+  artifactKey: Guid(65605faa4d260d243a71749594871fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/Background.png using Guid(65605faa4d260d243a71749594871fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9f4a8cc903ebabf5dddbceb0d88f001') in 0.011510 seconds
+  Import took 0.016597 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000884 seconds.
+  path: Assets/Sprites/Background/Background.png
+  artifactKey: Guid(65605faa4d260d243a71749594871fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/Background.png using Guid(65605faa4d260d243a71749594871fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9f4a8cc903ebabf5dddbceb0d88f001') in 0.013216 seconds
+  Import took 0.019704 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.868750 seconds.
+  path: Assets/Sprites/Background/Background.png
+  artifactKey: Guid(65605faa4d260d243a71749594871fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/Background.png using Guid(65605faa4d260d243a71749594871fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a4b1c42ace89379277e70304362a950') in 0.013109 seconds
+  Import took 0.021405 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.325825 seconds.
+  path: Assets/Sprites/Background/Background.png
+  artifactKey: Guid(65605faa4d260d243a71749594871fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/Background.png using Guid(65605faa4d260d243a71749594871fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a9cdc95bd197d4881c0b39f4f8b7c43') in 0.011558 seconds
+  Import took 0.020172 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.294797 seconds.
+  path: Assets/Sprites/Background/Background.png
+  artifactKey: Guid(65605faa4d260d243a71749594871fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/Background.png using Guid(65605faa4d260d243a71749594871fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14c4186b2c3b71bd3379184bf8dc3412') in 0.013254 seconds
+  Import took 0.021039 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 939.688761 seconds.
+  path: Assets/Sprites/Environment
+  artifactKey: Guid(4c1b25b9f8199a543bd546e54d5d2078) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Environment using Guid(4c1b25b9f8199a543bd546e54d5d2078) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f40b94799e9c41f9e64f60460e3ce9e2') in 0.008264 seconds
+  Import took 0.013256 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.061199 seconds.
+  path: Assets/Sprites/Environment/Asset 1.png
+  artifactKey: Guid(a28d6c259b02d72419103b0753750c66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Environment/Asset 1.png using Guid(a28d6c259b02d72419103b0753750c66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a95139d1caf2fe56f8e77cff17705f1') in 0.030593 seconds
+  Import took 0.034612 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000441 seconds.
+  path: Assets/Sprites/Environment/Asset 4.png
+  artifactKey: Guid(c2ad0e59d4021894892edfdec063f85b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Environment/Asset 4.png using Guid(c2ad0e59d4021894892edfdec063f85b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '151a4737f8a7dfb583989a6a5734b21a') in 0.019517 seconds
+  Import took 0.025244 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000419 seconds.
+  path: Assets/Sprites/Environment/Asset 10.png
+  artifactKey: Guid(76ce1040161f27e48b3daea406482984) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Environment/Asset 10.png using Guid(76ce1040161f27e48b3daea406482984) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0203635d88083d0b7ccc19b3279e8f1d') in 0.022560 seconds
+  Import took 0.029786 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000464 seconds.
+  path: Assets/Sprites/Environment/Asset 8.png
+  artifactKey: Guid(2bf84fe4af5357f41809176956fc5386) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Environment/Asset 8.png using Guid(2bf84fe4af5357f41809176956fc5386) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47bea3b9dd6d70917669ff8aa2d3f874') in 0.023808 seconds
+  Import took 0.029845 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000340 seconds.
+  path: Assets/Sprites/Environment/Asset 13.png
+  artifactKey: Guid(9181aa0a35cbb4a45ba428a06ce30339) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Environment/Asset 13.png using Guid(9181aa0a35cbb4a45ba428a06ce30339) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f25f69b49b4b38c243d66d4d8088eded') in 0.017585 seconds
+  Import took 0.021341 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000383 seconds.
+  path: Assets/Sprites/Environment/Asset 5.png
+  artifactKey: Guid(04412c36113b4bb4ebbb7b7f24bb82a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Environment/Asset 5.png using Guid(04412c36113b4bb4ebbb7b7f24bb82a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c9aa0c703852e98393148bec4a38eec') in 0.019727 seconds
+  Import took 0.025820 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000396 seconds.
+  path: Assets/Sprites/Environment/Asset 3.png
+  artifactKey: Guid(c48a6b50a6423d044bb16e05ef123f55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Environment/Asset 3.png using Guid(c48a6b50a6423d044bb16e05ef123f55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db9aac3ef46ea14736da51769b39bda5') in 0.018798 seconds
+  Import took 0.023697 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000457 seconds.
+  path: Assets/Sprites/Environment/Asset 11.png
+  artifactKey: Guid(f9ef5564f0d0774479fe4c48f4dcb594) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Environment/Asset 11.png using Guid(f9ef5564f0d0774479fe4c48f4dcb594) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbced5dcd885f3c303d373283ea2bc71') in 0.018290 seconds
+  Import took 0.025088 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000384 seconds.
+  path: Assets/Sprites/Environment/Asset 14.png
+  artifactKey: Guid(19324b2039641234ea84ab9b872d96aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Environment/Asset 14.png using Guid(19324b2039641234ea84ab9b872d96aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0e874e997c71531db972cfc4300a1f5') in 0.022475 seconds
+  Import took 0.028907 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000459 seconds.
+  path: Assets/Sprites/Environment/Asset 9.png
+  artifactKey: Guid(6181216537131fd40b247fe3ba637213) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Environment/Asset 9.png using Guid(6181216537131fd40b247fe3ba637213) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82ff168d3e5115adedeba8a2578da937') in 0.023588 seconds
+  Import took 0.028957 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000372 seconds.
+  path: Assets/Sprites/Environment/Asset 12.png
+  artifactKey: Guid(d41912ecb7dd51e4887f83401170fece) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Environment/Asset 12.png using Guid(d41912ecb7dd51e4887f83401170fece) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a982a3cd6f0a5572f1fa94eab31b9070') in 0.023164 seconds
+  Import took 0.031120 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000425 seconds.
+  path: Assets/Sprites/Environment/Asset 6.png
+  artifactKey: Guid(a103900552dfb1a45ac3a5dea437236f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Environment/Asset 6.png using Guid(a103900552dfb1a45ac3a5dea437236f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b249d2bf1ec7b292be9497e770940352') in 0.020607 seconds
+  Import took 0.025013 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000407 seconds.
+  path: Assets/Sprites/Environment/Asset 2.png
+  artifactKey: Guid(156efe3f4b3518a4b955e1cd207ae126) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Environment/Asset 2.png using Guid(156efe3f4b3518a4b955e1cd207ae126) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd02acf69a61f2a6fa0978e7513d55f3') in 0.028318 seconds
+  Import took 0.034326 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000423 seconds.
+  path: Assets/Sprites/Environment/Asset 15.png
+  artifactKey: Guid(e725f7d12bf71e844ab4e6918506bd2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Environment/Asset 15.png using Guid(e725f7d12bf71e844ab4e6918506bd2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8970323a3a29aa5279d767adc2952ef4') in 0.018324 seconds
+  Import took 0.024161 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000351 seconds.
+  path: Assets/Sprites/Environment/Asset 7.png
+  artifactKey: Guid(f91ed7409bc185544a594d68ba44eb76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Environment/Asset 7.png using Guid(f91ed7409bc185544a594d68ba44eb76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '626861983aa119c46821f3cc7dc6bef5') in 0.015953 seconds
+  Import took 0.020061 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.017182 seconds.
+  path: Assets/Sprites/Environment/Asset 15.png
+  artifactKey: Guid(e725f7d12bf71e844ab4e6918506bd2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Environment/Asset 15.png using Guid(e725f7d12bf71e844ab4e6918506bd2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8970323a3a29aa5279d767adc2952ef4') in 0.015417 seconds
+  Import took 0.020293 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.319327 seconds.
+  path: Assets/Sprites/Tiles
+  artifactKey: Guid(f2876fa6bad3d7f4cbd2714f67670e8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles using Guid(f2876fa6bad3d7f4cbd2714f67670e8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d46a154af52a97fe7718505e0f32f97') in 0.008101 seconds
+  Import took 0.013302 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.393914 seconds.
+  path: Assets/Sprites/Tiles/Spring
+  artifactKey: Guid(ae1b741ef71a91b4097878ac03680f77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring using Guid(ae1b741ef71a91b4097878ac03680f77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '568ee3e2a0376b5514b50ce94075527c') in 0.003662 seconds
+  Import took 0.012058 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.084572 seconds.
+  path: Assets/Sprites/Tiles/Spring/Asset 40.png
+  artifactKey: Guid(74abb6459ce368e4ebed09fb3111e23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/Asset 40.png using Guid(74abb6459ce368e4ebed09fb3111e23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35bec84fafcce5e8d085e6b8cd8180a7') in 0.025409 seconds
+  Import took 0.030522 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000422 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassJoinHillRight2&Left2.png
+  artifactKey: Guid(ac91842de393f61419fad335a6d37a72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassJoinHillRight2&Left2.png using Guid(ac91842de393f61419fad335a6d37a72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28de59b6ccc42d6b2000ee2208dfcabe') in 0.018553 seconds
+  Import took 0.022994 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000495 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassHillLeft2 DownShadow.png
+  artifactKey: Guid(3c673f15212e9ed4eb86b2c96cb5e8f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassHillLeft2 DownShadow.png using Guid(3c673f15212e9ed4eb86b2c96cb5e8f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e29b56108e85460042cb57cf4c2ff07') in 0.021460 seconds
+  Import took 0.027922 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000566 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassHillRight.png
+  artifactKey: Guid(7f5b598524313bf4d8d70ed87894cc61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassHillRight.png using Guid(7f5b598524313bf4d8d70ed87894cc61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5353347ebfb791233e8396f8618168d8') in 0.018814 seconds
+  Import took 0.024478 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000566 seconds.
+  path: Assets/Sprites/Tiles/Spring/Dirt.png
+  artifactKey: Guid(71c9d16b0d779e04e8a6d6f78cf7837b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/Dirt.png using Guid(71c9d16b0d779e04e8a6d6f78cf7837b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd661b0fed9bafed2efeb487857ba01a2') in 0.020397 seconds
+  Import took 0.026052 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000409 seconds.
+  path: Assets/Sprites/Tiles/Spring/DirtLeft.png
+  artifactKey: Guid(0176fa3c0a61a0f4cad9cc98bc459e0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/DirtLeft.png using Guid(0176fa3c0a61a0f4cad9cc98bc459e0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92f1fc5e09767a479ad5471131bccb00') in 0.017815 seconds
+  Import took 0.025110 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000623 seconds.
+  path: Assets/Sprites/Tiles/Spring/column_up.png
+  artifactKey: Guid(467abc4bd368f7a4bbdcf1dacedc30c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/column_up.png using Guid(467abc4bd368f7a4bbdcf1dacedc30c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37706bc6fb7bf54e7633796f2940eb6b') in 0.018590 seconds
+  Import took 0.024718 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002308 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassCliffLeft.png
+  artifactKey: Guid(1971995e40b9a0e409bf814c89c107e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassCliffLeft.png using Guid(1971995e40b9a0e409bf814c89c107e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7ce2a84508b480179fcfa1d1f0f38c5') in 0.019181 seconds
+  Import took 0.026468 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000444 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassJoinHillLeft2.png
+  artifactKey: Guid(e52f5b1b7df85b84f936132b2d5b4c6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassJoinHillLeft2.png using Guid(e52f5b1b7df85b84f936132b2d5b4c6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87066c717b28b1dad27875725f792d31') in 0.019701 seconds
+  Import took 0.025057 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000331 seconds.
+  path: Assets/Sprites/Tiles/Spring/DirtDown.png
+  artifactKey: Guid(884df65beb45634438224aa27ac55179) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/DirtDown.png using Guid(884df65beb45634438224aa27ac55179) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9bae551c14b26b677c1e106cc460e5f') in 0.016026 seconds
+  Import took 0.021934 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000313 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassMid.png
+  artifactKey: Guid(682224fe8ee95a942a8adbc6010725d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassMid.png using Guid(682224fe8ee95a942a8adbc6010725d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aaacd1fbf9971ab47eee9448147baa35') in 0.022698 seconds
+  Import took 0.029413 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000392 seconds.
+  path: Assets/Sprites/Tiles/Spring/Grass.png
+  artifactKey: Guid(2feb3109639754c40acc03e8136081ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/Grass.png using Guid(2feb3109639754c40acc03e8136081ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd765a418c66d68146cd927022861fa05') in 0.018069 seconds
+  Import took 0.023941 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000362 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassCliffRight.png
+  artifactKey: Guid(e95edf2fec28aec4ebc5fa08d630b6a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassCliffRight.png using Guid(e95edf2fec28aec4ebc5fa08d630b6a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cd7457955634f399415c05230ff998a') in 0.020002 seconds
+  Import took 0.023840 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000350 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassHillRight2.png
+  artifactKey: Guid(64d6582efd46d834fb9b9db85bf63326) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassHillRight2.png using Guid(64d6582efd46d834fb9b9db85bf63326) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b521cc249801d1ab69df640fc2db4aa') in 0.021621 seconds
+  Import took 0.029474 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000396 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassColumn.png
+  artifactKey: Guid(15b8c7e913a0af64e8b5b7048498263b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassColumn.png using Guid(15b8c7e913a0af64e8b5b7048498263b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82e6bc79a657fd3c490f6486cb98d975') in 0.021306 seconds
+  Import took 0.025687 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000390 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassJoinHillRight2.png
+  artifactKey: Guid(866d4bc05734b3146a78094fffa704d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassJoinHillRight2.png using Guid(866d4bc05734b3146a78094fffa704d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c8526792bd42a281827d6e67786037d') in 0.017282 seconds
+  Import took 0.022035 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000424 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassHillLeft2.png
+  artifactKey: Guid(a5ba4b99cb128f34eb5ca6328b9298d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassHillLeft2.png using Guid(a5ba4b99cb128f34eb5ca6328b9298d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b3a944bcac2b14195f818524e8f7a9f') in 0.020712 seconds
+  Import took 0.026920 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000376 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassLeft.png
+  artifactKey: Guid(1a0d83557951d8a449e0739959e7c58c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassLeft.png using Guid(1a0d83557951d8a449e0739959e7c58c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50b1c60f0370f752e818dbb781523700') in 0.017114 seconds
+  Import took 0.021002 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000388 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassCliffMid.png
+  artifactKey: Guid(1597ceff11690144093d128e21aa53a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassCliffMid.png using Guid(1597ceff11690144093d128e21aa53a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7ee436e031764ea2a1470e320fdae75') in 0.017584 seconds
+  Import took 0.024101 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000794 seconds.
+  path: Assets/Sprites/Tiles/Spring/DirtRightCorner.png
+  artifactKey: Guid(dbba0da7b78a22647a9da9ad638a340b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/DirtRightCorner.png using Guid(dbba0da7b78a22647a9da9ad638a340b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1afe09ba8badd2a2461cf51515bf32a5') in 0.016617 seconds
+  Import took 0.022600 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000402 seconds.
+  path: Assets/Sprites/Tiles/Spring/Asset 41.png
+  artifactKey: Guid(33c38d25dd24c1f4487cbe0229e12af4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/Asset 41.png using Guid(33c38d25dd24c1f4487cbe0229e12af4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba6d5ef0dd32d5388c9f75b02394f3da') in 0.020012 seconds
+  Import took 0.025883 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000382 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassJoinHillLeft2 DownShadow.png
+  artifactKey: Guid(b5f9a8e84b94baf45a8264b52e82f83d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassJoinHillLeft2 DownShadow.png using Guid(b5f9a8e84b94baf45a8264b52e82f83d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24847a7ee3175906793284fc711b4e2e') in 0.016987 seconds
+  Import took 0.020529 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000390 seconds.
+  path: Assets/Sprites/Tiles/Spring/column_down.png
+  artifactKey: Guid(203a2b9d119aefd479d1f8fb62d7a587) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/column_down.png using Guid(203a2b9d119aefd479d1f8fb62d7a587) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c515f9f6db7079e5890ae539e155b60a') in 0.015101 seconds
+  Import took 0.022296 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000507 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassRight.png
+  artifactKey: Guid(d6aab334b617b0a4990573721b7cf4a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassRight.png using Guid(d6aab334b617b0a4990573721b7cf4a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41682938dcff147aa501ba5023edd157') in 0.021188 seconds
+  Import took 0.025868 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000391 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassJoinHillRight2 DownShadow.png
+  artifactKey: Guid(1623db236d8441145b70d722a7d1e212) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassJoinHillRight2 DownShadow.png using Guid(1623db236d8441145b70d722a7d1e212) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bf90178ed05e5c9cdda62387e10ee20') in 0.017473 seconds
+  Import took 0.022552 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000399 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassHillLeft.png
+  artifactKey: Guid(57da45673889efb408e9a8328758229f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassHillLeft.png using Guid(57da45673889efb408e9a8328758229f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b99c212f3cb9517d50ed92d3a5362a3c') in 0.018872 seconds
+  Import took 0.024171 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000334 seconds.
+  path: Assets/Sprites/Tiles/Spring/DirtLeftCorner.png
+  artifactKey: Guid(696e4921e3ad7cf479fb36f3a7b9b36e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/DirtLeftCorner.png using Guid(696e4921e3ad7cf479fb36f3a7b9b36e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85e0cff091cd2203410b531e343a6ec2') in 0.019007 seconds
+  Import took 0.024182 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000409 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassJoinHillRight.png
+  artifactKey: Guid(4409a5c0f0bc29b48ae9a31ca6e6003e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassJoinHillRight.png using Guid(4409a5c0f0bc29b48ae9a31ca6e6003e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1255552b00be5a8381cf3d8b4f5b0b2') in 0.015872 seconds
+  Import took 0.020980 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000514 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassJoinHillRight2&Left2 DownShadow.png
+  artifactKey: Guid(b70e494a0536c9b4887613c9d0260bca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassJoinHillRight2&Left2 DownShadow.png using Guid(b70e494a0536c9b4887613c9d0260bca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e65e9ab345eebdb7a5f345ec5530bcf5') in 0.018288 seconds
+  Import took 0.022382 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000391 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassHillRight2 DownShadow.png
+  artifactKey: Guid(fb78162c8446efa4e9f067dd3146d4dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassHillRight2 DownShadow.png using Guid(fb78162c8446efa4e9f067dd3146d4dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6fc793bb8bcae12d5f342e2b49d6601') in 0.017110 seconds
+  Import took 0.023604 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000447 seconds.
+  path: Assets/Sprites/Tiles/Spring/DirtRight.png
+  artifactKey: Guid(51da486d08a712c42b777a890813863f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/DirtRight.png using Guid(51da486d08a712c42b777a890813863f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1767d34dbdddcf07f9e9231fd7e3eba2') in 0.017617 seconds
+  Import took 0.024270 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000385 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassJoinHillLeft&Right.png
+  artifactKey: Guid(e0cd65734afbac4418ae85adb9795ea8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassJoinHillLeft&Right.png using Guid(e0cd65734afbac4418ae85adb9795ea8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '305d63d4b82537bb3bd5c31ad9c9aeb6') in 0.017501 seconds
+  Import took 0.021639 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000407 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassJoinHillLeft.png
+  artifactKey: Guid(05fd9a3b7042a7f47a18238e12c52091) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassJoinHillLeft.png using Guid(05fd9a3b7042a7f47a18238e12c52091) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b827b21e24cba426aaceabb30cfd1904') in 0.015269 seconds
+  Import took 0.020116 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000381 seconds.
+  path: Assets/Sprites/Tiles/Spring/Column.png
+  artifactKey: Guid(4dcbbbcb39af2a34bb8decd8b3f23206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/Column.png using Guid(4dcbbbcb39af2a34bb8decd8b3f23206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '854c34a7a54609c98ddcea45cacbb8a3') in 0.020511 seconds
+  Import took 0.026995 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.862035 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassJoinHillLeft&Right.png
+  artifactKey: Guid(e0cd65734afbac4418ae85adb9795ea8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassJoinHillLeft&Right.png using Guid(e0cd65734afbac4418ae85adb9795ea8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebd9b65253f0d53d121a65c233aaf826') in 0.016588 seconds
+  Import took 0.021880 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000385 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassJoinHillRight2&Left2.png
+  artifactKey: Guid(ac91842de393f61419fad335a6d37a72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassJoinHillRight2&Left2.png using Guid(ac91842de393f61419fad335a6d37a72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce16aa89110ed638f7da13fa8eb420c1') in 0.012495 seconds
+  Import took 0.016831 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000416 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassJoinHillLeft2.png
+  artifactKey: Guid(e52f5b1b7df85b84f936132b2d5b4c6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassJoinHillLeft2.png using Guid(e52f5b1b7df85b84f936132b2d5b4c6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '266a02d993da8a05f08040f11c9072ec') in 0.011225 seconds
+  Import took 0.017938 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000389 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassMid.png
+  artifactKey: Guid(682224fe8ee95a942a8adbc6010725d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassMid.png using Guid(682224fe8ee95a942a8adbc6010725d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8aec312ae46cfd91f6ac52ac0f635a37') in 0.012044 seconds
+  Import took 0.016013 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000392 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassJoinHillRight2.png
+  artifactKey: Guid(866d4bc05734b3146a78094fffa704d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassJoinHillRight2.png using Guid(866d4bc05734b3146a78094fffa704d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f485e3e7b918e93278637b79ac7ab2c') in 0.015737 seconds
+  Import took 0.020753 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000356 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassLeft.png
+  artifactKey: Guid(1a0d83557951d8a449e0739959e7c58c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassLeft.png using Guid(1a0d83557951d8a449e0739959e7c58c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6abe08451a9a1a2e6792cdbe14428a56') in 0.014374 seconds
+  Import took 0.017966 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000418 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassJoinHillLeft2 DownShadow.png
+  artifactKey: Guid(b5f9a8e84b94baf45a8264b52e82f83d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassJoinHillLeft2 DownShadow.png using Guid(b5f9a8e84b94baf45a8264b52e82f83d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cab0fc15d5cf8e69fcae9439bb697b36') in 0.011246 seconds
+  Import took 0.016595 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000412 seconds.
+  path: Assets/Sprites/Tiles/Spring/column_down.png
+  artifactKey: Guid(203a2b9d119aefd479d1f8fb62d7a587) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/column_down.png using Guid(203a2b9d119aefd479d1f8fb62d7a587) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bff0445b8037d776c680ea27aae9e336') in 0.017653 seconds
+  Import took 0.024327 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000353 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassRight.png
+  artifactKey: Guid(d6aab334b617b0a4990573721b7cf4a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassRight.png using Guid(d6aab334b617b0a4990573721b7cf4a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ae300147667217f5933e163ab0bdb00') in 0.015421 seconds
+  Import took 0.021543 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000476 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassJoinHillRight2 DownShadow.png
+  artifactKey: Guid(1623db236d8441145b70d722a7d1e212) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassJoinHillRight2 DownShadow.png using Guid(1623db236d8441145b70d722a7d1e212) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f83382e14ab27cfe5981a9f18317a498') in 0.012615 seconds
+  Import took 0.017261 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000300 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassJoinHillRight.png
+  artifactKey: Guid(4409a5c0f0bc29b48ae9a31ca6e6003e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassJoinHillRight.png using Guid(4409a5c0f0bc29b48ae9a31ca6e6003e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96805aeacccf23d356709e7520a5db08') in 0.011567 seconds
+  Import took 0.016823 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000392 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassJoinHillRight2&Left2 DownShadow.png
+  artifactKey: Guid(b70e494a0536c9b4887613c9d0260bca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassJoinHillRight2&Left2 DownShadow.png using Guid(b70e494a0536c9b4887613c9d0260bca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f190fba529bdf314a2ab6b1112a5b4c2') in 0.013881 seconds
+  Import took 0.018783 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000369 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassJoinHillLeft.png
+  artifactKey: Guid(05fd9a3b7042a7f47a18238e12c52091) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassJoinHillLeft.png using Guid(05fd9a3b7042a7f47a18238e12c52091) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a3296ee57d00caf75ece2f7a2f638fc') in 0.014468 seconds
+  Import took 0.020727 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.781558 seconds.
+  path: Assets/Sprites/Tiles/Spring/Grass.png
+  artifactKey: Guid(2feb3109639754c40acc03e8136081ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/Grass.png using Guid(2feb3109639754c40acc03e8136081ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3f76416ca49eed10b19b4a17a11f37e') in 0.019268 seconds
+  Import took 0.025086 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000498 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassHillLeft2 DownShadow.png
+  artifactKey: Guid(3c673f15212e9ed4eb86b2c96cb5e8f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassHillLeft2 DownShadow.png using Guid(3c673f15212e9ed4eb86b2c96cb5e8f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9849b6610a185604f0bd0bffcf879818') in 0.016257 seconds
+  Import took 0.022422 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000656 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassHillRight.png
+  artifactKey: Guid(7f5b598524313bf4d8d70ed87894cc61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassHillRight.png using Guid(7f5b598524313bf4d8d70ed87894cc61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f21933e1ec90fd38b46b22f982ec8546') in 0.013734 seconds
+  Import took 0.019244 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000488 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassCliffLeft.png
+  artifactKey: Guid(1971995e40b9a0e409bf814c89c107e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassCliffLeft.png using Guid(1971995e40b9a0e409bf814c89c107e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8eaccd3d42974e3f4d69abfcb257bdda') in 0.014277 seconds
+  Import took 0.018434 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000492 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassCliffRight.png
+  artifactKey: Guid(e95edf2fec28aec4ebc5fa08d630b6a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassCliffRight.png using Guid(e95edf2fec28aec4ebc5fa08d630b6a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1891056b071ec853b2a81f5b9a9a006') in 0.013367 seconds
+  Import took 0.017852 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000413 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassHillRight2.png
+  artifactKey: Guid(64d6582efd46d834fb9b9db85bf63326) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassHillRight2.png using Guid(64d6582efd46d834fb9b9db85bf63326) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fab004808eb34f6355f29ad78bdca2a') in 0.014831 seconds
+  Import took 0.021476 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000394 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassColumn.png
+  artifactKey: Guid(15b8c7e913a0af64e8b5b7048498263b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassColumn.png using Guid(15b8c7e913a0af64e8b5b7048498263b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a3747e78a666b8fa6aa391808cdf95b') in 0.015423 seconds
+  Import took 0.020679 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000344 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassHillLeft2.png
+  artifactKey: Guid(a5ba4b99cb128f34eb5ca6328b9298d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassHillLeft2.png using Guid(a5ba4b99cb128f34eb5ca6328b9298d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ac9c3a6d24f0e1ee82718683cc31462') in 0.014995 seconds
+  Import took 0.019344 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000338 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassCliffMid.png
+  artifactKey: Guid(1597ceff11690144093d128e21aa53a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassCliffMid.png using Guid(1597ceff11690144093d128e21aa53a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6073b1d14ae427a7e56f2e11f65955b5') in 0.013392 seconds
+  Import took 0.017670 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000379 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassHillLeft.png
+  artifactKey: Guid(57da45673889efb408e9a8328758229f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassHillLeft.png using Guid(57da45673889efb408e9a8328758229f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61fe17d52e409ab8a11d9472d233526f') in 0.017856 seconds
+  Import took 0.023179 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000381 seconds.
+  path: Assets/Sprites/Tiles/Spring/GrassHillRight2 DownShadow.png
+  artifactKey: Guid(fb78162c8446efa4e9f067dd3146d4dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/GrassHillRight2 DownShadow.png using Guid(fb78162c8446efa4e9f067dd3146d4dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc3a504b2912a37c93944fdddbb8d393') in 0.015224 seconds
+  Import took 0.021106 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.265792 seconds.
+  path: Assets/Sprites/Tiles/Spring/Asset 40.png
+  artifactKey: Guid(74abb6459ce368e4ebed09fb3111e23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/Asset 40.png using Guid(74abb6459ce368e4ebed09fb3111e23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed4544d89c9e923658580b77560b08f6') in 0.015384 seconds
+  Import took 0.021253 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000353 seconds.
+  path: Assets/Sprites/Tiles/Spring/Dirt.png
+  artifactKey: Guid(71c9d16b0d779e04e8a6d6f78cf7837b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/Dirt.png using Guid(71c9d16b0d779e04e8a6d6f78cf7837b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '923dc68c881bb800dc501e38e2c6da8d') in 0.013040 seconds
+  Import took 0.016753 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000477 seconds.
+  path: Assets/Sprites/Tiles/Spring/DirtLeft.png
+  artifactKey: Guid(0176fa3c0a61a0f4cad9cc98bc459e0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/DirtLeft.png using Guid(0176fa3c0a61a0f4cad9cc98bc459e0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '071a07ace91149afa4e13ed3d9077c9c') in 0.012604 seconds
+  Import took 0.018387 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000462 seconds.
+  path: Assets/Sprites/Tiles/Spring/column_up.png
+  artifactKey: Guid(467abc4bd368f7a4bbdcf1dacedc30c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/column_up.png using Guid(467abc4bd368f7a4bbdcf1dacedc30c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10f1b011ba3fd2477f59f3168fdf1d28') in 0.014612 seconds
+  Import took 0.019415 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000537 seconds.
+  path: Assets/Sprites/Tiles/Spring/DirtDown.png
+  artifactKey: Guid(884df65beb45634438224aa27ac55179) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/DirtDown.png using Guid(884df65beb45634438224aa27ac55179) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '091ee3bbd6929bf1d967a4ef1f363649') in 0.014859 seconds
+  Import took 0.019389 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000445 seconds.
+  path: Assets/Sprites/Tiles/Spring/Asset 40.png
+  artifactKey: Guid(74abb6459ce368e4ebed09fb3111e23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/Asset 40.png using Guid(74abb6459ce368e4ebed09fb3111e23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed4544d89c9e923658580b77560b08f6') in 0.011123 seconds
+  Import took 0.015729 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000888 seconds.
+  path: Assets/Sprites/Tiles/Spring/DirtRightCorner.png
+  artifactKey: Guid(dbba0da7b78a22647a9da9ad638a340b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/DirtRightCorner.png using Guid(dbba0da7b78a22647a9da9ad638a340b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6711e9aff92a71f4461a992587fabaaf') in 0.012886 seconds
+  Import took 0.018267 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000519 seconds.
+  path: Assets/Sprites/Tiles/Spring/Asset 41.png
+  artifactKey: Guid(33c38d25dd24c1f4487cbe0229e12af4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/Asset 41.png using Guid(33c38d25dd24c1f4487cbe0229e12af4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bab264f5c8590e6ddf86b3682984a330') in 0.014762 seconds
+  Import took 0.019546 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000498 seconds.
+  path: Assets/Sprites/Tiles/Spring/DirtLeftCorner.png
+  artifactKey: Guid(696e4921e3ad7cf479fb36f3a7b9b36e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/DirtLeftCorner.png using Guid(696e4921e3ad7cf479fb36f3a7b9b36e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1fe8e395ed631966c5d20e32987ab82') in 0.013720 seconds
+  Import took 0.018077 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000338 seconds.
+  path: Assets/Sprites/Tiles/Spring/DirtRight.png
+  artifactKey: Guid(51da486d08a712c42b777a890813863f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/DirtRight.png using Guid(51da486d08a712c42b777a890813863f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ac2601d31a42b1edd36fad09012085d') in 0.013236 seconds
+  Import took 0.017738 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000371 seconds.
+  path: Assets/Sprites/Tiles/Spring/Column.png
+  artifactKey: Guid(4dcbbbcb39af2a34bb8decd8b3f23206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles/Spring/Column.png using Guid(4dcbbbcb39af2a34bb8decd8b3f23206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31ee909e568b5894cb330f83ed64ea57') in 0.014937 seconds
+  Import took 0.021964 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 109.537335 seconds.
+  path: Assets/Prefabs/Resources/Platform.prefab
+  artifactKey: Guid(e9830c8cd248f1e44bd35719d6ff8e82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Resources/Platform.prefab using Guid(e9830c8cd248f1e44bd35719d6ff8e82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0efb277ef7378d0cc0a1d821996f393d') in 0.060771 seconds
+  Import took 0.066661 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002373 seconds.
+  path: Assets/Prefabs/Resources/Platform.prefab
+  artifactKey: Guid(e9830c8cd248f1e44bd35719d6ff8e82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Resources/Platform.prefab using Guid(e9830c8cd248f1e44bd35719d6ff8e82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0efb277ef7378d0cc0a1d821996f393d') in 0.011764 seconds
+  Import took 0.016315 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.585102 seconds.
+  path: Assets/Prefabs/Resources/Platform.prefab
+  artifactKey: Guid(e9830c8cd248f1e44bd35719d6ff8e82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Resources/Platform.prefab using Guid(e9830c8cd248f1e44bd35719d6ff8e82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0136cd604dfc0c49e0fcf6c084527bc') in 0.012321 seconds
+  Import took 0.017077 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.737501 seconds.
+  path: Assets/Prefabs/Resources/Platform.prefab
+  artifactKey: Guid(e9830c8cd248f1e44bd35719d6ff8e82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Resources/Platform.prefab using Guid(e9830c8cd248f1e44bd35719d6ff8e82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d98f7e473ac6b876271650acb409fb4') in 0.011470 seconds
+  Import took 0.016681 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.899926 seconds.
+  path: Assets/Prefabs/Resources/Platform.prefab
+  artifactKey: Guid(e9830c8cd248f1e44bd35719d6ff8e82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Resources/Platform.prefab using Guid(e9830c8cd248f1e44bd35719d6ff8e82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8174b71864008fbbdbd2207c0cfb3fac') in 0.011637 seconds
+  Import took 0.019375 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001896 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.205 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1818 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.3 MB.
+System memory in use after: 88.3 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2318.
+Total: 2.687200 ms (FindLiveObjects: 0.340900 ms CreateObjectMapping: 0.109900 ms MarkObjects: 2.025200 ms  DeleteObjects: 0.210000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001553 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.889 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1818 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.3 MB.
+System memory in use after: 88.3 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2322.
+Total: 2.383200 ms (FindLiveObjects: 0.202200 ms CreateObjectMapping: 0.057400 ms MarkObjects: 1.956300 ms  DeleteObjects: 0.166000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001583 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.161 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.61 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1818 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.4 MB.
+System memory in use after: 88.4 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2326.
+Total: 3.802000 ms (FindLiveObjects: 0.361600 ms CreateObjectMapping: 0.132700 ms MarkObjects: 3.116700 ms  DeleteObjects: 0.189500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001734 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.593 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1819 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.4 MB.
+System memory in use after: 88.4 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2331.
+Total: 3.244300 ms (FindLiveObjects: 0.305200 ms CreateObjectMapping: 0.100600 ms MarkObjects: 2.674900 ms  DeleteObjects: 0.161400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001563 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.171 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1819 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.4 MB.
+System memory in use after: 88.4 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2335.
+Total: 3.212500 ms (FindLiveObjects: 0.520100 ms CreateObjectMapping: 0.202500 ms MarkObjects: 2.334700 ms  DeleteObjects: 0.133300 ms)
+
