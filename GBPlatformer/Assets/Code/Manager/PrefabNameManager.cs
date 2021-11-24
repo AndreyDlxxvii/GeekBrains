@@ -6,6 +6,7 @@ namespace GBPlatformer
         public const string PlayerAnimCFG = "PlayerAnimCFG";
         public const string Gun = "Gun";
         public const string Bullet = "Bullet";
+        public const string CoinAnim = "CoinAnim";
 
     }
 }

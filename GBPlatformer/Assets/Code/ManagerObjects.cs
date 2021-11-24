@@ -11,7 +11,8 @@ namespace GBPlatformer
         }
         public LevelObjectView PlayerCreateMonoBeh()
         {
-            return Object.Instantiate(_playerPref, Vector3.zero, Quaternion.identity).GetComponent<LevelObjectView>();
+            var start = new Vector3(-5f, -3.5f, 0f);
+            return Object.Instantiate(_playerPref, start, Quaternion.identity).GetComponent<LevelObjectView>();
         }
     }
 }
