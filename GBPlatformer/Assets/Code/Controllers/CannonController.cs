@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Runtime.ExceptionServices;
 using Unity.IO.LowLevel.Unsafe;
@@ -35,22 +36,6 @@ namespace GBPlatformer
         //TODO сделать плавный поворот до цели
         public void OnUpdate(float deltaTime)
         {
-            if (_flag)
-            {
-                _timer += deltaTime;
-                if (_bullets.Count > 0 && _timer > 1.5f)
-                {
-                    _bulletPool.Hide(_bullets.Dequeue());
-                    _timer = 0;
-                }
-                else if (_bullets.Count == 0)
-                {
-                    _flag = false;
-                } 
-
-                
-            }
-
             foreach (var ell in _cannonViews)
             {
                 if (Vector3.Distance(ell.TransformMuzzle.position, _transformTarget.position) < _range)
@@ -74,7 +59,6 @@ namespace GBPlatformer
                 _bullet.transform.rotation = cannonView.SpawnPoitMuzzle.rotation;
                 _bullet.AddForce(-_bullet.transform.up * 10f, ForceMode2D.Impulse);
                 _delay = 0f;
-                _bullets.Enqueue(_bullet);
             }
         }
     }

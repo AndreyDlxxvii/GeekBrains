@@ -20,6 +20,7 @@ namespace GBPlatformer
             var coinViews = Object.FindObjectsOfType<CoinObjectView>().ToList();
             var playerAnimator = new SpriteAnimController(playerConfig);
             var coinAnimator = new SpriteAnimController(coinConfig);
+            var generatorLevelView = Object.FindObjectOfType<GeneratorLevelView>();
             
             
             
@@ -28,12 +29,14 @@ namespace GBPlatformer
             var cannonController = new CannonController(playerMonoBeh.Transform, cannonViews, refResources);
             var coinController = new CoinController(coinAnimator, coinViews, playerMonoBeh);
             var enemyController = new EnemysController(enemyView,playerMonoBeh);
+            var genCtrl = new GeneratorController(generatorLevelView);
 
            controllers.Add(playerController);
            controllers.Add(cameraController);
            controllers.Add(cannonController);
            controllers.Add(coinController);
            controllers.Add(enemyController);
+           controllers.Add(genCtrl);
         }
     }
 }
