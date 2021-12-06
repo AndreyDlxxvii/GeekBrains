@@ -7,10 +7,10 @@ namespace GBPlatformer
     public class CoinController : IOnController, IDisposable, IOnUpdate
     {
         private SpriteAnimController _spriteAnimController;
-        private List<CoinObjectView> _coinObjectViews;
+        private List<LevelObjectView> _coinObjectViews;
         private LevelObjectView _playerView;
 
-        public CoinController(SpriteAnimController spriteAnimController, List<CoinObjectView> coinObjectViews, LevelObjectView playerView)
+        public CoinController(SpriteAnimController spriteAnimController, List<LevelObjectView> coinObjectViews, LevelObjectView playerView)
         {
             _spriteAnimController = spriteAnimController;
             _coinObjectViews = coinObjectViews;
@@ -19,16 +19,23 @@ namespace GBPlatformer
             _playerView.OnLevelObject += OnLevelObjectContact;
             foreach (var ell in _coinObjectViews)
             {
-                _spriteAnimController.StartAnimation(ell.SpriteRenderer, AnimState.Run, true);
+                if (ell is CoinObjectView coin)
+                {
+                    _spriteAnimController.StartAnimation(coin.SpriteRenderer, AnimState.Run, true);
+                }
             }
         }
 
-        private void OnLevelObjectContact(CoinObjectView contactView)
+        private void OnLevelObjectContact(LevelObjectView contactView)
         {
             if (_coinObjectViews.Contains(contactView))
             {
                 _spriteAnimController.StopAnimation(contactView.SpriteRenderer);
-                GameObject.Destroy(contactView.gameObject);
+                if (contactView is CoinObjectView coin)
+                {
+                    GameObject.Destroy(coin.gameObject);
+                }
+                
             }
         }
         public void OnUpdate(float deltaTime)

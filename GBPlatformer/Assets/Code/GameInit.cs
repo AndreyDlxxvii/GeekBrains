@@ -12,15 +12,17 @@ namespace GBPlatformer
             var playerModel = new PlayerModel(100f, 100f, 7f);
             var playerConfig = refResources.PlayerConfig;
             var coinConfig = refResources.CoiAnimConfigConfig;
-            // var managerObjects = new ManagerObjects(refResources);
-            // var playerMonoBeh = managerObjects.PlayerCreateMonoBeh();
-            var playerMonoBeh = Object.FindObjectOfType<LevelObjectView>();
+            var managerObjects = new ManagerObjects(refResources);
+            var playerMonoBeh = managerObjects.PlayerCreateMonoBeh();
+            //var playerMonoBeh = Object.FindObjectOfType<LevelObjectView>();
             var cannonViews = Object.FindObjectsOfType<CannonView>();
             var enemyView = Object.FindObjectOfType<EnemyObjectView>();
-            var coinViews = Object.FindObjectsOfType<CoinObjectView>().ToList();
+            var coinViews = Object.FindObjectsOfType<LevelObjectView>().ToList();
             var playerAnimator = new SpriteAnimController(playerConfig);
             var coinAnimator = new SpriteAnimController(coinConfig);
             var generatorLevelView = Object.FindObjectOfType<GeneratorLevelView>();
+            var questView = Object.FindObjectOfType<QuestView>();
+            var doorView = Object.FindObjectOfType<DoorView>();
             
             
             
@@ -30,6 +32,9 @@ namespace GBPlatformer
             var coinController = new CoinController(coinAnimator, coinViews, playerMonoBeh);
             var enemyController = new EnemysController(enemyView,playerMonoBeh);
             var genCtrl = new GeneratorController(generatorLevelView);
+            var doorController = new DoorController(doorView);
+            var questCfgController = new QuestCofiguratorController(questView, doorController);
+            
 
            controllers.Add(playerController);
            controllers.Add(cameraController);
@@ -37,6 +42,7 @@ namespace GBPlatformer
            controllers.Add(coinController);
            controllers.Add(enemyController);
            controllers.Add(genCtrl);
+           controllers.Add(questCfgController);
         }
     }
 }
