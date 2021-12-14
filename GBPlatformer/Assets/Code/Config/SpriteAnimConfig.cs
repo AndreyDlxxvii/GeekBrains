@@ -7,7 +7,7 @@ namespace GBPlatformer
 {
     [CreateAssetMenu (fileName = "SpriteAnimCfg", menuName = "Configs / Animation cfg", order = 1)]
     public class SpriteAnimConfig : ScriptableObject
-    {
+    {    
         [Serializable]
         public sealed class SpriteSequence
         {

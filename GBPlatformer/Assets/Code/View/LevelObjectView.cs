@@ -12,7 +12,7 @@ namespace GBPlatformer
         public Collider2D Collider2D;
         public Rigidbody2D Rigidbody2D;
 
-        public Action<CoinObjectView> OnLevelObject { get; set; }
+        public Action<LevelObjectView> OnLevelObject { get; set; }
         private void Awake()
         {
             if (Transform == null) Transform = GetComponent<Transform>();
@@ -24,7 +24,7 @@ namespace GBPlatformer
         
         private void OnTriggerEnter2D(Collider2D other)
         {
-            var levelObj = other.gameObject.GetComponent<CoinObjectView>();
+            var levelObj = other.gameObject.GetComponent<LevelObjectView>();
             OnLevelObject?.Invoke(levelObj);
         }
     }
