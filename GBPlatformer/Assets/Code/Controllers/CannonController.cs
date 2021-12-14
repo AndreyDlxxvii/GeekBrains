@@ -21,6 +21,8 @@ namespace GBPlatformer
         private float _delay;
         private float _timer;
         private float _range = 8f;
+        private bool _flag = false;
+        
         
         public CannonController(Transform transformTarget, CannonView [] cannonViews, RefResources refResources)
         {
@@ -33,14 +35,20 @@ namespace GBPlatformer
         //TODO сделать плавный поворот до цели
         public void OnUpdate(float deltaTime)
         {
-            _timer += deltaTime;
-            if (_timer > 2f)
+            if (_flag)
             {
-                if (_bullets.Count > 0)
+                _timer += deltaTime;
+                if (_bullets.Count > 0 && _timer > 1.5f)
                 {
                     _bulletPool.Hide(_bullets.Dequeue());
+                    _timer = 0;
                 }
-                _timer = 0;
+                else if (_bullets.Count == 0)
+                {
+                    _flag = false;
+                } 
+
+                
             }
 
             foreach (var ell in _cannonViews)
@@ -52,6 +60,7 @@ namespace GBPlatformer
                     _axes = Vector3.Cross(Vector3.down, _dir);
                     ell.TransformMuzzle.rotation = Quaternion.AngleAxis(_angle, _axes);
                     Fire(deltaTime, ell);
+                    _flag = true;
                 }
             }
         }
