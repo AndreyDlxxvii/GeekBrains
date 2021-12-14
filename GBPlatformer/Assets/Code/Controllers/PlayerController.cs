@@ -25,9 +25,6 @@ namespace GBPlatformer
         private float _yVelocity;
         private float _xVelocity;
         
-        
-        
-
         public PlayerController(LevelObjectView playerView, SpriteAnimController spriteAnimController, PlayerModel playerModel)
         {
             _playerView = playerView;

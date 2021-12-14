@@ -45,15 +45,10 @@ namespace GBPlatformer
             return temp;
         }
 
-        public void Hide()
+        public void Hide(Rigidbody2D _rigidbody)
         {
-            _listGO[count].gameObject.SetActive(false);
-            Debug.Log(_listGO[count].gameObject.activeInHierarchy);
-            count++;
-            if (count>=_listGO.Count)
-            {
-                count = 0;
-            }
+            _rigidbody.gameObject.SetActive(false);
+            _rigidbody.velocity = Vector3.zero;
         }
     }
 }
