@@ -6,24 +6,20 @@ using UnityEngine;
 public class BulletView : MonoBehaviour
 {
     public event Action Hit;
+    public event Action Dest;
 
     private float timer;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
 
-        if (timer > 3f)
+        if (timer > 2f)
         {
-            Hit?.Invoke();
+            // Dest?.Invoke();
+            // Hit?.Invoke();
             timer = 0f;
+            gameObject.SetActive(false);
         }
-
     }
 }

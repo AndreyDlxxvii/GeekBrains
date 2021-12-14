@@ -44,11 +44,10 @@ namespace GBPlatformer
             
             return temp;
         }
-
-        public void Hide(Rigidbody2D _rigidbody)
-        {
-            _rigidbody.gameObject.SetActive(false);
-            _rigidbody.velocity = Vector3.zero;
-        }
+        // public void Hide(Rigidbody2D _rigidbody)
+        // {
+        //     _rigidbody.gameObject.SetActive(false);
+        //     _rigidbody.velocity = Vector3.zero;
+        // }
     }
 }
