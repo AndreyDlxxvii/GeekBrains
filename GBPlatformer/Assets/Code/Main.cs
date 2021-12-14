@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,6 +21,16 @@ namespace GBPlatformer
         void Update()
         {
             _controllers.OnUpdate(Time.deltaTime);
+        }
+
+        void FixedUpdate()
+        {
+            _controllers.OnFixedUpdate(Time.fixedDeltaTime);
+        }
+
+        private void LateUpdate()
+        {
+            _controllers.OnLateUpdate(Time.deltaTime);
         }
     }
 }

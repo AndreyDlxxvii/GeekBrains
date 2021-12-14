@@ -8,10 +8,12 @@ namespace GBPlatformer
         public const string startMethod = "OnStart";
         public const string updateMethod = "OnUpdate";
         public const string fixedUpdateMethod = "OnFixedUpdate";
+        public const string lateUpdate = "OnLateUpdate";
         
         private List<IOnStart> _onStarts = new List<IOnStart>();
         private List<IOnUpdate> _onUpdates = new List<IOnUpdate>();
         private List<IOnFixedUpdate> _onFixedUpdates = new List<IOnFixedUpdate>();
+        private List<IOnLateUpdate> _onLateUpdates = new List<IOnLateUpdate>();
 
 
         public Controllers Add(IOnController controller)
@@ -29,6 +31,11 @@ namespace GBPlatformer
             if (controller is IOnFixedUpdate onFixedUpdate)
             {
                 _onFixedUpdates.Add(onFixedUpdate);
+            }
+
+            if (controller is IOnLateUpdate onLateUpdate)
+            {
+                _onLateUpdates.Add(onLateUpdate);
             }
             
             return this;
@@ -56,13 +63,24 @@ namespace GBPlatformer
             }
         }
 
-        public void OnFixedUpdate()
+        public void OnFixedUpdate(float fixedDeltaTime)
         {
             foreach (var ell in _onFixedUpdates)
             {
                 if (ell.HasMethod(fixedUpdateMethod))
                 {
-                    ell.OnFixedUpdate();
+                    ell.OnFixedUpdate(fixedDeltaTime);
+                }
+            }
+        }
+
+        public void OnLateUpdate(float deltaTime)
+        {
+            foreach (var ell in _onLateUpdates)
+            {
+                if (ell.HasMethod(lateUpdate))
+                {
+                    ell.OnLateUpdate(deltaTime);
                 }
             }
         }
