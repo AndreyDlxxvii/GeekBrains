@@ -46,6 +46,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -91,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5109029306926099540}
   - component: {fileID: 5778486962821058484}
-  - component: {fileID: 3756238460778137252}
+  - component: {fileID: 7523991376604426917}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -130,6 +131,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -165,7 +167,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3756238460778137252
+--- !u!114 &7523991376604426917
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,7 +176,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7951267984111405525}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b6c9178d80da644ea2ed1619b117127, type: 3}
+  m_Script: {fileID: 11500000, guid: 43bfd7c85b7969c419d62a49c486e580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8451805597918948043
@@ -223,6 +225,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
