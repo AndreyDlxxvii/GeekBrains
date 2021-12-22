@@ -7,7 +7,7 @@ namespace MyRaces
 {
     public class CarController : BaseController
     {
-        private readonly ResourcesPath _viewPath = new ResourcesPath{PathResoursec = "Prefabs/Car"};
+        private readonly ResourcesPath _viewPath = new ResourcesPath{PathResources = "Prefabs/Car"};
         private readonly CarView _carView;
 
         public CarController()

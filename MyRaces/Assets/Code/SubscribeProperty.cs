@@ -2,7 +2,7 @@ using System;
 
 namespace MyRaces
 {
-    public class SubscribeProperty<T> : IreadOnlySubscribeProperty<T>
+    public class SubscribeProperty<T> : IReadOnlySubscribeProperty<T>
     {
         private T _value;
         private Action<T> _onChangeValue;

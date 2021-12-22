@@ -4,21 +4,20 @@ namespace MyRaces
 {
     public class BtnCtrlController : BaseController
     {
-        private readonly ResourcesPath _viewPath = new ResourcesPath{PathResoursec = "Prefabs/BtnControll"};
+        private readonly ResourcesPath _viewPath = new ResourcesPath{PathResources = "Prefabs/BtnControll"};
         private readonly Transform _placeUI;
         private readonly BtnControlView _btnControlView;
 
-        public BtnCtrlController(Transform placeUI)
+        public BtnCtrlController(SubscribeProperty <float> leftMove, SubscribeProperty<float> rightMove, CarModel car, Transform placeUI)
         {
             _placeUI = placeUI;
             _btnControlView = LoadView();
-            _btnControlView.Move();
+            _btnControlView.Init(leftMove, rightMove, car.Speed);
         }
         
         private BtnControlView LoadView()
         {
-            var t = ResourceLoader.LoadPrefab(_viewPath);
-            var objectView = Object.Instantiate(t, _placeUI, false);
+            var objectView = Object.Instantiate(ResourceLoader.LoadPrefab(_viewPath), _placeUI, false);
             AddGameObject(objectView);
             if (objectView.TryGetComponent(out BtnControlView mainMenuView ))
             {

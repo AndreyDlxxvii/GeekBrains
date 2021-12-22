@@ -1,6 +1,8 @@
 using System;
 using JoostenProductions;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace MyRaces
@@ -9,22 +11,31 @@ namespace MyRaces
     {
         [SerializeField] private Button _leftButton;
         [SerializeField] private Button _rightButton;
-        
+        [SerializeField] private Button _exitButton;
+        [SerializeField] private PointerEventData PointerEventData;
+
         public override void Init(SubscribeProperty <float> leftMove, SubscribeProperty<float> rightMove, float speed)
         {
             base.Init(leftMove, rightMove, speed);
-            UpdateManager.SubscribeToUpdate(Move);
+            UpdateManager.SubscribeToUpdate(() => Move(speed));
         }
 
-        public void Move()
+        private void OnDestroy()
         {
-            _leftButton.onClick.AddListener(Test);
-            _rightButton.onClick.AddListener(Test);
+            UpdateManager.UnsubscribeFromUpdate(() => Move(1));
         }
 
-        private void Test()
+
+        public void Move(float speed)
         {
-            Debug.Log("move");
+            _leftButton.onClick.AddListener(() => OnLeftMove(speed));
+            _rightButton.onClick.AddListener(() => OnRightMove(speed));
+            _exitButton.onClick.AddListener(Exit);
+        }
+
+        private void Exit()
+        {
+            Application.Quit();
         }
     }
 }

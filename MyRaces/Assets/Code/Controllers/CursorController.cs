@@ -4,7 +4,7 @@ namespace MyRaces
 {
     public class CursorController : BaseController
     {
-        private readonly ResourcesPath _viewPath = new ResourcesPath {PathResoursec = "Prefabs/Cursor"};
+        private readonly ResourcesPath _viewPath = new ResourcesPath {PathResources = "Prefabs/Cursor"};
         private CursorTrailView _trailView;
 
         public CursorController()

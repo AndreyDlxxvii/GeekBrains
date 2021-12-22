@@ -5,11 +5,12 @@ namespace MyRaces
     internal class InputGameController : BaseController
     {
         private BaseInputView _view;
-        private readonly ResourcesPath _viewPath = new ResourcesPath {PathResoursec = "Prefabs/gyroscopeMove"};
+        private readonly ResourcesPath _viewPath = new ResourcesPath {PathResources = "Prefabs/gyroscopeMove"};
 
         public InputGameController(SubscribeProperty<float> leftMove, SubscribeProperty<float> rightMove, CarModel carModel)
         {
             _view = LoadView();
+            _view.Init(leftMove, rightMove, carModel.Speed);
         }
 
         private BaseInputView LoadView()

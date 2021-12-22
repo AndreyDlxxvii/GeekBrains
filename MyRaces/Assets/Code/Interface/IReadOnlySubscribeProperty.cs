@@ -2,7 +2,7 @@ using System;
 
 namespace MyRaces
 {
-    public interface IreadOnlySubscribeProperty<T>
+    public interface IReadOnlySubscribeProperty<T>
     {
         T value { get; }
 

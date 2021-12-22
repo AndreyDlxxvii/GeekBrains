@@ -4,6 +4,5 @@ namespace MyRaces
 {
     public class CursorTrailView : MonoBehaviour
     {
-        
     }
 }

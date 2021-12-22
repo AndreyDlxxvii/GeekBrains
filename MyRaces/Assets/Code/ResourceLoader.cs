@@ -6,8 +6,7 @@ namespace MyRaces
     {
         public static GameObject LoadPrefab(ResourcesPath path)
         {
-            var t = Resources.Load<GameObject>(path.PathResoursec);
-            return t;
+            return Resources.Load<GameObject>(path.PathResources);
         }
     }
 }
